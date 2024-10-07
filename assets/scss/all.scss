@@ -1,0 +1,21 @@
+// font-family
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "./utils/variables";
+@import "../../node_modules/bootstrap";
+
+// font-utilites
+@import "./utils/utilities";
+
+// RWD
+@import "./base/base";
+
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+@import "./layout/side-nav.scss";
+
+@import "./pages/index.scss";
+@import "./pages/product.scss";
+@import "./pages/cart.scss";
+@import "./pages/admin-panel.scss";
