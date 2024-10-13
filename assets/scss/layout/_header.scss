@@ -15,13 +15,24 @@
 
     @include pad {
         display: flex;
-        // justify-content: space-between;
+        justify-content: space-between;
         // margin-top: 56px;
         padding-left: 12px;
         padding-right: 12px;
         margin-top: 21.5px;
         height: 40px;
     }
+
+    @include mobile {
+        display: flex;
+        justify-content: space-between;
+        // margin-top: 56px;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: 21.5px;
+        height: 40px;
+    }
+
 }
 
 .menu_btn {
@@ -108,11 +119,6 @@
 
     & a {
         padding: 8px 32px;
-
-        // @include mobile-larger {
-        //     padding-left: 0;
-        //     padding-right: 0;
-        // }
     }
 
     @include pad {
@@ -159,7 +165,6 @@
 .cart {
     // margin-top: 10px;
     // margin-left: 24px;
-    // width: 32px;
     // width: 100%;
     // height: 32px;
     // padding: 10px;
@@ -180,7 +185,7 @@
 
 .cart:hover {
     // color: blue;
-    fill: skyblue;
+    //fill: skyblue;
     stroke: #79A93F;
-    stroke-width: 3px;
+    stroke-width: 2px;
 }
