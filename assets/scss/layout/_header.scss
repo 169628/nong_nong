@@ -1,0 +1,191 @@
+.header {
+    color: white;
+    padding: 64px 0;
+    width: 100%;
+}
+
+.container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+    border-radius: 200px;
+    height: 95px;
+
+    @include pad {
+        display: flex;
+        justify-content: space-between;
+        // margin-top: 56px;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: 21.5px;
+        height: 40px;
+    }
+
+    @include mobile {
+        display: flex;
+        justify-content: space-between;
+        // margin-top: 56px;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: 21.5px;
+        height: 40px;
+    }
+
+}
+
+.menu_btn {
+    display: none;
+
+    @include pad {
+        height: 24px;
+        width: 100%;
+        stroke: white;
+        display: flex;
+        margin-top: 8px;
+    }
+}
+
+.mobile_logo {
+    display: none;
+
+    @include pad {
+        height: 40px;
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+
+    }
+}
+
+.logo {
+    display: block;
+    width: 252px;
+    // width: 50%;
+    height: 63px;
+    // width: 100%;
+    margin-left: 128px;
+
+
+    @include pad {
+        // height: 50px;
+        // width: 100%;
+        display: none;
+    }
+
+    @include mobile {
+
+        display: none;
+    }
+
+}
+
+.bg-w {
+    background: #FFFFFF;
+
+    @include pad {
+        // height: 40px;
+        // width: 100%;
+        // $primary-500 ; 
+        background: #966a09;
+    }
+}
+
+.nav {
+    width: 266px;
+    height: 52px;
+    margin-right: 128px;
+    margin-top: 21.5px;
+
+    @include mobile {
+        width: 100%;
+        height: 40px;
+
+    }
+}
+
+.register {
+    background: #DBBE5D;
+    color: #FFFFFF;
+    margin-right: 24px;
+    font-size: 24px;
+    border-radius: 50px;
+    font-family: Noto Sans;
+    font-weight: 600;
+    line-height: 46px;
+    letter-spacing: 5%;
+
+    & a {
+        padding: 8px 32px;
+    }
+
+    @include pad {
+        display: none;
+    }
+}
+
+.register:hover {
+    color: #79A93F;
+}
+
+.cart-circle {
+    border: 3px #966A09 solid;
+    border-color: #966A09;
+    border-radius: 50px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+
+
+    @include pad {
+        margin-left: 60px;
+        border: 3px white solid;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        width: 40px;
+        // width: 100%;
+        height: 40px;
+    }
+
+    @include mobile {
+        margin-left: 51.5px;
+        border: 3px white solid;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.cart {
+    // margin-top: 10px;
+    // margin-left: 24px;
+    // width: 100%;
+    // height: 32px;
+    // padding: 10px;
+    // align-items: center;
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+
+    @include pad {
+        margin-top: 10px;
+        // height: 26px;
+        width: 100%;
+        // fill: skyblue;
+        stroke: white;
+        stroke-width: 2px;
+    }
+}
+
+.cart:hover {
+    // color: blue;
+    //fill: skyblue;
+    stroke: #79A93F;
+    stroke-width: 2px;
+}
