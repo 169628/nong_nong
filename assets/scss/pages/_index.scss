@@ -1,1 +1,155 @@
+.idx-banner {
+    margin-bottom: 75px;
 
+    @include mobile {
+        margin-bottom: 60px;
+    }
+}
+
+.idx-banner .idx-banner-item {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -40px;
+        width: 100%;
+        height: 162px;
+        background-color: #F7F4EB;
+        -webkit-mask: url("../assets/images/index/bg_wave_desktop.png") no-repeat center center;
+        mask: url("../assets/images/index/bg_wave_desktop.png") no-repeat center center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+
+        @include pad {
+            height: 100px;
+        }
+
+        @media (max-width: 375px) {
+            bottom: -10px;
+            height: 52px;
+            -webkit-mask: url("../assets/images/index/bg_wave_mobile.png") no-repeat
+                center center;
+            mask: url("../assets/images/index/bg_wave_mobile.png") no-repeat center
+                center;
+        }
+    }
+}
+
+.idx-product {
+    .read-more {
+        padding: 4px 16px 4px 16px;
+        color: #797979;
+        border: 1px solid #EDE4CB;
+        border-radius: 50px;
+    }
+
+    .idx-goods-item img {
+        border-radius: 8px;
+        margin-bottom: 16px;
+    }
+}
+
+.idx-product-list {
+    margin-bottom: 100px;
+
+    @include mobile {
+        margin-bottom: 80px;
+    }
+}
+
+.idx-heart-list {
+    padding: 64px 72px;
+
+    @include mobile {
+        padding: 10px 0;
+    }
+
+    .idx-goods-item {
+
+        @include mobile {
+            padding: 16px;
+        }
+    }
+}
+
+.buy-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50px;
+    font-size: 28px;
+    text-align: center;
+
+    @include mobile {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        padding: 8px 24px 8px 24px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.buy-btn-primary {
+    color: #966A09;
+    background: #EDE4CB;
+}
+.buy-btn-secondary {
+    color: white;
+    background: #79A93F;
+}
+
+.idx-banner-item img{
+    max-width: 100%;
+}
+
+.idx-cat-name img {
+    width: 24px;
+    height: 24px;
+}
+
+.idx-brand {
+    height: 989px;
+    background: url('../assets/images/index/concepts_bg_desktop.png') no-repeat top;
+
+    @media (max-width: 375px) {
+        height: 700px;
+        background: url('../assets/images/index/concepts_bg_mobile.png') no-repeat top;
+    }
+}
+
+.idx-brand-item {
+    width: 200px;
+    height: 200px;
+    flex-wrap: wrap;
+    text-align: center;
+    border: 4px solid white;
+    color: white;
+
+    @include pad {
+        width: 160px;
+        height: 160px;
+        font-size: 14px;
+    }
+
+
+    .idx-brand-title {
+        font-size: 32px;
+        margin-bottom: 8px;
+
+        @include pad {
+            font-size: 24px;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+    .idx-brand-content {
+        font-size: 16px;
+
+        @include pad {
+            font-size: 14px;
+        }
+    }
+}
