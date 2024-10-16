@@ -1,3 +1,39 @@
+.header-container {
+  background-color: $white;
+  max-width: 1548px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 200px;
+  @media (max-width: 1570px) {
+    max-width: 1338px;
+  }
+  @media (max-width: 1399px) {
+    max-width: 1158px;
+  }
+  @media (max-width: 1199px) {
+    max-width: 978px;
+  }
+  @include pad {
+    max-width: 738px;
+  }
+  @include mobile {
+    background-color: $primary-500;
+    max-width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+  }
+}
+
+.header-logo {
+  width: 160px;
+}
+
+.header-input-box {
+  border-radius: 50px;
+}
+
+/*
 .header {
   color: white;
   padding: 64px 0;
@@ -181,3 +217,4 @@
   stroke: #79a93f;
   stroke-width: 2px;
 }
+*/

@@ -1,4 +1,173 @@
 <!-- header -->
+
+<!-- 以下是 navbar -->
+<div
+  class="header-container fixed-top mt-md-22 px-4 px-md-0 pt-20 pb-2 py-md-6"
+>
+  <nav class="navbar m-0 p-0">
+    <div class="container-md">
+      <!-- 漢堡開始 -->
+      <a
+        href="#"
+        class="navbar-toggler d-md-none"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <img src="../assets/images/icon/menu.svg" alt="mobile-menu" />
+      </a>
+      <!-- 漢堡裡的內容-->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- 漢堡結束 -->
+      <!-- logo -->
+      <a class="navbar-brand m-0 p-0" href="#"
+        ><picture>
+          <source
+            srcset="../assets/images/logo/logo_horizontal_white.png"
+            media="(max-width: 767px)"
+          />
+          <img
+            class="img-fluid header-logo"
+            src="../assets/images/logo/logo_horizontal.png"
+            alt="banner"
+          /> </picture
+      ></a>
+      <ul class="list-unstyled d-flex">
+        <li class="d-none d-md-block">皮皮 先生/小姐，您好</li>
+        <li class="d-none d-md-block">
+          <a
+            class="btn btn-primary-500 dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              class="img-fluid"
+              src="../assets/images/icon/member-white.svg"
+              alt="banner"
+            />
+          </a>
+          <!-- dropdown -->
+          <div class="dropdown">
+            <ul class="dropdown-menu mt-4">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#"
+            ><picture>
+              <source
+                srcset="../assets/images/icon/cart-white.svg"
+                media="(max-width: 767px)"
+              />
+              <img
+                class="img-fluid"
+                src="../assets/images/icon/cart.svg"
+                alt="banner"
+              /> </picture
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div
+    class="header-input-box container bg-white p-4 mt-6 mb-2 d-block d-md-none"
+  >
+    <span class="m-4"
+      ><img src="../assets/images/icon/search.svg" alt="mobile-search"
+    /></span>
+    <input
+      type="text"
+      class="header-input text-gary-500 fs-6 border-0"
+      placeholder="請輸入關鍵字..."
+    />
+  </div>
+  <ul
+    class="list-unstyled container d-flex justify-content-around d-block d-md-none"
+  >
+    <li><a href="#" class="fs-6 text-white">#捐贈</a></li>
+    <li><a href="#" class="fs-6 text-white">#有機</a></li>
+    <li><a href="#" class="fs-6 text-white">#草莓季</a></li>
+    <li><a href="#" class="fs-6 text-white">#夏季消暑</a></li>
+  </ul>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<!--
 <header class="header">
   <style>
     svg:hover path {
@@ -13,20 +182,20 @@
       alt="mobile-menu"
       class="menu_btn"
     />
-    <!-- <div class="home"> -->
+    
     <a href="./index.html" class="mobile_logo"
       ><img src="../assets/images/logo/logo_horizontal_white.png" alt="logo"
     /></a>
     <a href="./index.html" class="logo"
       ><img src="../assets/images/logo/logo_horizontal.png" alt="logo"
     /></a>
-    <!-- </div> -->
+    
     <ul class="header-nav">
       <li class="register"><a href="#">登入 / 註冊</a></li>
 
       <li class="cart-circle">
         <a href="./cart-info.html">
-          <!-- <img src="../assets/images/icon/cart.svg" alt="logo" class="cart" /> -->
+          
           <svg
             width="32"
             height="32"
@@ -48,3 +217,4 @@
     </ul>
   </div>
 </header>
+-->
