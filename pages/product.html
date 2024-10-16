@@ -10,7 +10,69 @@
     <%- include('./layout/header'); -%>
 
     <!--商品詳情-->
-
+    <div class="container">
+      <div class="row">
+        <div class="d-flex gap-10">
+          <div>
+            <img class="product-img" src="../assets/images/product/product_cover.png" alt="產品主照">
+          </div>
+          <div class="d-flex flex-column product gap-10">
+            <div class="product-title">
+              <h1 class="fs-2 fw-bolder">山城自然芭樂</h1>
+              <p class="fs-5">中投果園芭樂，果肉脆甜、清新爽口，適合生食或製作芭樂汁</p>
+            </div>
+            <div class="product-price">
+              <h2 class="fs-2 fw-bolder mb-0">NT. 500</h2>
+            </div>
+            <div class="d-flex product-detail gap-10">
+              <div class="product-detail-topic">
+                <ul class="list-unstyled d-flex flex-column gap-10">
+                  <li class="py-2">產地</li>
+                  <li class="py-2">運送方式</li>
+                  <li class="py-2">產品規格</li>
+                  <li class="py-2">購買數量</li>
+                </ul>
+              </div>
+              <div class="product-detail-value">
+                <ul class="list-unstyled d-flex flex-column gap-10">
+                  <li class="py-2">彰化</li>
+                  <li class="py-2">冷藏</li>
+                  <li class="py-2">2 斤/箱</li>
+                  <li>
+                    <div class="btn_quantity">
+                      <button type="button" class="btn">
+                        <img src="../assets/images/icon/increase.svg" alt=""></button>
+                      <input type="text" name="quantity" value="1">
+                      <button type="button" class="btn">
+                        <img src="../assets/images/icon/decrease.svg" alt=""></button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-buyandstorage d-flex flex-column gap-10">
+              <div class="button-list d-flex gap-10">
+                <div class="btn-storage">
+                  <button type="button" class="btn btn-secondary100 fs-5">
+                    <img src="../assets/images/icon/cart.svg" alt="">
+                    查詢庫存</button>
+                </div> 
+                <div class="btn-buy">
+                  <button type="button" class="btn btn-secondary700 fs-5">
+                    <img src="../assets/images/icon/cart.svg" alt="">
+                    加入購物車</button>
+                </div>
+              </div>
+              <div class="storage-method">
+                <h6 >保存方式</h6>
+                <p>為保留芭樂的鮮美口感，建議將其存放於乾燥陰涼處，避免陽光直射。如需延長保存時間，可放入冰箱冷藏。建議在購買後一週內食用為佳</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
