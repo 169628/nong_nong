@@ -9,11 +9,11 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <!--商品詳情-->
+    <!--商品資訊-->
     <div class="container">
       <div class="row">
         <div class="d-flex gap-10">
-          <div>
+          <div style="max-width: 40%;">
             <img class="product-img" src="../assets/images/product/product_cover.png" alt="產品主照">
           </div>
           <div class="d-flex flex-column product gap-10">
@@ -41,10 +41,10 @@
                   <li>
                     <div class="btn_quantity">
                       <button type="button" class="btn">
-                        <img src="../assets/images/icon/increase.svg" alt=""></button>
+                        <img src="../assets/images/icon/decrease.svg" alt=""></button>
                       <input type="text" name="quantity" value="1">
                       <button type="button" class="btn">
-                        <img src="../assets/images/icon/decrease.svg" alt=""></button>
+                        <img src="../assets/images/icon/increase.svg" alt=""></button>
                     </div>
                   </li>
                 </ul>
@@ -73,6 +73,22 @@
       </div>
     </div>
     
+    <!-- 跳轉標籤 -->
+    <div class="container my-26">
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <label class="btn btn-outline-primary btn-primary300" for="btnradio1">商品介紹</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-primary btn-primary300" for="btnradio2">商品評論</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+        <label class="btn btn-outline-primary btn-primary300" for="btnradio3">購物須知</label>
+      </div>
+    </div>
+
+    <!-- 商品介紹 -->
+
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
