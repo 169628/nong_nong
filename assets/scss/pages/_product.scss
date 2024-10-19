@@ -21,19 +21,10 @@
             }
         }
         &-value{
-            li{
-                //padding: 8px 0;
-            }
             .btn_quantity{
                 border: 1px solid $gary-500;
                 border-radius: var(--bs-border-radius);
                 input{
-                    // padding: 0.375rem 0.75rem;
-                    // font-weight: 400;
-                    // line-height: 1.5;
-                    // color: var(--bs-body-color);
-                    // appearance: none;
-                    // background-clip: padding-box;
                     background-color: var(--bs-body-bg);
                     border: none;
                     text-align: center;
@@ -70,6 +61,61 @@
     max-width: 100%;
     border-radius: 8px;
     //width: 526px;
+}
+
+//Product Introduce
+.introduce{
+    &-content{
+        max-width: 100%;
+        .describe{
+            color: #1F1E1D;
+            max-width: 64%;
+        }
+        .intro-1{
+            img{
+                max-width: 100%;
+                border-radius: 8px 0 0 8px;
+            }
+            .bg-describe{
+                background-color: $primary-100;
+                border-radius: 0 8px 8px 0;
+            }
+        }
+        .intro-2{
+            img{
+                max-width: 100%;
+                border-radius: 0 8px 8px 0;
+            }
+            .bg-describe{
+                background-color: $secondary-100;
+                border-radius: 8px 0 0 8px;
+            }
+        }
+        .intro-3{
+            .bg{
+                height: 389px;
+            }
+            img{
+                width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 8px;
+            }
+        }
+        .intro-4{
+            .bg-describe{
+                background-color: $primary-100;
+                border-radius: 8px;
+            }
+            .describe{
+                color: #1F1E1D;
+                text-align: center;
+                max-width: 100%;
+                margin: 56px 0;
+            }
+        }
+    }
 }
 
 // Button
