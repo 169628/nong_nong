@@ -7,10 +7,70 @@
     <title>會員後台/商品管理</title>
   </head>
   <body>
-    <%- include('./layout/admin-header'); -%> <%-
-    include('./layout/admin-side-nav'); -%>
+    <%- include('./layout/admin-header'); -%>
 
     <!--商品管理-->
+    <div class="d-flex">
+      <%-include('./layout/admin-side-nav'); -%>
+
+      <div class="admin-contnet">
+        <div class="admin-content-container pt-17 ps-17 d-flex flex-column">
+          <ul class="d-flex">
+            <li>商品管理</li>
+            <li><a href="#">導入</a></li>
+            <li><a href="#">導出</a></li>
+          </ul>
+          <ul class="ms-auto d-flex">
+            <li class="d-none d-md-block">商品名稱</li>
+            <li class="d-none d-md-block"><input type="text" /></li>
+            <li class="d-none d-md-block">
+              <input type="text" list="category" />
+              <datalist id="category">
+                <option value="chrome">葉菜類</option>
+                <option value="firefox">安心水果類</option>
+              </datalist>
+            </li>
+            <li><a href="#">建立商品</a></li>
+          </ul>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul class="ms-auto d-flex">
+            <li>共8條</li>
+            <li><a href="#">上一頁</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">下一頁</a></li>
+            <li><a href="#">下10頁</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="../main.js"></script>
   </body>
