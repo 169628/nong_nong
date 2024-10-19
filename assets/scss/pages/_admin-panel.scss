@@ -1,0 +1,81 @@
+.admin-header {
+  background-color: $white;
+  @include mobile {
+    background-color: $primary-500;
+  }
+}
+
+.admin-header-container {
+  max-width: 1296px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 1399px) {
+    max-width: 1116px;
+  }
+  @media (max-width: 1199px) {
+    max-width: 936px;
+  }
+  @include pad {
+    max-width: 696px;
+  }
+
+  @include mobile {
+    max-width: 516px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.admin-header {
+  .offcanvas-body {
+    background-color: $white;
+  }
+}
+
+.admin-header-logo {
+  width: 252px;
+  @include mobile {
+    width: 160px;
+    position: absolute;
+    buttom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.admin-side {
+  width: 20vw;
+  height: 90vh;
+}
+.admin-side-container {
+  width: 50%;
+  margin-left: auto;
+  @media (max-width: 1375px) {
+    width: 70%;
+  }
+  @media (max-width: 987px) {
+    width: 80%;
+  }
+  @media (max-width: 865px) {
+    width: 100%;
+  }
+}
+
+.admin-contnet {
+  width: 80vw;
+  @include mobile {
+    width: 100vw;
+  }
+}
+.admin-content-container {
+  width: 90%;
+  margin-right: auto;
+  @include mobile {
+    width: 516px;
+    margin-left: auto;
+  }
+}
