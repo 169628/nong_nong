@@ -1,3 +1,29 @@
+.swiper {
+    .swiper-btn-white {
+        &::after {
+            content: '';
+        }
+    }
+
+    .btn-swiper {
+        width: 48px;
+        height: 48px;
+        border-radius: 50px;
+        font-size: 28px;
+        text-align: center;
+        top: 150px;
+        background: white;
+        border: 2px solid #785507;
+    }
+
+    .swiper-button-next {
+        right: -20px;
+    }
+    .swiper-button-prev {
+        left: -20px;
+    }
+}
+
 .idx-banner {
     margin-bottom: 75px;
 
@@ -36,6 +62,10 @@
     }
 }
 
+.idx-banner-item img{
+    max-width: 100%;
+}
+
 // 最新上架 / 熱門
 .idx-product {
     .read-more {
@@ -43,11 +73,8 @@
         color: #797979;
         border: 1px solid #EDE4CB;
         border-radius: 50px;
-    }
-
-    .idx-goods-item img {
-        border-radius: 8px;
-        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -57,20 +84,127 @@
     @include mobile {
         margin-bottom: 80px;
     }
+
+    .idx-goods-item {
+        width: 306px;
+
+        @include mobile {
+            width: 164px;
+            padding: 8px;
+        }
+
+        // https: //blog.csdn.net/pitaogao/article/details/112727743
+        .img-box { 
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        .img-box::after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        .goods-pic {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: cover;
+        }
+
+        .card-title {
+            font-size: 20px;
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+
+        .old-price {
+            font-size: 16px;
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 // 傳遞心意
 .idx-heart-list {
     padding: 64px 72px;
+    background: #EBF1DD;
 
     @include mobile {
         padding: 10px 0;
+        background: none;
+
     }
 
+    // .idx-goods-item {
+
+    //     @include mobile {
+    //         padding: 16px;
+    //         background: #EBF1DD;
+    //     }
+    // }
+
     .idx-goods-item {
+        width: 416px;
+        border-radius: 8px;
 
         @include mobile {
+            width: 164px;
             padding: 16px;
+            background: #EBF1DD;
+        }
+
+        // https: //blog.csdn.net/pitaogao/article/details/112727743
+        .img-box {
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            height: 208px;
+            position: relative;
+
+            @include mobile {
+                height: auto;
+            }
+        }
+
+        @include mobile {
+            .img-box::after {
+                content: '';
+                display: block;
+                padding-bottom: 100%;
+            }
+        }
+        
+
+        .goods-pic {
+            position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+        }
+
+        .card-title {
+            font-size: 20px;
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+
+        .old-price {
+            font-size: 16px;
+
+            @include mobile {
+                font-size: 14px;
+            }
         }
     }
 }
@@ -86,7 +220,7 @@
         width: 100%;
         height: auto;
         border-radius: 8px;
-        padding: 8px 24px 8px 24px;
+        padding: 8px 18px 8px 18px;
         font-size: 14px;
         font-weight: 500;
     }
@@ -101,13 +235,14 @@
     background: #79A93F;
 }
 
-.idx-banner-item img{
-    max-width: 100%;
-}
-
 .idx-cat-name img {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
+
+    @include pad {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 .idx-brand {
@@ -182,9 +317,10 @@
             margin-bottom: 4px;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
     }
-    
+
     .idx-brand-content {
         font-size: 16px;
 
@@ -192,9 +328,35 @@
             font-size: 14px;
         }
     }
+
+    .feature-icon svg rect {
+        fill: none;
+    }
+    
+    .feature-icon svg path {
+        fill: white;
+    }
 }
 
 // 客人好評
+.idx-comment {
+    .idx-comment-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .idx-comment-brief {
+        font-size: 24px;
+        margin-bottom: 48px;
+
+        @include mobile {
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+    }
+}
 // .idx-comment-list {
 // }
 .idx-comment-item {
@@ -225,7 +387,7 @@
             font-size: 14px;
         }
     }
-    
+
     .star {
         width: 16px;
         height: 16px;
@@ -250,6 +412,17 @@
 
     @include mobile {
         margin-bottom: 96px;
+    }
+
+    .idx-about-brief {
+        font-size: 24px;
+        margin-bottom: 48px;
+
+        @include mobile {
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
     }
 }
 
