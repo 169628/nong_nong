@@ -178,6 +178,21 @@
     }
 }
 
+.instructions{
+    margin-bottom: 120px;
+    &-list{
+        margin: 0px calc(100%/12*2);
+        list-style-type: decimal;
+        list-style-position: inside;
+        p{
+            font-weight: 400;
+        }
+        .division{
+            border-bottom: 1px solid $gary-300;
+        }
+    }
+}
+
 // Button
 .btn-group{
     width: 100%;
