@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>商品詳情</title>
   </head>
   <body>
@@ -194,9 +198,89 @@
     </section>
 
     <!-- 商品評論 -->
-    <section class="container comment">
-      <div class="title mb-17 d-flex justify-content-center">
-        <h2 id="productComment" class="fs-2 text-primary-500 fw-bold mb-0">商品評論</h2>
+    <section class="comment py-26 mb-26">
+      <div class="container">
+        <div class="title mb-17 d-flex justify-content-center">
+          <h2 id="productComment" class="fs-2 text-primary-500 fw-bold mb-0">商品評論</h2>
+        </div>
+        <div class="swiper idx-comment-list mb-17">
+          <div class="swiper-wrapper d-flex align-items-stretch">
+            <div class="swiper-slide idx-comment-item" style="height: auto">
+              <div class="row g-0">
+                <div class="card-header">
+                  <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
+                  <div class="name-rank">
+                    <span class="fullname">Andrew</span>
+                    <div class="rank-star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">新鮮清脆，能品嚐到自然的陽光與大地，非常滿意。</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide idx-comment-item" style="height: auto">
+              <div class="row g-0">
+                <div class="card-header">
+                  <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
+                  <div class="name-rank">
+                    <span class="fullname">張小姐</span>
+                    <div class="rank-star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">口感不錯，但甜度稍微不足，整體來說還可以，但沒有特別驚豔。</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide idx-comment-item" style="height: auto">
+              <div class="row g-0">
+                <div class="card-header">
+                  <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
+                  <div class="name-rank">
+                    <span class="fullname">花媽</span>
+                    <div class="rank-star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">我家小孩最挑嘴了，但這次的芭樂他們都吃得很開心，還搶著要再吃。真心推薦給所有媽媽們！</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-btn-white"></div>
+          <div class="swiper-button-prev swiper-btn-white"></div>
+        </div>
+        <div class="btn-comment d-flex justify-content-between">
+          <div class="btn-comment-write">
+            <button type="button" class="btn btn-primary fs-5">
+              <img src="../assets/images/icon/pen.svg" alt="pen">
+              我要評論</button>
+          </div> 
+          <div class="btn-comment-viewall">
+            <button type="button" class="btn btn-primary fs-5">
+              <img src="../assets/images/icon/star.svg" class="star">
+              查看所有評論</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -231,5 +315,35 @@
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".idx-comment-list", {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        direction: getDirection(),
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 'auto',
+          }
+        },
+        on: {
+          resize: function () {
+            swiper.changeDirection(getDirection());
+          },
+        }
+      });
+
+      function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 374 ? 'vertical' : 'horizontal';
+
+        return direction;
+      }
+    </script>
   </body>
 </html>

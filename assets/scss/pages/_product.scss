@@ -178,6 +178,45 @@
     }
 }
 
+//Comment
+.comment{
+    background-color: $primary-100;
+    .btn-comment{
+        .btn{
+            width: 100%;
+        }
+        &-write{
+            width: calc(100%/12*3);
+            .btn-primary{
+                color: $primary-500;
+                background-color: $primary-100;
+            }
+            .btn{
+                border-color: $primary-500;
+            }
+            .btn:hover {
+                color: $primary-100;
+                background-color: $primary-500;
+            }
+        }
+        &-viewall{
+            width: calc(100%/12*3);
+            .btn-primary{
+                color: $primary-100;
+                background-color: $primary-500;
+            }
+            .btn{
+                border-color: $primary-500;
+            }
+            .btn:hover {
+                color: $primary-500;
+                background-color: $primary-100;
+            }
+        }
+    }
+}
+
+//Shopping Instructions
 .instructions{
     margin-bottom: 120px;
     &-list{
