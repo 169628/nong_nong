@@ -1,3 +1,8 @@
+//Common
+.revert{
+    transform: scaleX(-1);
+}
+
 //Product Header
 .product{
     &-title{
@@ -16,7 +21,6 @@
         &-topic{
             color: $gary-500;
             li{
-                //padding: 8px 0;
                 text-align-last:justify;
             }
         }
@@ -54,6 +58,33 @@
             }
             background-color: #EDE4CB80;
             padding: 16px 24px;
+        }
+
+        .btn-secondary700{
+            color: $secondary-100;
+            background: $secondary-700;
+            border: 1px solid $secondary-700;
+        }
+        
+        .btn-secondary700:hover {
+            color: $secondary-100;
+            background: $secondary-300;
+            border: 1px solid $secondary-300;
+        }
+        
+        .btn-secondary100{
+            color: $secondary-700;
+            background: $secondary-100;
+            border: 1px solid $secondary-700;
+        }
+        
+        .btn-secondary100:hover {
+            img{
+                content: url(../assets/images/icon/box-secondary100.svg);
+            }
+            color: $secondary-100;
+            background: $secondary-700;
+            border: 1px solid $secondary-700;
         }
     }
 }
@@ -197,6 +228,10 @@
             .btn:hover {
                 color: $primary-100;
                 background-color: $primary-500;
+                img{
+                    filter: drop-shadow($primary-100 2000px 0);
+                    translate: (-2000px);
+                }
             }
         }
         &-viewall{
@@ -211,6 +246,10 @@
             .btn:hover {
                 color: $primary-500;
                 background-color: $primary-100;
+                img{
+                    filter: drop-shadow($primary-500 2000px 0);
+                    translate: (-2000px);
+                }
             }
         }
     }
@@ -251,28 +290,4 @@
         color: $gary-500;
         border: 1px solid $gary-500;
     }
-}
-
-.btn-secondary700{
-    color: $secondary-100;
-    background: $secondary-700;
-    border: 1px solid $secondary-700;
-}
-
-.btn-secondary700:hover {
-    color: $secondary-100;
-    background: $secondary-300;
-    border: 1px solid $secondary-300;
-}
-
-.btn-secondary100{
-    color: $secondary-700;
-    background: $secondary-100;
-    border: 1px solid $secondary-700;
-}
-
-.btn-secondary100:hover {
-    color: $secondary-100;
-    background: $secondary-700;
-    border: 1px solid $secondary-700;
 }
