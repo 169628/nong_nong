@@ -1,35 +1,72 @@
-<div class="out-progressbar">
-    <div class="position-relative m-4">
-        <div class="progress" style="height: 1px;">
-            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
-                aria-valuemax="100"></div>
+<div class="container box">
+
+    <div class="out-progressbar">
+        <div class="position-relative m-4">
+            <div class="progress" style="height: 1px;">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+            </div>
+            <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary"
+                style="width: 2rem; height:2rem;">1<p class="font-probar">確認訂單</p></button>
+            <button type="button" class="position-absolute top-0 start-33 translate-middle btn btn-sm btn-secondary"
+                style="width: 2rem; height:2rem;">2 <p class="font-probar">填寫收件資料</p></button>
+            <button type="button" class="position-absolute top-0 start-66 translate-middle btn btn-sm btn-secondary"
+                style="width: 2rem; height:2rem;">3<p class="font-probar">進行付款</p></button>
+            <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary"
+                style="width: 2rem; height:2rem;">4<p class="font-probar">完成購買</p></button>
+
         </div>
-        <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary"
-            style="width: 2rem; height:2rem;">1<p class="position-relative font-probar">確認訂單</p></button>
-        <button type="button" class="position-absolute top-0 start-33 translate-middle btn btn-sm btn-secondary"
-            style="width: 2rem; height:2rem;">2 <p class="font-probar">填寫收件資料</p></button>
-        <button type="button" class="position-absolute top-0 start-66 translate-middle btn btn-sm btn-secondary"
-            style="width: 2rem; height:2rem;">3<p class="font-probar">進行付款</p></button>
-        <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary"
-            style="width: 2rem; height:2rem;">4<p class="font-probar">完成購買</p></button>
+    </div>
 
+    <div class="w857 mt64">
+        <div class="confirmCart">
+            <div class="cartHead">
+                <h2>購物車內容</h2>
+                <i class="bi bi-tree color-note fontSizeMed mT-8">
+                    <span class="give color-note">表示購物項目屬於捐贈區商品</span>
+                </i>
+            </div>
+        </div>
+
+        <!--購物車內容-->
+        <div class="w857">
+            <ul class="d-flex justify-content-between mar-t40 w857">
+                <li class="fontBlack fontSizeMed  itemBg100 mr-24 iwidth416">項目</li>
+                <li class="fontBlack fontSizeMed  itemBg100 mr-24 iwidth196">數量</li>
+                <li class="fontBlack fontSizeMed  itemBg100 iwidth196">小計</li>
+            </ul>
+            <div class="d-flex">
+                <div class="d-flex iwidth416 mr-24">
+                    <div class="flex-shrink-0 mrl-l24">
+                        <img class="img-fluid  img-h86" src="../assets/images/index/product-01.jpg" alt=" wendan">
+                    </div>
+                    <div class="flex-grow-1 ms-3 mrl-l12">
+                        <h5 class="card-title mb-1">花蓮鶴岡老欉文旦<i class="bi bi-tree color-note fontSizeMed mT-8"></i>
+                        </h5>
+
+                        <span class="text-gary-500 mb-2">10斤/箱</span></br>
+                        <span class="text-primary-500  mb-2">NT.511</span>
+                    </div>
+
+                </div>
+
+                <div class="iwidth196 mr-24">
+
+                    <form id='myform' method='' action='#'>
+                        <input type='button' value='-' class='qtyminus' field='quantity' />
+                        <input type='text' name='quantity' value='2' class='qty' />
+                        <input type='button' value='+' class='qtyplus' field='quantity' />
+                    </form>
+
+                </div>
+                <div class="iwidth196 text-end">
+                    <span>NT. 1,022</span>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
+<!-- whole body end -->
 
-<div class="confirmCart">
-    <div class="cartHead">
-        <h2>購物車內容</h2>
-        <i class="bi bi-tree color-note fontSizeMed mT-8">
-            <span class="give color-note">表示購物項目屬於捐贈區商品</span>
-        </i>
-    </div>
-</div>
-<!--購物車內容-->
-<div class="cartList">
-    <ul class="d-flex">
-        <li class="fontBlack fontSizeMed padding itemBg100 mr-24 iwidth416">項目</li>
-        <li class="fontBlack fontSizeMed padding itemBg100 mr-24 iwidth196">數量</li>
-        <li class="fontBlack fontSizeMed padding itemBg100 iwidth196">小計</li>
-    </ul>
-</div>
 <br /><br /><br /><br /><br /><br /><br /><br />
