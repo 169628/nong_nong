@@ -13,16 +13,62 @@
     -%>
 
     <div class="idx-banner">
-      <div class="">
-        <div class="idx-banner-item">
-          <!--swiper-slide -->
-          <picture>
-            <source
-              media="(min-width: 375px)"
-              srcset="../assets/images/index/banner/banner-01.png"
-            />
-            <img src="../assets/images/index/banner/banner-mobile-01.png" />
-          </picture>
+      <div class="swiper banner-swiper">
+        <div class="swiper-wrapper idx-banner-item">
+          <div class="swiper-slide">
+            <picture>
+              <source media="(min-width: 375px)" srcset="../assets/images/index/banner/banner-01.png"/>
+              <img src="../assets/images/index/banner/banner-mobile-01.png" />
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <source media="(min-width: 375px)" srcset="../assets/images/index/banner/banner-02.png"/>
+              <img src="../assets/images/index/banner/banner-mobile-02.png" />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+        <div class="d-none d-lg-flex justify-content-center position-absolute idx-search">
+          <div class="d-flex align-items-center position-relative idx-search-item">
+            <input type="text" class="form-control rounded-pill text-gary-500 py-6 px-10 dropdown-toggle" placeholder="請輸入關鍵字..." role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+            <a class="position-absolute end-0 me-11 text-primary-300" href="#" ><i class="bi bi-search"></i></a>
+
+            <!-- 搜尋選單 -->
+            <div class="dropdown-menu mt-4 overflow-hidden text-gary-500">
+              <div class="d-flex">
+                <!-- 選單第一層 -->
+                <ul class="list-unstyled dropdown-menu-lev-one">
+                  <li class="mb-6"><a class="search-item search-item-all" href="#">所有地區</a></li>
+                  <li><a class="search-item" href="#">北部</a></li>
+                  <li class="item-current"><a class="search-item" href="#">中部</a></li>
+                  <li><a class="search-item" href="#">南部</a></li>
+                  <li><a class="search-item" href="#">東部</a></li>
+                </ul>
+                <!-- 選單第二層 -->
+                <ul class="list-unstyled dropdown-menu-lev-two">
+                  <li class="mb-6"><a class="search-item search-item-all" href="#">所有種類</a></li>
+                  <li class="item-current"><a class="search-item" href="#">葉菜類</a></li>
+                  <li><a class="search-item" href="#">根莖瓜果類</a></li>
+                  <li><a class="search-item" href="#">菌菇類</a></li>
+                  <li><a class="search-item" href="#">豆類</a></li>
+                  <li><a class="search-item" href="#">安心水果類</a></li>
+                </ul>
+                <!-- 選單第三層 -->
+                <section class="list-unstyled dropdown-menu-lev-three">
+                  <ul class="list-unstyled">
+                    <li class="mb-6"><a href="#" class="search-item search-item-all">所有項目</a></li>
+                    <li><a href="#" class="search-item">小白菜</a></li>
+                    <li><a href="#" class="search-item">高麗菜</a></li>
+                    <li class="item-current"><a href="#" class="search-item">青江菜</a></li>
+                    <li><a href="#" class="search-item">龍鬚菜</a></li>
+                    <li><a href="#" class="search-item">韭菜</a></li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -45,6 +91,10 @@
                   <a href="product.html">
                       <img src="../assets/images/index/product-01.jpg" class="card-img-top goods-pic" alt="...">
                   </a>
+                  <div class="tag-list">
+                    <span class="product-tag">多汁</span>
+                    <span class="product-tag">有機</span>
+                  </div>
                 </div>
 
                 <div class="card-body">
@@ -74,6 +124,9 @@
                   <a href="product.html">
                       <img src="../assets/images/index/product-02.jpg" class="card-img-top goods-pic" alt="...">
                   </a>
+                  <div class="tag-list">
+                    <span class="product-tag">常溫</span>
+                  </div>
                 </div>
 
                 <div class="card-body">
@@ -101,6 +154,10 @@
                   <a href="product.html">
                       <img src="../assets/images/index/product-03.jpg" class="card-img-top goods-pic" alt="...">
                   </a>
+                  <div class="tag-list">
+                    <span class="product-tag">冷藏</span>
+                    <span class="product-tag">有機</span>
+                  </div>
                 </div>
 
                 <div class="card-body">
@@ -128,6 +185,9 @@
                   <a href="product.html">
                       <img src="../assets/images/index/product-04.jpg" class="card-img-top goods-pic" alt="...">
                   </a>
+                  <div class="tag-list">
+                    <span class="product-tag">常溫</span>
+                  </div>
                 </div>
 
                 <div class="card-body">
@@ -138,6 +198,142 @@
                     <div class="goods-price mb-2 mb-md-0">
                       <span class="text-primary-500 fw-bold fs-6 fs-md-4 me-4">NT.530</span>
                       <span class="old-price text-gary-500"><del>NT.600</del></span>
+                    </div>
+                    <a href="#" class="buy-btn buy-btn-primary"
+                      ><i class="bi bi-cart3"></i
+                      ><span class="ms-2 d-md-none">加入購物車</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next swiper-btn-white d-none d-lg-flex btn-swiper"><i class="bi bi-arrow-right-short fs-1 text-primary-500"></i></div>
+            <div class="swiper-button-prev swiper-btn-white d-none d-lg-flex btn-swiper"><i class="bi bi-arrow-left-short fs-1 text-primary-500"></i></div>
+          </div>
+        </div>
+        <div class="idx-product-list">
+          <div class="idx-product-cat d-flex justify-content-between mb-md-13 mb-6">
+            <div class="idx-cat-name d-flex align-items-center">
+              <img src="../assets/images/icon/rice_ears.png" class="me-2 me-md-6" />
+              <h2 class="text-primary-500 fs-4 fs-md-2 fw-700">熱門商品</h2>
+            </div>
+            <a href="#" class="read-more">看更多熱門產品<i class="bi bi-arrow-right ms-2"></i></a>
+          </div>
+
+          <div class="swiper hotSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide idx-goods-item">
+                <div class="img-box">
+                  <a href="product.html">
+                      <img src="../assets/images/index/product-04.jpg" class="card-img-top goods-pic" alt="...">
+                  </a>
+                  <div class="tag-list">
+                    <span class="product-tag">常溫</span>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <a href="product.html"><h3 class="card-title mb-1">高雄旗山香蕉</h3></a>
+                  <span class="text-gary-500 mb-2">400-500g/串</span>
+
+                  <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-start align-items-md-end">
+                    <div class="goods-price mb-2 mb-md-0">
+                      <span class="text-primary-500 fw-bold fs-6 fs-md-4 me-4">NT.530</span>
+                      <span class="old-price text-gary-500"><del>NT.600</del></span>
+                    </div>
+                    <a href="#" class="buy-btn buy-btn-primary"
+                      ><i class="bi bi-cart3"></i
+                      ><span class="ms-2 d-md-none">加入購物車</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide idx-goods-item">
+                <div class="img-box">
+                  <a href="product.html">
+                      <img src="../assets/images/index/product-03.jpg" class="card-img-top goods-pic" alt="...">
+                  </a>
+                  <div class="tag-list">
+                    <span class="product-tag">冷藏</span>
+                    <span class="product-tag">有機</span>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <a href="product.html"><h3 class="card-title mb-1">拉拉山水蜜桃</h3></a>
+                  <span class="text-gary-500 mb-2">5粒/箱</span>
+
+                  <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-start align-items-md-end">
+                    <div class="goods-price mb-2 mb-md-0">
+                      <span class="text-primary-500 fw-bold fs-6 fs-md-4 me-4"
+                        >NT.1100</span
+                      >
+                      <span class="old-price text-gary-500"
+                        ><del>NT.1500</del></span
+                      >
+                    </div>
+                    <a href="#" class="buy-btn buy-btn-primary"
+                      ><i class="bi bi-cart3"></i
+                      ><span class="ms-2 d-md-none">加入購物車</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide idx-goods-item">
+                <div class="img-box">
+                  <a href="product.html">
+                      <img src="../assets/images/index/product-02.jpg" class="card-img-top goods-pic" alt="...">
+                  </a>
+                  <div class="tag-list">
+                    <span class="product-tag">常溫</span>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <a href="product.html"><h3 class="card-title mb-1">初秋高麗菜</h3></a>
+                  <span class="text-gary-500 mb-2">900-1100g/顆</span>
+
+                  <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-start align-items-md-end">
+                    <div class="goods-price mb-2 mb-md-0">
+                      <span class="text-primary-500 fw-bold fs-6 fs-md-4 me-4"
+                        >NT.99</span
+                      >
+                      <span class="old-price text-gary-500"
+                        ><del>NT.110</del></span
+                      >
+                    </div>
+                    <a href="#" class="buy-btn buy-btn-primary"
+                      ><i class="bi bi-cart3"></i
+                      ><span class="ms-2 d-md-none">加入購物車</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide idx-goods-item">
+                <div class="img-box">
+                  <a href="product.html">
+                      <img src="../assets/images/index/product-01.jpg" class="card-img-top goods-pic" alt="...">
+                  </a>
+                  <div class="tag-list">
+                    <span class="product-tag">多汁</span>
+                    <span class="product-tag">有機</span>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <a href="product.html"><h3 class="card-title mb-1">花蓮鶴岡老欉文旦</h3></a>
+                  <span class="text-gary-500 mb-2">10斤/箱</span>
+
+                  <div
+                    class="d-flex flex-column flex-md-row justify-content-md-between"
+                  >
+                    <div class="goods-price mb-2 mb-md-0">
+                      <span class="text-primary-500 fw-bold fs-6 fs-md-4 me-4"
+                        >NT.511</span
+                      >
+                      <span class="old-price text-gary-500"
+                        ><del>NT.511</del></span
+                      >
                     </div>
                     <a href="#" class="buy-btn buy-btn-primary"
                       ><i class="bi bi-cart3"></i
@@ -500,7 +696,36 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+      var swiper = new Swiper(".banner-swiper", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      });
+
       var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 24,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2.3,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 'auto',
+            spaceBetween: 24,
+          }
+        },
+      });
+
+      var hotSwiper = new Swiper(".hotSwiper", {
         slidesPerView: 4,
         spaceBetween: 24,
         loop: true,
