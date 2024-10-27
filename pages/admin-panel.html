@@ -64,7 +64,7 @@
             <i class="bi bi-plus fs-4 me-2"></i>建立商品
           </button>
 
-          <!-- 按鈕 model -->
+          <!-- 單個建立商品 modal -->
           <div
             class="modal fade"
             id="exampleModal"
@@ -72,11 +72,11 @@
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="exampleModalLabel">
-                    Modal title
+                    建立商品
                   </h1>
                   <button
                     type="button"
@@ -85,17 +85,56 @@
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body">...</div>
-                <div class="modal-footer">
+                <div class="modal-body">
+                  <ul class="p-0">
+                    <li class="d-flex align-items-center">
+                      <label
+                        class="fs-6 text-gary-500 me-2"
+                        for="admin-product-name"
+                        >商品名稱 <span class="text-danger">*</span>
+                      </label>
+                      <input
+                        id="admin-product-name"
+                        type="text"
+                        class="form-control fs-6 px-6 py-2 text-gary-500 border border-gary-500 rounded-1"
+                        placeholder="請輸入商品名稱"
+                        aria-label="Recipient's username with two button addons"
+                        style="width: 213px"
+                      />
+                    </li>
+                    <li class="d-flex align-items-center mt-6">
+                      <label
+                        class="fs-6 text-gary-500 me-2"
+                        for="admin-product-name"
+                        >商品分類<span class="text-danger">*</span>
+                      </label>
+                      <select
+                        class="form-select admin-product-select fs-6 px-6 py-2 text-gary-500 border border-gary-500 rounded-1"
+                        aria-label="Default select example"
+                        style="width: 213px"
+                      >
+                        <option selected>請選擇商品分類</option>
+                        <option value="1">葉菜類</option>
+                        <option value="2">根莖瓜果類</option>
+                        <option value="3">菌菇類</option>
+                        <option value="3">安心水果類</option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    class="btn btn-outline-primary-700 admin-create-modal-btn"
                     data-bs-dismiss="modal"
                   >
-                    Close
+                    取消
                   </button>
-                  <button type="button" class="btn btn-primary">
-                    Save changes
+                  <button
+                    type="button"
+                    class="btn btn-primary-700 admin-create-modal-btn"
+                  >
+                    確認
                   </button>
                 </div>
               </div>
@@ -140,65 +179,221 @@
               </button>
             </li>
           </ul>
-          <table
-            class="table admin-table align-middle overflow-x-auto mt-17 fs-6"
-          >
-            <thead>
-              <tr>
-                <td>
-                  <input type="checkbox" name="check" id="check" />
-                </td>
-                <td>商品名稱</td>
-                <td class="text-center">商品分類</td>
-                <td class="text-center">售價</td>
-                <td class="text-center">庫存數</td>
-                <td class="text-center">是否捐贈</td>
-                <td class="text-center">操作</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="checkbox" name="check" id="check" /></td>
-                <td>花蓮鶴岡老欉文日</td>
-                <td class="text-center">安心水果類</td>
-                <td class="text-end">NT.528</td>
-                <td class="text-center">
-                  1000 <i class="bi bi-pencil ms-1"></i>
-                </td>
-                <td class="text-center">
-                  <input type="checkbox" name="check" id="check" />
-                </td>
-                <td class="text-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-outline-gary-500">
-                      編輯
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-outline-gary-500 dropdown-toggle dropdown-toggle-split"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <i class="bi bi-three-dots"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">停用</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">刪除</a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <ul class="ms-auto d-flex">
-            <li>共8條</li>
-            <li><a href="#">上一頁</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">下一頁</a></li>
-            <li><a href="#">下10頁</a></li>
-          </ul>
+
+          <!-- 表格 -->
+
+          <div class="overflow-x-auto mt-17">
+            <table class="table admin-table align-middle fs-6">
+              <thead>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check" id="check" />
+                  </td>
+                  <td>商品名稱</td>
+                  <td class="text-center">商品分類</td>
+                  <td class="text-center">售價</td>
+                  <td class="text-center">庫存數</td>
+                  <td class="text-center">是否捐贈</td>
+                  <td class="text-center">操作</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" name="check" id="check" /></td>
+                  <td>花蓮鶴岡老欉文日</td>
+                  <td class="text-center">安心水果類</td>
+                  <td class="text-end">NT.528</td>
+                  <td class="text-center">
+                    1000 <i class="bi bi-pencil ms-1"></i>
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" name="check" id="check" />
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn"
+                      >
+                        編輯
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="bi bi-three-dots"></i>
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-menu-end admin-dropdown-menu"
+                      >
+                        <li><a class="dropdown-item" href="#">停用</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">刪除</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="check" id="check" /></td>
+                  <td>高雄旗山香蕉</td>
+                  <td class="text-center">安心水果類</td>
+                  <td class="text-end">NT.528</td>
+                  <td class="text-center">
+                    1000 <i class="bi bi-pencil ms-1"></i>
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" name="check" id="check" />
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn"
+                      >
+                        編輯
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="bi bi-three-dots"></i>
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-menu-end admin-dropdown-menu"
+                      >
+                        <li><a class="dropdown-item" href="#">停用</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">刪除</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="check" id="check" /></td>
+                  <td>山城自然芭樂</td>
+                  <td class="text-center">安心水果類</td>
+                  <td class="text-end">NT.528</td>
+                  <td class="text-center">
+                    1000 <i class="bi bi-pencil ms-1"></i>
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" name="check" id="check" />
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn"
+                      >
+                        編輯
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="bi bi-three-dots"></i>
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-menu-end admin-dropdown-menu"
+                      >
+                        <li><a class="dropdown-item" href="#">停用</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">刪除</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="check" id="check" /></td>
+                  <td>拉拉山水蜜桃</td>
+                  <td class="text-center">安心水果類</td>
+                  <td class="text-end">NT.528</td>
+                  <td class="text-center">
+                    1000 <i class="bi bi-pencil ms-1"></i>
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" name="check" id="check" />
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn"
+                      >
+                        編輯
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="bi bi-three-dots"></i>
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-menu-end admin-dropdown-menu"
+                      >
+                        <li><a class="dropdown-item" href="#">停用</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">刪除</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 頁尾頁碼按鈕 -->
+
+          <div class="mt-10 d-md-flex mb-26 mb-md-35">
+            <ul
+              class="p-0 ms-md-auto d-flex justify-content-center align-items-md-center"
+            >
+              <li class="d-none d-md-block text-gary-500 fs-6 me-8">共8條</li>
+              <li class="me-3">
+                <button class="admin-pagination-btn" type="submit">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+              </li>
+              <li class="mx-3">
+                <button class="admin-pagination-btn" type="submit">1</button>
+              </li>
+              <li class="ms-3">
+                <button class="admin-pagination-btn" type="submit">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-between mt-6 mt-md-0">
+              <p class="d-block d-md-none text-gary-500 fs-6">共8條</p>
+              <div class="admin-pagination-dropdown dropdown-center">
+                <button
+                  class="btn btn-outline-gary-300 dropdown-toggle py-2 ms-md-8"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  10條/頁
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">20條/頁</a></li>
+                  <li><a class="dropdown-item" href="#">50條/頁</a></li>
+                  <li><a class="dropdown-item" href="#">80條/頁</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -131,9 +131,15 @@
   }
 }
 
+.admin-create-modal-btn {
+  width: 45%;
+}
+
 .admin-create-btn {
   width: 131px;
 }
+
+//表格
 
 .admin-table {
   thead {
@@ -155,6 +161,45 @@
     &::after {
       content: none;
       display: none;
+    }
+  }
+}
+
+.btn-group {
+  .admin-edit-btn {
+    &:hover {
+      background-color: $white;
+      color: $gary-500;
+    }
+    &:active {
+      background-color: $white;
+      color: $gary-500;
+    }
+  }
+}
+
+//頁尾頁碼按鈕
+
+.admin-pagination-btn {
+  background-color: $white;
+  width: 40px;
+  height: 40px;
+  color: $gary-300;
+  border: 1px $gary-300 solid;
+  border-radius: 4px;
+  &:hover {
+    color: $gary-500;
+    border: 1px $gary-500 solid;
+  }
+}
+
+.admin-pagination-dropdown {
+  button {
+    background-color: $white;
+    &:hover {
+      background-color: $white;
+      color: $gary-500;
+      border: 1px $gary-500 solid;
     }
   }
 }
