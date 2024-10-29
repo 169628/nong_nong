@@ -1,30 +1,34 @@
-// *,
-// *:before,
-// *:after {
-//      outline: solid 1px;
-// }
+.cart-out-progressbar {
+  max-width: 747px;
 
-// ol,
-// ul {
-//     list-style: none;
-// }
-
-.out-progressbar {
-  // display: flex;
-  margin-top: 64px;
-  // margin-left: 586px;
-  // margin-right: 586px;
-  margin-left: 274px;
-  margin-right: 274px;
-}
-
-.font-probar {
-  color: $primary-500;
-  letter-spacing: 5%;
-  font-weight: $font-weight-semibold;
-  font-size: 18px;
-  margin-top: 20px;
-  // text-align: left;
+  .span-full {
+    width: 40px;
+    height: 40px;
+    background-color: $primary-500;
+    color: $white;
+    font-size: 24px;
+    text-align: center;
+  }
+  .span-outline {
+    width: 40px;
+    height: 40px;
+    background-color: $tertiary-100;
+    border: 1px solid $primary-500;
+    color: $primary-500;
+    font-size: 24px;
+    text-align: center;
+  }
+  .font-probar {
+    color: $primary-500;
+    letter-spacing: 5%;
+    font-weight: $font-weight-semibold;
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+  .finish-position {
+    right: -30px;
+  }
 }
 
 .confirmCart {

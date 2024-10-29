@@ -10,7 +10,235 @@
     <%- include('./layout/header'); -%>
 
     <!--填寫收件資料-->
+    <div class="container">
+      <%- include('./layout/cart-confirm'); -%>
 
+      <h1>購物車內容</h1>
+      <div class="row">
+        <div class="col col-md-8">
+          <div class="row row-cols-1 row-cols-md-2">
+            <div class="col d-none d-md-block">
+              <p class="text-center bg-primary-100 fs-5">項目</p>
+            </div>
+            <div class="col d-none d-md-block">
+              <div class="row">
+                <div class="col">
+                  <p class="text-center bg-primary-100 fs-5">數量</p>
+                </div>
+                <div class="col">
+                  <p class="text-center bg-primary-100 fs-5">小計</p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex">
+              <div class="w-25 h-25">
+                <img
+                  src="../assets/images/index/product-01.jpg"
+                  class="img-fluid"
+                  alt="wendan"
+                />
+              </div>
+              <ul class="list-unstyled">
+                <li>
+                  <p class="fs-4">花蓮鶴岡老欉文旦</p>
+                </li>
+                <li class="text-gary-500">
+                  <p class="fs-5">10斤/箱</p>
+                </li>
+                <li class="text-gary-500">
+                  <p class="fs-5">單價 NT.511</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <ul class="d-flex">
+                    <button type="button" class="btn" style="width: 35px">
+                      <img src="../assets/images/icon/decrease.svg" alt="" />
+                    </button>
+                    <input
+                      type="text"
+                      name="quantity text-center"
+                      style="width: 126px"
+                      value="2"
+                    />
+                    <button type="button" class="btn" style="width: 35px">
+                      <img src="../assets/images/icon/increase.svg" alt="" />
+                    </button>
+                  </ul>
+                </div>
+                <div class="col">
+                  <p class="fs-4 text-end align-items-center">NT. 1022</p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex">
+              <div class="w-25 h-25">
+                <img
+                  src="../assets/images/index/product-04.jpg"
+                  class="img-fluid"
+                  alt="banana"
+                />
+              </div>
+              <ul class="list-unstyled">
+                <li>
+                  <p class="fs-4">高雄旗山香蕉</p>
+                </li>
+                <li class="text-gary-500">
+                  <p class="fs-5">400-500g/串</p>
+                </li>
+                <li class="text-gary-500">
+                  <p class="fs-5">單價 NT. 530</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <div class="row">
+                <div class="col">
+                  <ul class="d-flex list-unstyled">
+                    <li>
+                      <button type="button" class="btn" style="width: 35px">
+                        <img src="../assets/images/icon/decrease.svg" alt="" />
+                      </button>
+                    </li>
+                    <li>
+                      <input
+                        type="text"
+                        name="quantity text-center"
+                        style="width: 126px"
+                        value="1"
+                      />
+                    </li>
+                    <li>
+                      <button type="button" class="btn" style="width: 35px">
+                        <img src="../assets/images/icon/increase.svg" alt="" />
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col"><p class="fs-4 text-end">NT. 530</p></div>
+              </div>
+            </div>
+            <div class="col">
+              <p class="text-gary-500 fs-4 mb-6">運送方式</p>
+              <button
+                type="button"
+                class="btn btn-outline-secondary fs-5 bt-style my-bt-mr"
+              >
+                捐贈
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary fs-5 bt-style my-bt-mr"
+              >
+                宅配
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary fs-5 bt-style1 text-nowrap"
+              >
+                倉庫自取
+              </button>
+              <p class="fs-8" style="color: #d16a30">
+                購物車內有不屬於捐贈區商品，請確認後再選擇
+              </p>
+            </div>
+            <div class="col"></div>
+            <div class="col">
+              <p class="text-gary-500 fs-4 mb-6">優惠折扣碼</p>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control fs-5 opacity-50"
+                  style="color: #797979"
+                  placeholder="請輸入折扣碼序號"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <!-- <span class="input-group-text" id="basic-addon2">使用</span> -->
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary fs-5 bt-style my-bt-mr rounded"
+                >
+                  使用
+                </button>
+              </div>
+            </div>
+            <div class="col">
+              <div class="col d-flex">
+                <p class="text-gary-500 fs-4 mb-6 mr-1">紅利點數可折抵</p>
+                <p class="text-secondary-700 fs-4">NT. 24</p>
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control fs-5 opacity-50"
+                  placeholder="請輸入要使用的紅利點數"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                />
+                <!-- <span class="input-group-text" id="basic-addon2">使用</span> -->
+                <button
+                  type="button"
+                  class="ml-6 btn btn-outline-secondary fs-5 bt-style my-bt-mr rounded"
+                >
+                  使用
+                </button>
+                <p class="fs-8" style="color: #d16a30">持有的紅利點數不足</p>
+              </div>
+            </div>
+          </div>
+          <div class="opacity-50" style="background-color: #ede4cb">
+            <p class="text-primary-300">【 優惠使用及商品出貨配送須知 】</p>
+            <ol>
+              <li class="text-gary-500">
+                除商品缺貨外，訂單付款完成後 5~7 個工作天（不含例假日）進行出貨
+              </li>
+              <li class="text-gary-500">
+                實際配送天數視物流狀況而定，恕無法指定到貨日
+              </li>
+              <li class="text-gary-500">
+                低溫商品運用過程中有一定風險，無法保證產品不會遭遇溫度變化，請評估後可接受再下單
+              </li>
+              <li class="text-gary-500">
+                若訂單成立後因個人因素取消訂單，首購折扣碼即失效，恕不補發
+              </li>
+            </ol>
+            <p class="text-primary-300">【 會員紅利點數累積 】</p>
+            <ol>
+              <li class="text-gary-500">消費滿 100 元贈送 1 點紅利</li>
+              <li class="text-gary-500">
+                紅利點數等同現金，1點 = $1元，可直接折抵商品金額
+              </li>
+              <li class="text-gary-500">
+                捐贈回饋之紅利積點可累計，且無使用時效性（不含特殊活動獲得之紅利）
+              </li>
+              <li class="text-gary-500">紅利點數無法折抵運費</li>
+              <li class="text-gary-500">
+                除因商品瑕疵因素，退貨後該訂單使用的紅利點數將無法歸還帳戶
+              </li>
+              <li class="text-gary-500">
+                訂單內商品須全為捐贈區商品, 才可捐贈
+              </li>
+            </ol>
+          </div>
+          <div class="row">
+            <div class="col-6">續繼選購</div>
+            <div class="col-6">填寫收件資料</div>
+          </div>
+        </div>
+        <div class="d-none d-md-block col-md-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+          consequuntur molestiae perferendis repellat, voluptate nostrum omnis
+          natus distinctio. Sequi aliquid laborum nostrum veritatis voluptatem,
+          consequatur consequuntur dolor modi nihil deleniti ipsa facilis
+          doloribus. Rerum sit repellendus molestiae perspiciatis laborum
+          dolorem, sint ullam, incidunt tempore nobis, temporibus nesciunt
+          quibusdam placeat quaerat!
+        </div>
+      </div>
+    </div>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
