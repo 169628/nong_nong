@@ -9,10 +9,9 @@
     <title>農農自然 - 首頁</title>
   </head>
   <body>
-    <%- include('./layout/header_index'); -%>
-    <%- include('./layout/header-search');-%>
-
     <div class="idx-banner">
+      <%- include('./layout/header'); -%>
+      <%- include('./layout/header-search');-%>
       <div class="swiper banner-swiper">
         <div class="swiper-wrapper idx-banner-item">
           <div class="swiper-slide">
@@ -29,44 +28,43 @@
           </div>
         </div>
         <div class="swiper-pagination"></div>
+      </div>
+      <div class="d-none d-md-flex justify-content-center position-absolute idx-search">
+        <div class="d-flex align-items-center position-relative idx-search-item">
+          <input type="text" class="form-control rounded-pill text-gary-500 py-6 px-10 dropdown-toggle" placeholder="請輸入關鍵字..." role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+          <a class="position-absolute end-0 me-11 text-primary-300" href="#" ><i class="bi bi-search"></i></a>
 
-        <div class="d-none d-lg-flex justify-content-center position-absolute idx-search">
-          <div class="d-flex align-items-center position-relative idx-search-item">
-            <input type="text" class="form-control rounded-pill text-gary-500 py-6 px-10 dropdown-toggle" placeholder="請輸入關鍵字..." role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-            <a class="position-absolute end-0 me-11 text-primary-300" href="#" ><i class="bi bi-search"></i></a>
-
-            <!-- 搜尋選單 -->
-            <div class="dropdown-menu mt-4 overflow-hidden text-gary-500">
-              <div class="d-flex">
-                <!-- 選單第一層 -->
-                <ul class="list-unstyled dropdown-menu-lev-one">
-                  <li class="mb-6"><a class="search-item search-item-all" href="#">所有地區</a></li>
-                  <li><a class="search-item" href="#">北部</a></li>
-                  <li class="item-current"><a class="search-item" href="#">中部</a></li>
-                  <li><a class="search-item" href="#">南部</a></li>
-                  <li><a class="search-item" href="#">東部</a></li>
+          <!-- 搜尋選單 -->
+          <div class="dropdown-menu mt-4 overflow-hidden text-gary-500">
+            <div class="d-flex">
+              <!-- 選單第一層 -->
+              <ul class="list-unstyled dropdown-menu-lev-one">
+                <li class="mb-6"><a class="search-item search-item-all" href="#">所有地區</a></li>
+                <li><a class="search-item" href="#">北部</a></li>
+                <li class="item-current"><a class="search-item" href="#">中部</a></li>
+                <li><a class="search-item" href="#">南部</a></li>
+                <li><a class="search-item" href="#">東部</a></li>
+              </ul>
+              <!-- 選單第二層 -->
+              <ul class="list-unstyled dropdown-menu-lev-two">
+                <li class="mb-6"><a class="search-item search-item-all" href="#">所有種類</a></li>
+                <li class="item-current"><a class="search-item" href="#">葉菜類</a></li>
+                <li><a class="search-item" href="#">根莖瓜果類</a></li>
+                <li><a class="search-item" href="#">菌菇類</a></li>
+                <li><a class="search-item" href="#">豆類</a></li>
+                <li><a class="search-item" href="#">安心水果類</a></li>
+              </ul>
+              <!-- 選單第三層 -->
+              <section class="list-unstyled dropdown-menu-lev-three">
+                <ul class="list-unstyled">
+                  <li class="mb-6"><a href="#" class="search-item search-item-all">所有項目</a></li>
+                  <li><a href="#" class="search-item">小白菜</a></li>
+                  <li><a href="#" class="search-item">高麗菜</a></li>
+                  <li class="item-current"><a href="#" class="search-item">青江菜</a></li>
+                  <li><a href="#" class="search-item">龍鬚菜</a></li>
+                  <li><a href="#" class="search-item">韭菜</a></li>
                 </ul>
-                <!-- 選單第二層 -->
-                <ul class="list-unstyled dropdown-menu-lev-two">
-                  <li class="mb-6"><a class="search-item search-item-all" href="#">所有種類</a></li>
-                  <li class="item-current"><a class="search-item" href="#">葉菜類</a></li>
-                  <li><a class="search-item" href="#">根莖瓜果類</a></li>
-                  <li><a class="search-item" href="#">菌菇類</a></li>
-                  <li><a class="search-item" href="#">豆類</a></li>
-                  <li><a class="search-item" href="#">安心水果類</a></li>
-                </ul>
-                <!-- 選單第三層 -->
-                <section class="list-unstyled dropdown-menu-lev-three">
-                  <ul class="list-unstyled">
-                    <li class="mb-6"><a href="#" class="search-item search-item-all">所有項目</a></li>
-                    <li><a href="#" class="search-item">小白菜</a></li>
-                    <li><a href="#" class="search-item">高麗菜</a></li>
-                    <li class="item-current"><a href="#" class="search-item">青江菜</a></li>
-                    <li><a href="#" class="search-item">龍鬚菜</a></li>
-                    <li><a href="#" class="search-item">韭菜</a></li>
-                  </ul>
-                </section>
-              </div>
+              </section>
             </div>
           </div>
         </div>
