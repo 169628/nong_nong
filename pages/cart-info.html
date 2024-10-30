@@ -13,115 +13,138 @@
     <div class="container">
       <%- include('./layout/cart-confirm'); -%>
 
-      <h1>購物車內容</h1>
-      <div class="row">
-        <div class="col col-md-8">
-          <div class="row row-cols-1 row-cols-md-2">
-            <div class="col d-none d-md-block">
-              <p class="text-center bg-primary-100 fs-5">項目</p>
+      <h4 class="mt-26 mt-lg-0 fs-4 fs-md-2 text-primary-700 fw-bold">
+        購物車內容
+      </h4>
+      <div class="text-secondary-700 d-flex">
+        <div class="cart-icon-vector">
+          <img
+            src="../assets/images/icon/Vector.png"
+            class="img-fluid"
+            alt="vector photo"
+          />
+        </div>
+        <p class="fs-6 fw-medium">表示購物項目屬於捐贈區商品</p>
+      </div>
+      <div class="row mt-13 mt-md-15">
+        <div class="col col-lg-8">
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col d-none d-lg-block">
+              <p class="text-center bg-primary-100 fs-6 py-4 m-0">項目</p>
             </div>
-            <div class="col d-none d-md-block">
+            <div class="col d-none d-lg-block">
               <div class="row">
                 <div class="col">
-                  <p class="text-center bg-primary-100 fs-5">數量</p>
+                  <p class="text-center bg-primary-100 fs-6 py-4 m-0">數量</p>
                 </div>
                 <div class="col">
-                  <p class="text-center bg-primary-100 fs-5">小計</p>
+                  <p class="text-center bg-primary-100 fs-6 py-4 m-0">小計</p>
                 </div>
               </div>
             </div>
             <div class="col d-flex">
-              <div class="w-25 h-25">
+              <div class="cart-product-photo overflow-hidden rounded-3">
                 <img
                   src="../assets/images/index/product-01.jpg"
                   class="img-fluid"
                   alt="wendan"
                 />
               </div>
-              <ul class="list-unstyled">
-                <li>
-                  <p class="fs-4">花蓮鶴岡老欉文旦</p>
+              <ul class="list-unstyled ms-4">
+                <li class="d-flex">
+                  <p class="m-0 fs-5 me-2">花蓮鶴岡老欉文旦</p>
+                  <div class="cart-icon-vector">
+                    <img
+                      src="../assets/images/icon/Vector.png"
+                      class="img-fluid"
+                      alt="vector photo"
+                    />
+                  </div>
                 </li>
-                <li class="text-gary-500">
-                  <p class="fs-5">10斤/箱</p>
+                <li class="mt-1">
+                  <p class="m-0 fs-6 text-gary-500">10斤/箱</p>
                 </li>
-                <li class="text-gary-500">
-                  <p class="fs-5">單價 NT.511</p>
+                <li class="mt-1 d-flex">
+                  <p class="m-0 fs-6 text-gary-500 me-4">單價</p>
+                  <p class="m-0 fs-6 text-gary-500">NT.511</p>
                 </li>
               </ul>
             </div>
             <div class="col">
-              <div class="row">
-                <div class="col">
-                  <ul class="d-flex">
-                    <button type="button" class="btn" style="width: 35px">
-                      <img src="../assets/images/icon/decrease.svg" alt="" />
-                    </button>
-                    <input
-                      type="text"
-                      name="quantity text-center"
-                      style="width: 126px"
-                      value="2"
-                    />
-                    <button type="button" class="btn" style="width: 35px">
-                      <img src="../assets/images/icon/increase.svg" alt="" />
-                    </button>
+              <div class="row h-100">
+                <div class="col-6 d-flex align-items-center">
+                  <ul
+                    class="d-flex justify-content-between border border-gary-500 rounded-1 p-0 py-1 list-unstyled w-100"
+                  >
+                    <li>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-dash"></i
+                      ></a>
+                    </li>
+                    <li class="fs-6">2</li>
+                    <li>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-plus"></i
+                      ></a>
+                    </li>
                   </ul>
                 </div>
-                <div class="col">
-                  <p class="fs-4 text-end align-items-center">NT. 1022</p>
+                <div
+                  class="col-6 d-flex justify-content-end align-items-center"
+                >
+                  <p class="m-0 fs-5 fw-medium">NT. 1022</p>
                 </div>
               </div>
             </div>
             <div class="col d-flex">
-              <div class="w-25 h-25">
+              <div class="cart-product-photo overflow-hidden rounded-3">
                 <img
                   src="../assets/images/index/product-04.jpg"
                   class="img-fluid"
                   alt="banana"
                 />
               </div>
-              <ul class="list-unstyled">
-                <li>
-                  <p class="fs-4">高雄旗山香蕉</p>
+              <ul class="list-unstyled ms-4">
+                <li class="d-flex">
+                  <p class="m-0 fs-5 me-2">高雄旗山香蕉</p>
                 </li>
-                <li class="text-gary-500">
-                  <p class="fs-5">400-500g/串</p>
+                <li class="mt-1">
+                  <p class="m-0 fs-6 text-gary-500">400-500g/串</p>
                 </li>
-                <li class="text-gary-500">
-                  <p class="fs-5">單價 NT. 530</p>
+                <li class="mt-1 d-flex">
+                  <p class="m-0 fs-6 text-gary-500 me-4">單價</p>
+                  <p class="m-0 fs-6 text-gary-500">NT. 530</p>
                 </li>
               </ul>
             </div>
             <div class="col">
-              <div class="row">
-                <div class="col">
-                  <ul class="d-flex list-unstyled">
+              <div class="row h-100">
+                <div class="col-6 d-flex align-items-center">
+                  <ul
+                    class="d-flex justify-content-between border border-gary-500 rounded-1 p-0 py-1 list-unstyled w-100"
+                  >
                     <li>
-                      <button type="button" class="btn" style="width: 35px">
-                        <img src="../assets/images/icon/decrease.svg" alt="" />
-                      </button>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-dash"></i
+                      ></a>
                     </li>
+                    <li class="fs-6">1</li>
                     <li>
-                      <input
-                        type="text"
-                        name="quantity text-center"
-                        style="width: 126px"
-                        value="1"
-                      />
-                    </li>
-                    <li>
-                      <button type="button" class="btn" style="width: 35px">
-                        <img src="../assets/images/icon/increase.svg" alt="" />
-                      </button>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-plus"></i
+                      ></a>
                     </li>
                   </ul>
                 </div>
-                <div class="col"><p class="fs-4 text-end">NT. 530</p></div>
+                <div
+                  class="col-6 d-flex justify-content-end align-items-center"
+                >
+                  <p class="m-0 fs-5 fw-medium">NT. 530</p>
+                </div>
               </div>
             </div>
             <div class="col">
-              <p class="text-gary-500 fs-4 mb-6">運送方式</p>
+              <p class="text-gary-500 fs-4 m-0">運送方式</p>
               <button
                 type="button"
                 class="btn btn-outline-secondary fs-5 bt-style my-bt-mr"
@@ -228,7 +251,7 @@
             <div class="col-6">填寫收件資料</div>
           </div>
         </div>
-        <div class="d-none d-md-block col-md-4">
+        <div class="d-none d-lg-block col-lg-4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
           consequuntur molestiae perferendis repellat, voluptate nostrum omnis
           natus distinctio. Sequi aliquid laborum nostrum veritatis voluptatem,
