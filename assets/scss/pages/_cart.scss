@@ -41,125 +41,55 @@
   height: 86px;
 }
 
-.confirmCart {
-  margin-top: 100px; //64px;
-  max-height: 1119px;
-  width: 857px;
-  // gap: 40px;
+.cart-price-color {
+  @include mobile {
+    color: $primary-500;
+  }
 }
 
-.fontSizeMed {
-  font-size: $font-weight-medium; //  18px;
-  //color: $secondary-700;
+.cart-btn-hover {
+  &:hover {
+    color: $white;
+    background-color: $primary-300;
+    border: 0;
+  }
+  &:active {
+    color: $white;
+    background-color: $primary-300;
+    border: 0;
+  }
 }
 
-.color-note {
-  color: $secondary-700;
+.cart-alert-text {
+  font-size: 14px;
+  color: #d16a30;
+  margin: 0;
 }
 
-.mT-8 {
-  margin-top: 8px;
+.cart-input-form {
+  font-size: 16px;
+  color: #797979;
+  border: $gary-500 solid 1px;
+  border-radius: 4px;
+  background-color: $tertiary-100;
+  padding: 8px 16px;
+  outline: none;
+  &::placeholder {
+    color: #797979;
+  }
+  width: 311px;
+  @media (max-width: 1400px) {
+    width: 254px;
+  }
 }
 
-.fontBlack {
-  color: black;
+.cart-info-bgcolor {
+  background-color: #ede4cb;
 }
-
-.mar-t40 {
-  margin-top: 40px;
+.cart-info-li-text {
+  font-size: 14px;
 }
-
-.mrl-l24 {
-  margin-left: 24px;
-}
-
-.mrl-l12 {
-  margin-left: 12px;
-}
-
-.item-padding {
-  margin-left: -191px;
-  margin-right: -191px;
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.itemBg100 {
-  background-color: $primary-100;
-  border-radius: $border-radius;
-  text-align: center;
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.mr-24 {
-  margin-right: 24px;
-}
-
-.iwidth416 {
-  width: 416px;
-}
-
-.iwidth196 {
-  width: 196px;
-}
-
-.iheight196 {
-  height: 196px;
-}
-
-.w267 {
-  max-height: 267px;
-}
-
-.w857 {
-  max-width: 857px;
-}
-
-.mt64 {
-  margin-top: 64px;
-}
-
-.img-h86 {
-  width: 100%;
-  height: 86px;
-  max-width: 80px;
-}
-
-//spin-btn begin
-.qty {
-  max-width: 126.5px;
-  height: 40px;
-  text-align: center;
-  border: 0;
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-}
-
-input.qtyplus {
-  width: 30px;
-  height: 32px;
-  border: 1px solid #aaa;
-  background: #797979;
-}
-
-input.qtyminus {
-  width: 30px;
-  height: 32px;
-  border: 1px solid #aaa;
-  background: #797979;
-}
-
-//spin-btn end
-
-.bt-style {
-  width: 97px;
-}
-
-.bt-style1 {
-  width: 131px;
-}
-
-.my-bt-mr {
-  margin-right: 24px;
+.cart-info-checkbox {
+  width: 16px;
+  height: 16px;
 }
