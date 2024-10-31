@@ -10,64 +10,390 @@
     <%- include('./layout/admin-header'); -%>
 
     <!--商品管理-->
+
+    <!--
+
+    -->
     <div class="d-flex">
       <%-include('./layout/admin-side-nav'); -%>
 
       <div class="admin-contnet">
-        <div class="admin-content-container pt-17 ps-17 d-flex flex-column">
-          <ul class="d-flex">
-            <li>商品管理</li>
-            <li><a href="#">導入</a></li>
-            <li><a href="#">導出</a></li>
-          </ul>
-          <ul class="ms-auto d-flex">
-            <li class="d-none d-md-block">商品名稱</li>
-            <li class="d-none d-md-block"><input type="text" /></li>
-            <li class="d-none d-md-block">
-              <input type="text" list="category" />
-              <datalist id="category">
-                <option value="chrome">葉菜類</option>
-                <option value="firefox">安心水果類</option>
-              </datalist>
+        <div
+          class="admin-content-container pt-20 pt-md-17 ps-md-17 d-flex flex-column"
+        >
+          <ul class="p-0 d-flex ms-0 ms-md-13">
+            <li class="fs-4 fs-md-2 text-primary-700 fw-bold me-10 me-md-15">
+              商品管理
             </li>
-            <li><a href="#">建立商品</a></li>
+            <li class="d-flex align-items-center me-6 me-md-15">
+              <a href="#" class="d-flex"
+                ><img
+                  src="../assets/images/icon/import.svg"
+                  alt="import"
+                  class="me-2"
+                />
+                <span class="fs-6 text-primary-500">導入&ensp;</span>
+                <span class="fs-6 text-primary-500 d-none d-md-block"
+                  >Excel</span
+                >
+              </a>
+            </li>
+            <li class="d-flex align-items-center">
+              <a href="#" class="d-flex"
+                ><img
+                  src="../assets/images/icon/export.svg"
+                  alt="import"
+                  class="me-2"
+                />
+                <span class="fs-6 text-primary-500">導出&ensp;</span>
+                <span class="fs-6 text-primary-500 d-none d-md-block"
+                  >Excel</span
+                >
+              </a>
+            </li>
           </ul>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-          <ul class="ms-auto d-flex">
-            <li>共8條</li>
-            <li><a href="#">上一頁</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">下一頁</a></li>
-            <li><a href="#">下10頁</a></li>
+
+          <!-- 單個建立商品按鈕 -->
+
+          <button
+            type="button"
+            class="btn btn-outline-primary-700 d-block d-md-none mt-10 py-0 d-flex justify-content-center align-items-center rounded-1"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <i class="bi bi-plus fs-4 me-2"></i>建立商品
+          </button>
+
+          <!-- 單個建立商品 modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    建立商品
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <ul class="p-0">
+                    <li class="d-flex align-items-center">
+                      <label
+                        class="fs-6 text-gary-500 me-2"
+                        for="admin-product-name"
+                        >商品名稱 <span class="text-danger">*</span>
+                      </label>
+                      <input
+                        id="admin-product-name"
+                        type="text"
+                        class="form-control fs-6 px-6 py-2 text-gary-500 border border-gary-500 rounded-1"
+                        placeholder="請輸入商品名稱"
+                        aria-label="Recipient's username with two button addons"
+                        style="width: 213px"
+                      />
+                    </li>
+                    <li class="d-flex align-items-center mt-6">
+                      <label
+                        class="fs-6 text-gary-500 me-2"
+                        for="admin-product-name"
+                        >商品分類<span class="text-danger">*</span>
+                      </label>
+                      <select
+                        class="form-select admin-product-select fs-6 px-6 py-2 text-gary-500 border border-gary-500 rounded-1"
+                        aria-label="Default select example"
+                        style="width: 213px"
+                      >
+                        <option selected>請選擇商品分類</option>
+                        <option value="1">葉菜類</option>
+                        <option value="2">根莖瓜果類</option>
+                        <option value="3">菌菇類</option>
+                        <option value="3">安心水果類</option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary-700 admin-create-modal-btn"
+                    data-bs-dismiss="modal"
+                  >
+                    取消
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary-700 admin-create-modal-btn"
+                  >
+                    確認
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul
+            class="ms-0 ms-lg-13 mt-9 p-0 d-none d-md-block d-md-flex justify-content-between align-items-md-center"
+          >
+            <li class="d-none d-md-block">
+              <label class="fs-6 text-gary-500" for="admin-product-name"
+                >商品名稱</label
+              >
+            </li>
+            <li class="d-none d-md-block">
+              <input
+                id="admin-product-name"
+                type="text"
+                class="form-control fs-6 px-2 px-lg-6 text-gary-500 border border-gary-500 rounded-1"
+                placeholder="請輸入商品名稱"
+                aria-label="Recipient's username with two button addons"
+              />
+            </li>
+            <li class="d-none d-md-block">
+              <select
+                class="form-select admin-product-select fs-6 px-2 px-lg-6 text-gary-500 border border-gary-500 rounded-1"
+                aria-label="Default select example"
+              >
+                <option selected>請選擇商品分類</option>
+                <option value="1">葉菜類</option>
+                <option value="2">根莖瓜果類</option>
+                <option value="3">菌菇類</option>
+                <option value="3">安心水果類</option>
+              </select>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="btn btn-outline-primary-700 admin-create-btn py-0 px-2 px-lg-6 d-flex align-items-center rounded-1"
+              >
+                <i class="bi bi-plus fs-4 me-2"></i>建立商品
+              </button>
+            </li>
           </ul>
+
+          <!-- 表格 -->
+
+          <div class="overflow-x-auto mt-17">
+            <table class="table admin-table align-middle fs-6">
+              <thead>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="check" id="check" />
+                  </td>
+                  <td>商品名稱</td>
+                  <td class="text-center">商品分類</td>
+                  <td class="text-center">售價</td>
+                  <td class="text-center">庫存數</td>
+                  <td class="text-center">是否捐贈</td>
+                  <td class="text-center">操作</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" name="check" id="check" /></td>
+                  <td>花蓮鶴岡老欉文日</td>
+                  <td class="text-center">安心水果類</td>
+                  <td class="text-end">NT.528</td>
+                  <td class="text-center">
+                    1000 <i class="bi bi-pencil ms-1"></i>
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" name="check" id="check" />
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn"
+                      >
+                        編輯
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="bi bi-three-dots"></i>
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-menu-end admin-dropdown-menu"
+                      >
+                        <li><a class="dropdown-item" href="#">停用</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">刪除</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="check" id="check" /></td>
+                  <td>高雄旗山香蕉</td>
+                  <td class="text-center">安心水果類</td>
+                  <td class="text-end">NT.528</td>
+                  <td class="text-center">
+                    1000 <i class="bi bi-pencil ms-1"></i>
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" name="check" id="check" />
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn"
+                      >
+                        編輯
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="bi bi-three-dots"></i>
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-menu-end admin-dropdown-menu"
+                      >
+                        <li><a class="dropdown-item" href="#">停用</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">刪除</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="check" id="check" /></td>
+                  <td>山城自然芭樂</td>
+                  <td class="text-center">安心水果類</td>
+                  <td class="text-end">NT.528</td>
+                  <td class="text-center">
+                    1000 <i class="bi bi-pencil ms-1"></i>
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" name="check" id="check" />
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn"
+                      >
+                        編輯
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="bi bi-three-dots"></i>
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-menu-end admin-dropdown-menu"
+                      >
+                        <li><a class="dropdown-item" href="#">停用</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">刪除</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="check" id="check" /></td>
+                  <td>拉拉山水蜜桃</td>
+                  <td class="text-center">安心水果類</td>
+                  <td class="text-end">NT.528</td>
+                  <td class="text-center">
+                    1000 <i class="bi bi-pencil ms-1"></i>
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox" name="check" id="check" />
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn"
+                      >
+                        編輯
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-gary-500 admin-edit-btn dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <i class="bi bi-three-dots"></i>
+                      </button>
+                      <ul
+                        class="dropdown-menu dropdown-menu-end admin-dropdown-menu"
+                      >
+                        <li><a class="dropdown-item" href="#">停用</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">刪除</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 頁尾頁碼按鈕 -->
+
+          <div class="mt-10 d-md-flex mb-26 mb-md-35">
+            <ul
+              class="p-0 ms-md-auto d-flex justify-content-center align-items-md-center"
+            >
+              <li class="d-none d-md-block text-gary-500 fs-6 me-8">共8條</li>
+              <li class="me-3">
+                <button class="admin-pagination-btn" type="submit">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+              </li>
+              <li class="mx-3">
+                <button class="admin-pagination-btn" type="submit">1</button>
+              </li>
+              <li class="ms-3">
+                <button class="admin-pagination-btn" type="submit">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-between mt-6 mt-md-0">
+              <p class="d-block d-md-none text-gary-500 fs-6">共8條</p>
+              <div class="admin-pagination-dropdown dropdown-center">
+                <button
+                  class="btn btn-outline-gary-300 dropdown-toggle py-2 ms-md-8"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  10條/頁
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">20條/頁</a></li>
+                  <li><a class="dropdown-item" href="#">50條/頁</a></li>
+                  <li><a class="dropdown-item" href="#">80條/頁</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
