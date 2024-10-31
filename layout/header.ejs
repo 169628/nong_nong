@@ -1,7 +1,7 @@
 <!-- header -->
 
 <!-- 以下是 navbar -->
-<div class="header mt-md-22 pt-20 pb-6 py-md-6">
+<div class="header pt-20 pb-6 py-md-6">
   <nav class="header-container">
     <!-- 漢堡開始 -->
     <a
@@ -32,7 +32,7 @@
           >
             所有地區
           </div>
-          <ul class="ps-11 pe-6 mt-10">
+          <ul class="ps-11 pe-6 mt-10 list-unstyled">
             <li>
               <a
                 href="#"
@@ -73,7 +73,7 @@
     </div>
     <!-- 漢堡結束 -->
     <!-- logo -->
-    <a class="m-0 p-0" href="#"
+    <a class="m-0 p-0" href="index.html"
       ><picture>
         <source
           srcset="../assets/images/logo/logo_horizontal_white.png"
@@ -85,12 +85,14 @@
           alt="banner"
         /> </picture
     ></a>
-    <button
-      type="button"
-      class="d-block d-md-none btn btn-outline-white rounded-circle"
-    >
-      <i class="bi bi-cart3 fs-5"></i>
-    </button>
+    <a href="cart-confirm.html">
+      <button
+        type="button"
+        class="d-block d-md-none btn btn-outline-white rounded-circle"
+      >
+        <i class="bi bi-cart3 fs-5"></i>
+      </button>
+    </a>
 
     <ul
       class="d-none d-md-block list-unstyled d-md-flex align-items-md-center justify-content-md-between"
@@ -100,12 +102,17 @@
       </li>
       <li class="ms-10 position-relative dropdown-center">
         <a
+          class="btn btn-primary-500 rounded-circle"
+          href="admin-panel.html"
+          role="button"
+        >
+        <!-- <a
           class="btn btn-primary-500 rounded-circle dropdown-toggle"
-          href="#"
+          href="admin-panel.html"
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-        >
+        > -->
           <i class="bi bi-person fs-5"></i>
         </a>
         <!-- dropdown -->
@@ -128,12 +135,14 @@
         </div>
       </li>
       <li class="ms-10">
-        <button
-          type="button"
-          class="btn btn-outline-primary-500 rounded-circle"
-        >
-          <i class="bi bi-cart3 fs-5"></i>
-        </button>
+        <a href="cart-confirm.html">
+          <button
+            type="button"
+            class="btn btn-outline-primary-500 rounded-circle"
+          >
+            <i class="bi bi-cart3 fs-5"></i>
+          </button>
+        </a>
       </li>
     </ul>
   </nav>
