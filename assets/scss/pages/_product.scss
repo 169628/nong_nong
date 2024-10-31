@@ -36,6 +36,12 @@
                 input:focus-visible {
                     outline: none;
                 }
+                button{
+                    border: none;
+                }
+                button:active {
+                    background-color: #EDE4CB80;
+                }
             }
         }
     }
@@ -93,37 +99,84 @@
     border-radius: 8px;
 }
 
+// Button grop for jump tag
+.jump-tag{
+    margin: 80px auto;
+    @include pad {
+        margin: 48px auto;
+    }
+    .btn-group{
+        width: 100%;
+        .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+            color: var(--bs-btn-active-color);
+            background-color: $primary-300;
+            border-color: $primary-300;
+        }
+        
+        .btn-check + .btn:hover {
+            color: var(--bs-btn-active-color);
+            background-color:  $primary-300;
+            border-color:  $primary-300;
+        }
+        
+        .btn-outline-primary {
+            color: $gary-500;
+            border: 1px solid $gary-500;
+        }
+    }
+}
+
 //Product Introduce
 .introduce{
     &-content{
-        max-width: 100%;
         .describe{
             color: #1F1E1D;
-            max-width: 64%;
+            padding: 0px calc(100%/12);
+            @include pad {
+                padding: 40px 12px;
+            }
         }
         .intro-1{
             img{
                 max-width: 100%;
                 border-radius: 8px 0 0 8px;
+                @include pad {
+                    border-radius: 0px;
+                }
             }
             .bg-describe{
                 background-color: $primary-100;
                 border-radius: 0 8px 8px 0;
+                @include pad {
+                    border-radius: 0px;
+                }
             }
         }
         .intro-2{
+            @include pad {
+                flex-direction: column-reverse;
+            }
             img{
                 max-width: 100%;
                 border-radius: 0 8px 8px 0;
+                @include pad {
+                    border-radius: 0px;
+                }
             }
             .bg-describe{
                 background-color: $secondary-100;
                 border-radius: 8px 0 0 8px;
+                @include pad {
+                    border-radius: 0px;
+                }
             }
         }
         .intro-3{
             .bg{
                 height: 389px;
+                @include mobile {
+                    height: auto;
+                }
             }
             img{
                 width: 100%;
@@ -131,18 +184,33 @@
                 object-fit: cover;
                 object-position: center;
                 border-radius: 8px;
+                @include pad {
+                    border-radius: 0px;
+                }
             }
         }
         .intro-4{
-            .bg-describe{
+            .bg{
                 background-color: $primary-100;
                 border-radius: 8px;
+                @include pad {
+                    border-radius: 0px;
+                }
             }
             .describe{
                 color: #1F1E1D;
                 text-align: center;
-                max-width: 100%;
-                margin: 56px 0;
+                padding: 56px 0;
+                @include pad {
+                    padding: 40px 12px;
+                    text-align: start;
+                }
+                .gap-break-point{
+                    margin-bottom: 16px;
+                    @include pad {
+                        margin: 16px 0px;
+                    }
+                }
             }
         }
     }
@@ -150,14 +218,30 @@
 
 .donate{
     .bg{
-        background: url('../assets/images/product/donation_bg_desktop.png') no-repeat center;
+        background: url('../assets/images/product/donation_bg_desktop.png') center;
+        background-size: cover;
         border-radius: 80px;
+        @include pad {
+            border-radius: 0px;
+            background-position: right;
+            -webkit-filter: grayscale(50%); /* Safari */
+            filter: grayscale(50%);
+        }
+    }
+    &-container{
         padding: 0px calc(100%/12);
         padding-top: 80px;
         padding-bottom: 240px;
     }
-    &-slogan{        
+    &-slogan{
+        @media (max-width: 1200px) {
+            text-align: center;
+        }        
         .logo{
+            font-size: 20px;
+            @include mobile {
+                font-size: 16 px;
+            }
             font-weight: 500;
             border: 1px solid white;
             border-radius: 50px;
@@ -165,47 +249,93 @@
         .title{
             font-size: 64px;
             line-height: 92.67px;
+            @media (max-width: 1200px) {
+                line-height: 1.2;
+            }
+            @include mobile {
+                font-size: 32px;
+            }
         }
         .content{
+            font-size: 24px;
             line-height: 34.75px;
+            @include mobile {
+                font-size: 16 px;
+            }
         }
     }
-    .icon-text{
-        width: 100px;
-        height: 100px;
-        text-align: center;
-        border: 1px solid white;
+    &-icon{
+        @include pad {
+            display: flex;
+            flex-direction: column;
+        }
+        .icon-text{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            border: 1px solid white;
+        }
     }
 }
 
 .farm{
-    .container{
-        position: relative;
-    }
-    .farm-owner{
-        height: 322px;
-        width: 230px;
-        position: absolute;
-        top: 359px;
-        bottom: 265px;
-        right: calc(100%/12);
-        left: calc(100%/12*9);
-
-        img{
-            max-width: 100%;
-            border: 2px solid white;
+    &-picture{
+        .bg-farm{
+            width: 100%;
+            border-radius: 80px 80px 0 0;
+            @include pad {
+                border-radius: 0px;
+            }
+        }
+        .farm-owner{
+            width: calc(100%/12*2);//230
+            @include mobile {
+                width: 25%;
+            }
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 105%;
+            left: 80%;
+            @include pad {
+                left: 50%;
+            }
+            .farm-name{
+                text-align: center;
+                font-size:  32px;
+                @include pad {
+                    font-size: 24px;
+                }
+            }
+            &-name{
+                @include pad {
+                    font-size: 16px;
+                }
+            }
+            img{
+                max-width: 100%;
+                border: 2px solid white;
+            }
         }
     }
-    .bg-farm{
-        width: 100%;
-        border-radius: 80px 80px 0 0;
-    }
-
     .describe{
-        background-color: white;
-        border-radius: 0 0 80px 80px;
+        padding: 64px 0;
         padding-left: calc(100%/12);
         padding-right: calc(100%/12*4);
+        @include pad {
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-top: 120px;
+        }
+        background-color: white;
+        border-radius: 0 0 80px 80px;
+        @include pad {
+            border-radius: 0px;
+        }
+        &-title{
+            @include pad {
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -213,11 +343,22 @@
 .comment{
     background-color: $primary-100;
     .btn-comment{
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
         .btn{
             width: 100%;
         }
         &-write{
             width: calc(100%/12*3);
+            @include pad {
+                width: 100%/12*4;
+            }
+            @include mobile {
+                width: calc(100%/4*3);
+                margin-bottom: 16px;
+            }
             .btn-primary{
                 color: $primary-500;
                 background-color: $primary-100;
@@ -236,6 +377,12 @@
         }
         &-viewall{
             width: calc(100%/12*3);
+            @include pad {
+                width: calc(100%/12*4);
+            }
+            @include mobile {
+                width: calc(100%/4*3);
+            }
             .btn-primary{
                 color: $primary-100;
                 background-color: $primary-500;
@@ -258,8 +405,17 @@
 //Shopping Instructions
 .instructions{
     margin-bottom: 120px;
+    ol{
+        padding-inline-start: 0px;
+    }
     &-list{
         margin: 0px calc(100%/12*2);
+        @include pad {
+            margin: 0px calc(100%/12);
+        }
+        @include mobile {
+            margin: 0px 12px;
+        }
         list-style-type: decimal;
         list-style-position: inside;
         p{
@@ -268,26 +424,5 @@
         .division{
             border-bottom: 1px solid $gary-300;
         }
-    }
-}
-
-// Button
-.btn-group{
-    width: 100%;
-    .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
-        color: var(--bs-btn-active-color);
-        background-color: $primary-300;
-        border-color: $primary-300;
-    }
-    
-    .btn-check + .btn:hover {
-        color: var(--bs-btn-active-color);
-        background-color:  $primary-300;
-        border-color:  $primary-300;
-    }
-    
-    .btn-outline-primary {
-        color: $gary-500;
-        border: 1px solid $gary-500;
     }
 }
