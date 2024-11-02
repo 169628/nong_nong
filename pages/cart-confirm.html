@@ -1,216 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>購物車/確認訂單</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>購物車/確認訂單</title>
-</head>
+  <body class="pt-md-26 pt-lg-33">
+    <%- include('./layout/header'); -%>
+    <!--填寫收件資料-->
+    <div class="container">
+      <%- include('./layout/cart-confirm'); -%>
 
-<body>
-  <%- include('./layout/header'); -%>
-    <div class="container box">
-      <div class="d-none d-md-block">
-        <%- include('./layout/cart-confirm'); -%>
+      <h4 class="mt-26 mt-lg-0 fs-4 fs-md-2 text-primary-700 fw-bold">
+        購物車內容
+      </h4>
+      <div class="text-secondary-700 d-flex">
+        <div class="cart-icon-vector">
+          <img
+            src="../assets/images/icon/Vector.png"
+            class="img-fluid"
+            alt="vector photo"
+          />
+        </div>
+        <p class="fs-6 fw-medium">表示購物項目屬於捐贈區商品</p>
       </div>
-      </br></br></br>
-
-
-      <div class="row">
-        <div class="col col-md-8">
-          <!-- column name -->
-          <div class="row row-cols-1 row-cols-md-2 gx-10">
-            <div class="col d-none d-md-block">
-              <p class="text-center bg-primary-100 fs-5">項目</p>
+      <div class="row mt-md-15">
+        <div class="col col-lg-8">
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col d-none d-lg-block">
+              <p class="text-center bg-primary-100 rounded-3 fs-6 py-4 m-0">
+                項目
+              </p>
             </div>
-            <div class="col d-none d-md-block">
-              <div class="row">
-                <div class="col text-center">
-                  <p class="text-center bg-primary-100 fs-5">數量</p>
-                </div>
-                <div class="col text-center">
-                  <p class="text-center bg-primary-100 fs-5">小計</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- wandan -->
-          <!-- <div class="row row-cols-1 row-cols-md-2"> -->
-          <div class="col d-flex">
-            <img src="../assets/images/index/product-01.jpg" style="width: 80px;height: 86;" alt="wendan" />
-            <ul class="list-unstyled">
-              <li>
-                <p class="fs-4">花蓮鶴岡老欉文旦</p>
-              </li>
-              <li class="text-gary-500">
-                <p class="fs-5">10斤/箱</p>
-              </li>
-              <li class="text-gary-500">
-                <p class="fs-5">單價 NT.511</p>
-              </li>
-            </ul>
-          </div> <!-- end of wandan intro-->
-          <div class="col">
-            <div class="row">
-              <div class="col">
-                <div class=" d-flex">
-                  <button type="button" class="btn" style="width: 35px;">
-                    <img src="../assets/images/icon/decrease.svg" alt=""></button>
-                  <input type="text" name="quantity text-center" style="width: 126px;" value="2">
-                  <button type="button" class="btn" style="width: 35px;">
-                    <img src="../assets/images/icon/increase.svg" alt=""></button>
-                </div>
-
-              </div>
-              <div class="col">
-                <p class="fs-4 text-end align-items-center">NT. 1022</p>
-              </div>
-            </div>
-          </div>
-          <!--</div> end of wandan-->
-
-          <!-- banana -->
-          <div class="col d-flex">
-            <img src="../assets/images/index/product-04.jpg" style="width: 80px;height: 80;" alt="banana" />
-            <ul class="list-unstyled">
-              <li>
-                <p class="fs-4">高雄旗山香蕉</p>
-              </li>
-              <li class="text-gary-500">
-                <p class="fs-5">400-500g/串</p>
-              </li>
-              <li class="text-gary-500">
-                <p class="fs-5">單價 NT. 530</p>
-              </li>
-            </ul>
-            <div class="col">
+            <div class="col d-none d-lg-block">
               <div class="row">
                 <div class="col">
-                  <ul class="d-flex list-unstyled">
-                    <li> <button type="button" class="btn" style="width: 35px;">
-                        <img src="../assets/images/icon/decrease.svg" alt=""></button></li>
-                    <li><input type="text" name="quantity text-center" style="width: 126px;" value="1"></li>
-                    <li><button type="button" class="btn" style="width: 35px;">
-                        <img src="../assets/images/icon/increase.svg" alt=""></button></li>
+                  <p class="text-center bg-primary-100 rounded-3 fs-6 py-4 m-0">
+                    數量
+                  </p>
+                </div>
+                <div class="col">
+                  <p class="text-center bg-primary-100 rounded-3 fs-6 py-4 m-0">
+                    小計
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex pt-13 pb-10 px-lg-10 pt-md-10 pb-lg-0">
+              <div class="cart-product-photo overflow-hidden rounded-3">
+                <img
+                  src="../assets/images/index/product-01.jpg"
+                  class="img-fluid"
+                  alt="wendan"
+                />
+              </div>
+              <ul class="list-unstyled ms-4">
+                <li class="d-flex">
+                  <p class="m-0 fs-5 me-2">花蓮鶴岡老欉文旦</p>
+                  <div class="cart-icon-vector">
+                    <img
+                      src="../assets/images/icon/Vector.png"
+                      class="img-fluid"
+                      alt="vector photo"
+                    />
+                  </div>
+                </li>
+                <li class="mt-1">
+                  <p class="m-0 fs-6 text-gary-500">10斤/箱</p>
+                </li>
+                <li class="mt-1 d-flex">
+                  <p class="m-0 fs-6 text-gary-500 me-4">單價</p>
+                  <p class="m-0 fs-6 text-gary-500">NT.511</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <div class="row h-100">
+                <div class="col-6 d-flex align-items-center">
+                  <ul
+                    class="d-flex justify-content-between border border-gary-500 rounded-1 p-0 py-1 list-unstyled w-100"
+                  >
+                    <li>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-dash"></i
+                      ></a>
+                    </li>
+                    <li class="fs-6">2</li>
+                    <li>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-plus"></i
+                      ></a>
+                    </li>
                   </ul>
                 </div>
-                <div class="col">
-                  <div class="m-4">
-                    <p class="fs-4 text-end">NT. 530</p>
-                  </div>
+                <div
+                  class="col-6 d-flex justify-content-end align-items-center"
+                >
+                  <p class="m-0 fs-5 fw-medium cart-price-color">NT. 1022</p>
                 </div>
+              </div>
+            </div>
+            <div class="col d-flex pt-15 pb-10 px-lg-10 pt-md-10 pb-lg-0">
+              <div class="cart-product-photo overflow-hidden rounded-3">
+                <img
+                  src="../assets/images/index/product-04.jpg"
+                  class="img-fluid"
+                  alt="banana"
+                />
+              </div>
+              <ul class="list-unstyled ms-4">
+                <li class="d-flex">
+                  <p class="m-0 fs-5 me-2">高雄旗山香蕉</p>
+                </li>
+                <li class="mt-1">
+                  <p class="m-0 fs-6 text-gary-500">400-500g/串</p>
+                </li>
+                <li class="mt-1 d-flex">
+                  <p class="m-0 fs-6 text-gary-500 me-4">單價</p>
+                  <p class="m-0 fs-6 text-gary-500">NT. 530</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <div class="row h-100">
+                <div class="col-6 d-flex align-items-center">
+                  <ul
+                    class="d-flex justify-content-between border border-gary-500 rounded-1 p-0 py-1 list-unstyled w-100"
+                  >
+                    <li>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-dash"></i
+                      ></a>
+                    </li>
+                    <li class="fs-6">1</li>
+                    <li>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-plus"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="col-6 d-flex justify-content-end align-items-center"
+                >
+                  <p class="m-0 fs-5 fw-medium cart-price-color">NT. 530</p>
+                </div>
+              </div>
+            </div>
+            <div class="col pt-19 pt-md-15">
+              <p class="text-gary-500 fs-6 fs-md-5 m-0">運送方式</p>
+              <div class="mt-6 d-flex justify-content-between d-md-inline-flex">
+                <button
+                  type="button"
+                  class="btn btn-outline-gary-500 py-4 px-13 fs-6 fw-medium me-md-10 cart-btn-hover"
+                >
+                  捐贈
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-gary-500 py-4 px-13 fs-6 fw-medium me-md-10 cart-btn-hover"
+                >
+                  宅配
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-gary-500 py-4 px-6 fs-6 fw-medium cart-btn-hover"
+                >
+                  倉庫自取
+                </button>
+              </div>
+              <p class="cart-alert-text mt-2 d-none d-md-flex">
+                購物車內有不屬於捐贈區商品，請確認後再選擇
+              </p>
+            </div>
+            <div class="col d-none d-md-block"></div>
+            <div class="col pt-8 pt-md-10">
+              <label for="discount" class="text-gary-500 fs-6 fs-md-5"
+                >優惠折扣碼</label
+              >
+              <div class="mt-6 d-flex justify-content-between">
+                <input
+                  id="discount"
+                  type="text"
+                  class="cart-input-form"
+                  placeholder="請輸入折扣碼序號"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-gary-500 py-3 px-10 fs-6 cart-btn-hover"
+                >
+                  使用
+                </button>
+              </div>
+            </div>
+            <div class="col pt-8 pt-md-10">
+              <div class="d-flex">
+                <label for="discount" class="text-gary-500 fs-6 fs-md-5 me-2"
+                  >紅利點數可折抵</label
+                >
+                <p class="text-secondary-700 fs-6 fs-md-5 fs-medium">NT. 24</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <input
+                  id="discount"
+                  type="text"
+                  class="cart-input-form"
+                  placeholder="請輸入要使用的紅利點數"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-gary-500 py-3 px-10 fs-6 cart-btn-hover"
+                >
+                  使用
+                </button>
+              </div>
+              <p class="cart-alert-text d-none d-md-block">
+                持有的紅利點數不足
+              </p>
+            </div>
+          </div>
+
+          <div class="d-block d-lg-none pt-13 pb-15">
+            <p
+              class="m-0 fs-6 fw-medium py-4 text-white text-center bg-primary-300 cart-info-top-border"
+            >
+              訂單摘要
+            </p>
+            <div class="bg-white cart-info-bottom-border p-10 px-lg-13">
+              <ul class="list-unstyled p-0">
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">商品總金額</span
+                  ><span class="text-gary-500">NT. 1,552</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">運費總金額</span
+                  ><span class="text-gary-500">NT. 60</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">折扣</span
+                  ><span class="text-primary-500">－NT. 60</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">紅利折抵</span
+                  ><span class="text-primary-500">－ NT. 2</span>
+                </li>
+              </ul>
+              <div
+                class="d-flex justify-content-between align-items-center border-top border-gary-500 pt-10 pb-6"
+              >
+                <span class="text-gary-500 cart-total-price-font"
+                  >結帳總金額</span
+                ><span class="text-primary-500 fs-4 fw-bold">$ 1,550</span>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center cart-info-bgcolor py-8 px-6"
+              >
+                <span class="text-gary-500 cart-info-li-text"
+                  >此筆訂單捐贈後可獲得紅利</span
+                ><span class="text-primary-300 fs-6 fw-bold">11 點</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-info-bgcolor p-10 mt-lg-10">
+            <p class="text-primary-300 fw-bold">
+              【 優惠使用及商品出貨配送須知 】
+            </p>
+            <ol class="mb-0 ps-6">
+              <li class="text-gary-500 cart-info-li-text">
+                除商品缺貨外，訂單付款完成後 5~7 個工作天（不含例假日）進行出貨
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                實際配送天數視物流狀況而定，恕無法指定到貨日
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                低溫商品運用過程中有一定風險，無法保證產品不會遭遇溫度變化，請評估後可接受再下單
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                若訂單成立後因個人因素取消訂單，首購折扣碼即失效，恕不補發
+              </li>
+            </ol>
+            <p class="text-primary-300 fw-bold mt-13">【 會員紅利點數累積 】</p>
+            <ol class="mb-0 ps-6">
+              <li class="text-gary-500 cart-info-li-text">
+                消費滿 100 元贈送 1 點紅利
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                紅利點數等同現金，1點 = $1元，可直接折抵商品金額
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                捐贈回饋之紅利積點可累計，且無使用時效性（不含特殊活動獲得之紅利）
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                紅利點數無法折抵運費
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                除因商品瑕疵因素，退貨後該訂單使用的紅利點數將無法歸還帳戶
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                訂單內商品須全為捐贈區商品, 才可捐贈
+              </li>
+            </ol>
+          </div>
+          <ul class="list-unstyled mt-20 mt-md-26">
+            <li
+              class="cart-info-bgcolor py-8 py-md-4 px-10 d-flex align-items-center"
+            >
+              <input type="checkbox" class="cart-info-checkbox me-6" />
+              <p class="m-0 fw-light">
+                同意商店服務條款/會員責任規範及個資聲明。
+              </p>
+            </li>
+            <li
+              class="cart-info-bgcolor py-8 py-md-4 px-10 d-flex align-items-center mt-6"
+            >
+              <input type="checkbox" class="cart-info-checkbox me-6" />
+              <p class="m-0 fw-light">
+                為保障彼此之權益，賣家在收到您的訂單後仍保有決定是否接受訂單及出貨與否之權利。
+              </p>
+            </li>
+          </ul>
+          <div class="row mt-22 mb-26 mb-md-31">
+            <div class="col-6">
+              <button
+                type="button"
+                class="btn btn-outline-primary-500 w-100 py-4"
+              >
+                繼續選購
+              </button>
+            </div>
+            <div class="col-6">
+              <button type="button" class="btn btn-primary-500 w-100 py-4">
+                填寫收件資料
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-4">
+          <div class="p-0 px-lg-4">
+            <p
+              class="m-0 fs-6 fw-medium py-4 text-white text-center bg-primary-300 cart-info-top-border"
+            >
+              訂單摘要
+            </p>
+            <div class="bg-white cart-info-bottom-border p-10 px-lg-13">
+              <ul class="list-unstyled p-0">
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">商品總金額</span
+                  ><span class="text-gary-500">NT. 1,552</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">運費總金額</span
+                  ><span class="text-gary-500">NT. 60</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">折扣</span
+                  ><span class="text-primary-500">－NT. 60</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">紅利折抵</span
+                  ><span class="text-primary-500">－ NT. 2</span>
+                </li>
+              </ul>
+              <div
+                class="d-flex justify-content-between align-items-center border-top border-gary-500 pt-10 pb-6"
+              >
+                <span class="text-gary-500 cart-total-price-font"
+                  >結帳總金額</span
+                ><span class="text-primary-500 fs-4 fw-bold">$ 1,550</span>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center cart-info-bgcolor py-8 px-6"
+              >
+                <span class="text-gary-500 cart-info-li-text"
+                  >此筆訂單捐贈後可獲得紅利</span
+                ><span class="text-primary-300 fs-6 fw-bold">11 點</span>
               </div>
             </div>
           </div>
         </div>
-      </div> <!--end of col col-md-8)-->
-
-
-      <!-- 運送方式buttons -->
-      <div class="col mt-15 mb-2">
-        <p class="text-gary-500 fs-4 mb-6">運送方式</p>
-        <div class="d-flex justify-content-start">
-          <!-- <div style="margin-right: 24px; width: 97px;"> -->
-          <button type="button" class="btn btn-outline-secondary fs-5 bt-style my-bt-mr">
-            捐贈
-          </button>
-          <button type="button" class="btn btn-outline-secondary fs-5 bt-style my-bt-mr">
-            宅配
-          </button>
-          <button type="button" class="btn btn-outline-secondary fs-5 bt-style1 text-nowrap">
-            倉庫自取
-          </button>
-        </div>
       </div>
-
-      <p class="fs-8" style="color:#D16A30">購物車內有不屬於捐贈區商品，請確認後再選擇</p>
-
-      <!-- discount -->
-      <div class="d-flex row row-cols-8">
-        <div class="col-4">
-          <p class="text-gary-500 fs-4 mb-6">優惠折扣碼</p>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control fs-5 opacity-50" style="color: #797979;" placeholder="請輸入折扣碼序號"
-              aria-label="Recipient's username" aria-describedby="basic-addon2" />
-            <!-- <span class="input-group-text" id="basic-addon2">使用</span> -->
-            <button type="button" class="btn btn-outline-secondary fs-5 bt-style my-bt-mr rounded">
-              使用
-            </button>
-          </div>
-        </div>
-
-        <!-- bonus紅利 -->
-        <div class="col-4">
-          <div class="col d-flex">
-            <p class="text-gary-500 fs-4 mb-6 mr-1">紅利點數可折抵 </p>
-            <p class="text-secondary-700 fs-4">NT. 24</p>
-          </div>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control fs-5 opacity-50" placeholder="請輸入要使用的紅利點數"
-              aria-label="Recipient's username" aria-describedby="basic-addon2" />
-            <!-- <span class="input-group-text" id="basic-addon2">使用</span> -->
-            <button type="button" class="ml-6 btn btn-outline-secondary fs-5 bt-style my-bt-mr rounded">
-              使用
-            </button>
-            </br>
-          </div>
-          <p class="fs-8" style="color:#D16A30">持有的紅利點數不足</p>
-
-        </div><!-- end of bonus-->
-      </div>
-
-      <!--memo-->
-      <div class="row">
-        <div class="col">
-          <div class="opacity-50" style="background-color: #EDE4CB;">
-            <div>
-              <p class="text-primary-300">【 優惠使用及商品出貨配送須知 】</p>
-              <ol>
-                <li class="text-gary-500">除商品缺貨外，訂單付款完成後 5~7 個工作天（不含例假日）進行出貨</li>
-                <li class="text-gary-500">實際配送天數視物流狀況而定，恕無法指定到貨日</li>
-                <li class="text-gary-500">低溫商品運用過程中有一定風險，無法保證產品不會遭遇溫度變化，請評估後可接受再下單</li>
-                <li class="text-gary-500">若訂單成立後因個人因素取消訂單，首購折扣碼即失效，恕不補發</li>
-              </ol>
-            </div>
-
-            <div>
-              <p class="text-primary-300">【 會員紅利點數累積 】</p>
-              <ol>
-                <li class="text-gary-500">消費滿 100 元贈送 1 點紅利</li>
-                <li class="text-gary-500">紅利點數等同現金，1點 = $1元，可直接折抵商品金額</li>
-                <li class="text-gary-500">捐贈回饋之紅利積點可累計，且無使用時效性（不含特殊活動獲得之紅利）</li>
-                <li class="text-gary-500">紅利點數無法折抵運費</li>
-                <li class="text-gary-500">除因商品瑕疵因素，退貨後該訂單使用的紅利點數將無法歸還帳戶</li>
-                <li class="text-gary-500">訂單內商品須全為捐贈區商品, 才可捐贈</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div> <!--end of row-->
     </div>
-
-    <div class="row">
-      <div class="col-6">續繼選購</div>
-      <div class="col-6">填寫收件資料</div>
-    </div>
-
-    <div class="d-none d-md-block col-md-4">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-      consequuntur molestiae perferendis repellat, voluptate nostrum omnis
-
-    </div>
-
-    <!-- pipi end -->
-
-
-
-    <!-- whole body end -->
-
-    <br /><br /><br /><br /><br /><br /><br /><br />
     <%- include('./layout/footer'); -%>
 
-      <script type="module" src="../main.js"></script>
-</body>
-
+    <script type="module" src="../main.js"></script>
+  </body>
 </html>

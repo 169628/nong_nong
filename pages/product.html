@@ -14,63 +14,62 @@
     <%- include('./layout/header'); -%>
 
     <!--商品資訊-->
-    <div class="container">
+    <div class="container mt-16 mt-md-36">
+      <p class="text-gary-500">中部 / 安心水果 / 芭樂</p>
       <div class="row">
-        <div class="d-flex gap-10">
-          <div style="max-width: 40%;">
-            <img class="product-img" src="../assets/images/product/product_cover.png" alt="產品主照">
+        <div class="col-lg-5 mb-sm-13">
+          <img class="product-img" src="../assets/images/product/product_cover.png" alt="產品主照">
+        </div>
+        <div class="col-lg-7 d-flex flex-column product gap-10 ">
+          <div class="product-title">
+            <h1 class="fs-2 fw-bold">山城自然芭樂</h1>
+            <p class="fs-5">中投果園芭樂，果肉脆甜、清新爽口，適合生食或製作芭樂汁</p>
           </div>
-          <div class="d-flex flex-column product gap-10">
-            <div class="product-title">
-              <h1 class="fs-2 fw-bold">山城自然芭樂</h1>
-              <p class="fs-5">中投果園芭樂，果肉脆甜、清新爽口，適合生食或製作芭樂汁</p>
+          <div class="product-price">
+            <h2 class="fs-2 fw-bold mb-0">NT. 500</h2>
+          </div>
+          <div class="product-detail d-flex gap-10">
+            <div class="product-detail-topic">
+              <ul class="list-unstyled d-flex flex-column gap-10">
+                <li class="py-2">產地</li>
+                <li class="py-2">運送方式</li>
+                <li class="py-2">產品規格</li>
+                <li class="py-2">購買數量</li>
+              </ul>
             </div>
-            <div class="product-price">
-              <h2 class="fs-2 fw-bold mb-0">NT. 500</h2>
+            <div class="product-detail-value">
+              <ul class="list-unstyled d-flex flex-column gap-10">
+                <li class="py-2">彰化</li>
+                <li class="py-2">冷藏</li>
+                <li class="py-2">2 斤/箱</li>
+                <li>
+                  <div class="btn_quantity">
+                    <button type="button" class="btn">
+                      <img src="../assets/images/icon/decrease.svg" alt="-"></button>
+                    <input type="text" name="quantity" value="1">
+                    <button type="button" class="btn">
+                      <img src="../assets/images/icon/increase.svg" alt="+"></button>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="product-detail d-flex gap-10">
-              <div class="product-detail-topic">
-                <ul class="list-unstyled d-flex flex-column gap-10">
-                  <li class="py-2">產地</li>
-                  <li class="py-2">運送方式</li>
-                  <li class="py-2">產品規格</li>
-                  <li class="py-2">購買數量</li>
-                </ul>
-              </div>
-              <div class="product-detail-value">
-                <ul class="list-unstyled d-flex flex-column gap-10">
-                  <li class="py-2">彰化</li>
-                  <li class="py-2">冷藏</li>
-                  <li class="py-2">2 斤/箱</li>
-                  <li>
-                    <div class="btn_quantity">
-                      <button type="button" class="btn">
-                        <img src="../assets/images/icon/decrease.svg" alt=""></button>
-                      <input type="text" name="quantity" value="1">
-                      <button type="button" class="btn">
-                        <img src="../assets/images/icon/increase.svg" alt=""></button>
-                    </div>
-                  </li>
-                </ul>
+          </div>
+          <div class="product-buyandstorage d-flex flex-column gap-10">
+            <div class="button-list d-flex gap-10">
+              <div class="btn-storage">
+                <button type="button" class="btn btn-secondary100 fs-5">
+                  <img src="../assets/images/icon/box.svg" alt="box">
+                  查詢庫存</button>
+              </div> 
+              <div class="btn-buy">
+                <button type="button" class="btn btn-secondary700 fs-5">
+                  <img src="../assets/images/icon/cart-secondary100.svg" alt="cart">
+                  加入購物車</button>
               </div>
             </div>
-            <div class="product-buyandstorage d-flex flex-column gap-10">
-              <div class="button-list d-flex gap-10">
-                <div class="btn-storage">
-                  <button type="button" class="btn btn-secondary100 fs-5">
-                    <img src="../assets/images/icon/box.svg" alt="box">
-                    查詢庫存</button>
-                </div> 
-                <div class="btn-buy">
-                  <button type="button" class="btn btn-secondary700 fs-5">
-                    <img src="../assets/images/icon/cart-secondary100.svg" alt="cart">
-                    加入購物車</button>
-                </div>
-              </div>
-              <div class="storage-method">
-                <h6 >保存方式</h6>
-                <p>為保留芭樂的鮮美口感，建議將其存放於乾燥陰涼處，避免陽光直射。如需延長保存時間，可放入冰箱冷藏。建議在購買後一週內食用為佳</p>
-              </div>
+            <div class="storage-method">
+              <h6 >保存方式</h6>
+              <p>為保留芭樂的鮮美口感，建議將其存放於乾燥陰涼處，避免陽光直射。如需延長保存時間，可放入冰箱冷藏。建議在購買後一週內食用為佳</p>
             </div>
           </div>
         </div>
@@ -78,17 +77,11 @@
     </div>
     
     <!-- 跳轉標籤 -->
-     <!-- TO-DO: <a> 跳轉後 <label> btn 沒有 active 到 -->
-    <div class="container my-26">
-      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-        <label class="btn btn-outline-primary btn-primary300" for="btnradio1"><a class="d-block" href="#productIntroduce">商品介紹</a></label>
-        
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-        <label class="btn btn-outline-primary btn-primary300" for="btnradio2"><a class="d-block" href="#productComment">商品評論</a></label>
-      
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-        <label class="btn btn-outline-primary btn-primary300" for="btnradio3"><a class="d-block" href="#shoppingInstructions">購物須知</a></label>
+    <div class="container jump-tag">
+      <div class="list-group d-flex flex-row">
+        <a class="list-group-item list-group-item-action fs-5" href="#productIntroduce">商品介紹</a>
+        <a class="list-group-item list-group-item-action fs-5" href="#productComment">商品評論</a>
+        <a class="list-group-item list-group-item-action fs-5" href="#shoppingInstructions">購物須知</a>
       </div>
     </div>
 
@@ -101,25 +94,25 @@
       </div>
       <div class="introduce-content">
         <ul class="list-unstyled d-flex flex-column gap-10">
-          <li class="row mx-0 d-flex intro-1">
-            <div class="col-sm px-0">
+          <li class="intro-1 row d-flex mx-0">
+            <div class="col-lg-6 px-0">
               <img src="../assets/images/product/product_Intro_1.jpg" alt="商品圖1">
             </div>
-            <div class="col-sm px-0 d-flex justify-content-center align-items-center bg-describe">
+            <div class="col-lg-6 px-0 d-flex align-items-center bg-describe">
               <div class="d-flex flex-column describe gap-6">
-                <div class="fs-2 text-primary-500 fw-bold mb-0">大自然的餽贈</div>
+                <div class="fs-2 text-primary-500 fw-bold mb-0 text-center">大自然的餽贈</div>
                 <div class="fs-5">來自臺灣中部山城的自然芭樂，蘊藏著大自然的純粹恩賜。以最原始、最自然的方式栽培這些芭樂，沒有使用任何化學肥料或農藥，讓每一顆芭樂都能自然成熟保持其健康的營養價值和原始風味。</div>
               </div>
             </div>
           </li>
-          <li class="row mx-0 d-flex intro-2">
-            <div class="col-sm px-0 d-flex justify-content-center align-items-center bg-describe">
+          <li class="intro-2 row d-flex mx-0">
+            <div class="col-lg-6 px-0 d-flex align-items-center bg-describe">
               <div class="d-flex flex-column describe gap-6">
-                <div class="fs-2 text-secondary-700 fw-bold mb-0">營養天然低熱量</div>
+                <div class="fs-2 text-secondary-700 fw-bold mb-0 text-center">營養天然低熱量</div>
                 <div class="fs-5">這些芭樂在豐富的陽光和肥沃的土壤滋養下,果實鮮嫩多汁，富含豐富的維他命 C 和纖維素。咬上一口，即可感受到濃郁的芳香和清新的酸甜口感，是夏日消暑的最佳選擇，也適合日常健康飲食。</div>
               </div>
             </div>
-            <div class="col-sm px-0">
+            <div class="col-lg-6 px-0">
               <img src="../assets/images/product/product_Intro_2.jpg" alt="商品圖2">
             </div>
           </li>
@@ -129,14 +122,12 @@
             </div>
           </li>
           <li class="intro-4">
-            <div class="d-flex justify-content-center align-items-center bg-describe">
-              <div class="d-flex flex-column gap-6 describe">
-                <div class="fs-2 text-primary-500 fw-bold mb-0">堅持有機高品質</div>
-                <div class="fs-5">自然芭樂來自於專注於有機農業的小農，這些小農們擁有對土地的深厚理解和無盡的熱情。<br>
-                  他們選擇最適合芭樂生長的品種，經過精心管理和照顧，讓每一顆芭樂都能達到最佳的成熟狀態。</div>
+            <div class="d-flex flex-column align-items-center bg describe">
+                <div class="fs-2 text-primary-500 fw-bold mb-6">堅持有機高品質</div>
+                <div class="fs-5">自然芭樂來自於專注於有機農業的小農，這些小農們擁有對土地的深厚理解和無盡的熱情。</div>
+                <div class="fs-5 gap-break-point">他們選擇最適合芭樂生長的品種，經過精心管理和照顧，讓每一顆芭樂都能達到最佳的成熟狀態。</div>
                 <div class="fs-5">每一顆芭樂都經過仔細挑選，確保只有最優質的果實能夠到達您的手中。<br>
                   我們承諾提供的新鮮芭樂，不僅保留了大自然的純粹風味，也展現小農們對農業的專業和對品質的執著。</div>
-              </div>
             </div>
           </li>
         </ul>
@@ -146,33 +137,37 @@
     <section class="donate my-26 text-white">
       <div class="container">
         <div class="bg">
-          <div class="donate-slogan mb-10">
-            <p class="fs-5 logo d-inline px-10 py-1">捐贈方案</p>
-            <h1 class="title fw-bold">選擇捐贈,自然農產品傳遞關愛</h1>
-            <p class="fs-4 content">在享受我們的自然農產品的同時，您可以選擇將這份珍貴的禮物捐贈給弱勢團體<br>幫助更多需要幫助的人</p>
-          </div>
-          <div class="donate-icon row mb-15 gap-10">
-            <div class="col-sm d-flex justify-content-center align-items-center">
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="d-flex justify-content-center align-items-center icon-text rounded-circle fs-5 fw-bold mb-0">提升<br>健康</div>
-              </div>
-              <div class="fs-6 ms-6">捐贈農產品提供必需的營養，助力弱勢群體的健康</div>
+          <div class="donate-container">
+            <div class="donate-slogan mb-10">
+              <p class="logo d-inline px-10 py-1">捐贈方案</p>
+              <h1 class="title fw-bold d-none d-xl-block my-2">選擇捐贈,自然農產品傳遞關愛</h1>
+              <h1 class="title fw-bold d-xl-none mb-2 my-2">選擇捐贈<br>自然農產品傳遞關愛</h1>
+              <p class="content d-none d-xl-block">在享受我們的自然農產品的同時，您可以選擇將這份珍貴的禮物捐贈給弱勢團體<br>幫助更多需要幫助的人</p>
+              <p class="content d-xl-none">在享受我們的自然農產品的同時，您可以選擇將這份珍貴的禮物捐贈給弱勢團體幫助更多需要幫助的人</p>
             </div>
-            <div class="col-sm d-flex justify-content-center align-items-center">
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="d-flex justify-content-center align-items-center icon-text rounded-circle fs-5 fw-bold mb-0">可持續<br>農業</div>
+            <div class="donate-icon row mb-15 gap-10">
+              <div class="col-sm d-flex align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="d-flex justify-content-center align-items-center icon-text rounded-circle fs-5 fw-bold mb-0">提升<br>健康</div>
+                </div>
+                <div class="fs-6 ms-6">捐贈農產品提供必需的營養，助力弱勢群體的健康</div>
               </div>
-              <div class="fs-6 ms-6">我們的農產品來自有機耕作，支持環保，保護我們的地球</div>
+              <div class="col-sm d-flex align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="d-flex justify-content-center align-items-center icon-text rounded-circle fs-5 fw-bold mb-0">可持續<br>農業</div>
+                </div>
+                <div class="fs-6 ms-6">我們的農產品來自有機耕作，支持環保，保護我們的地球</div>
+              </div>
+              <div class="col-sm d-flex align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="d-flex justify-content-center align-items-center icon-text rounded-circle fs-5 fw-bold mb-0">傳遞<br>關愛</div>
+                </div>
+                <div class="fs-6 ms-6">每一份捐贈帶來溫暖與支持，提供社會關懷與傳遞善意</div>
+              </div>          
             </div>
-            <div class="col-sm d-flex justify-content-center align-items-center">
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="d-flex justify-content-center align-items-center icon-text rounded-circle fs-5 fw-bold mb-0">傳遞<br>關愛</div>
-              </div>
-              <div class="fs-6 ms-6">每一份捐贈帶來溫暖與支持，提供社會關懷與傳遞善意</div>
-            </div>          
-          </div>
-          <div class="donate-footer fs-5">
-            選擇捐贈自然農產品，不僅支持健康和環境也傳遞了愛與關懷<br>讓我們一起把這份自然的美好帶給更多需要幫助的人！
+            <div class="donate-footer fs-5">
+              選擇捐贈自然農產品，不僅支持健康和環境也傳遞了愛與關懷<br>讓我們一起把這份自然的美好帶給更多需要幫助的人！
+            </div>            
           </div>
         </div>
       </div>
@@ -180,15 +175,17 @@
 
     <section class="farm mb-26">
       <div class="container">
-        <div class="farm-owner">
-          <img class="rounded-circle" src="../assets/images/product/farm_owner.png" alt="小農">
-          <div class="d-flex flex-column align-items-center">
-            <div class="fs-2 fw-bold text-primary-500 ">林氏果園</div>
-            <h4 class="mb-0">林大哥</h4>
+        <div class="farm-picture position-relative">
+          <img class="bg-farm" src="../assets/images/product/farm_intro.png" alt="小農園">
+          <div class="farm-owner">
+            <img class="rounded-circle" src="../assets/images/product/farm_owner.png" alt="小農">
+            <div class="d-flex flex-column align-items-center">
+              <div class="farm-name fw-bold text-primary-500 ">林氏果園</div>
+              <h4 class="farm-owner-name mb-0">林大哥</h4>
+            </div>
           </div>
         </div>
-        <img class="bg-farm" src="../assets/images/product/farm_intro.png" alt="小農園">
-        <div class="describe py-22">
+        <div class="describe">
            <div class="describe-title fs-2 fw-bold text-primary-500 mb-2">傳承三代的堅持與心意</div>
            <div class="describe-content fs-5">
             <p>在中部山城的綠意盎然的山間，林大哥和家族經營著一片傳承了三代的農田。自上世紀中葉以來，他們遵循有機耕作的原則，不使用化學肥料和農藥，讓土地與作物保持自然的和諧。林大哥的農園內生長著各種新鮮農產品，每一種作物都在這片肥沃的土地上汲取自然的養分。</p>
@@ -208,7 +205,7 @@
           <img class="revert" src="../assets/images/icon/rice_ears.png" alt="rice-ears">
         </div>
         <div class="swiper idx-comment-list mb-17">
-          <div class="swiper-wrapper d-flex align-items-stretch">
+          <div class="swiper-wrapper">
             <div class="swiper-slide idx-comment-item" style="height: auto">
               <div class="row g-0">
                 <div class="card-header">
@@ -275,12 +272,12 @@
         </div>
         <div class="btn-comment d-flex justify-content-between">
           <div class="btn-comment-write">
-            <button type="button" class="btn btn-primary fs-5">
+            <button type="button" class="btn btn-primary fs-5 py-5">
               <img src="../assets/images/icon/pen-brown.png" alt="pen">
               我要評論</button>
           </div> 
           <div class="btn-comment-viewall">
-            <button type="button" class="btn btn-primary fs-5">
+            <button type="button" class="btn btn-primary fs-5 py-5">
               <img src="../assets/images/icon/star-primary100.svg" class="star">
               查看所有評論</button>
           </div>
