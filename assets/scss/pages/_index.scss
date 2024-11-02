@@ -42,10 +42,9 @@
     width: 100%;
     height: 162px;
     background-color: #f7f4eb;
-    -webkit-mask: url("../assets/images/index/bg_wave_desktop.png") no-repeat
-      center center;
-    mask: url("../assets/images/index/bg_wave_desktop.png") no-repeat center
+    -webkit-mask: url("../images/index/bg_wave_desktop.png") no-repeat center
       center;
+    mask: url("../images/index/bg_wave_desktop.png") no-repeat center center;
     -webkit-mask-size: contain;
     mask-size: contain;
 
