@@ -93,3 +93,16 @@
   width: 16px;
   height: 16px;
 }
+
+.cart-info-top-border {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.cart-info-bottom-border {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.cart-total-price-font {
+  font-size: 18px;
+  font-weight: 500;
+}
