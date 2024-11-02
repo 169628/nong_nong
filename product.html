@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>商品詳情</title>
+    <script type="module" crossorigin src="/nong_nong/assets/main-f55d420d.js"></script>
+    <link rel="stylesheet" href="/nong_nong/assets/main-903b64c0.css">
+  </head>
+  <body>
+    <!-- header -->
+
+<!-- 以下是 navbar -->
+<div class="header pt-20 pb-6 py-md-6">
+  <nav class="header-container">
+    <!-- 漢堡開始 -->
+    <a
+      href="#"
+      class="navbar-toggler d-md-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <img src="/nong_nong/assets/menu-1828182a.svg" alt="mobile-menu" />
+    </a>
+    <!-- 漢堡裡的內容-->
+    <div
+      class="offcanvas offcanvas-start bg-white admin-offcanvas"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div
+        class="offcanvas-body p-0 pt-15 d-flex flex-column justify-content-between"
+      >
+        <div>
+          <div
+            href="#"
+            class="fs-6 ps-11 py-1 fw-semibold text-primary-500 bg-primary-100"
+          >
+            所有地區
+          </div>
+          <ul class="ps-11 pe-6 mt-10 list-unstyled">
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500"
+                >北部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >中部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >南部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >東部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <button
+          type="submits"
+          class="border-0 bg-tertiary-500 py-2 text-white fs-6 fw-semibold"
+        >
+          登入 / 註冊
+        </button>
+      </div>
+    </div>
+    <!-- 漢堡結束 -->
+    <!-- logo -->
+    <a class="m-0 p-0" href="index.html"
+      ><picture>
+        <source
+          srcset="/nong_nong/assets/logo_horizontal_white-f49b86d9.png "
+          media="(max-width: 767px)"
+        />
+        <img
+          class="img-fluid header-logo"
+          src="/nong_nong/assets/logo_horizontal-d94d5102.png"
+          alt="banner"
+        /> </picture
+    ></a>
+    <a href="cart-confirm.html">
+      <button
+        type="button"
+        class="d-block d-md-none btn btn-outline-white rounded-circle"
+      >
+        <i class="bi bi-cart3 fs-5"></i>
+      </button>
+    </a>
+
+    <ul
+      class="d-none d-md-block list-unstyled d-md-flex align-items-md-center justify-content-md-between"
+    >
+      <li class="fs-5 text-gary-500">
+        <span class="fw-semibold me-2">皮皮</span>先生/小姐，您好
+      </li>
+      <li class="ms-10 position-relative dropdown-center">
+        <a
+          class="btn btn-primary-500 rounded-circle"
+          href="admin-panel.html"
+          role="button"
+        >
+          <!-- <a
+          class="btn btn-primary-500 rounded-circle dropdown-toggle"
+          href="admin-panel.html"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        > -->
+          <i class="bi bi-person fs-5"></i>
+        </a>
+        <!-- dropdown -->
+        <div class="header-dropdown-menu dropdown-menu mt-14">
+          <p class="fs-6 fw-semibold text-gary-500 p-0 mb-10">會員中心</p>
+          <ul class="p-0">
+            <li>
+              <a class="fs-6" href="#">個人資料</a>
+            </li>
+            <li>
+              <a class="fs-6 mt-1" href="#">歷史訂單</a>
+            </li>
+            <li>
+              <a class="fs-6 mt-1" href="#">折扣碼清單</a>
+            </li>
+            <li>
+              <a class="fs-6 mt-1" href="#">登出</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="ms-10">
+        <a href="cart-confirm.html">
+          <button
+            type="button"
+            class="btn btn-outline-primary-500 rounded-circle"
+          >
+            <i class="bi bi-cart3 fs-5"></i>
+          </button>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    <!--商品資訊-->
+    <div class="container mt-16 mt-md-36">
+      <p class="text-gary-500">中部 / 安心水果 / 芭樂</p>
+      <div class="row">
+        <div class="col-lg-5 mb-sm-13">
+          <img class="product-img" src="/nong_nong/assets/product_cover-0d238d2f.png" alt="產品主照">
+        </div>
+        <div class="col-lg-7 d-flex flex-column product gap-10 ">
+          <div class="product-title">
+            <h1 class="fs-2 fw-bold">山城自然芭樂</h1>
+            <p class="fs-5">中投果園芭樂，果肉脆甜、清新爽口，適合生食或製作芭樂汁</p>
+          </div>
+          <div class="product-price">
+            <h2 class="fs-2 fw-bold mb-0">NT. 500</h2>
+          </div>
+          <div class="product-detail d-flex gap-10">
+            <div class="product-detail-topic">
+              <ul class="list-unstyled d-flex flex-column gap-10">
+                <li class="py-2">產地</li>
+                <li class="py-2">運送方式</li>
+                <li class="py-2">產品規格</li>
+                <li class="py-2">購買數量</li>
+              </ul>
+            </div>
+            <div class="product-detail-value">
+              <ul class="list-unstyled d-flex flex-column gap-10">
+                <li class="py-2">彰化</li>
+                <li class="py-2">冷藏</li>
+                <li class="py-2">2 斤/箱</li>
+                <li>
+                  <div class="btn_quantity">
+                    <button type="button" class="btn">
+                      <img src="/nong_nong/assets/decrease-d0392ef3.svg" alt="-"></button>
+                    <input type="text" name="quantity" value="1">
+                    <button type="button" class="btn">
+                      <img src="/nong_nong/assets/increase-49e3d4fc.svg" alt="+"></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-buyandstorage d-flex flex-column gap-10">
+            <div class="button-list d-flex gap-10">
+              <div class="btn-storage">
+                <button type="button" class="btn btn-secondary100 fs-5">
+                  <img src="/nong_nong/assets/box-30682a9a.svg" alt="box">
+                  查詢庫存</button>
+              </div> 
+              <div class="btn-buy">
+                <button type="button" class="btn btn-secondary700 fs-5">
+                  <img src="/nong_nong/assets/cart-secondary100-9c4a693d.svg" alt="cart">
+                  加入購物車</button>
+              </div>
+            </div>
+            <div class="storage-method">
+              <h6 >保存方式</h6>
+              <p>為保留芭樂的鮮美口感，建議將其存放於乾燥陰涼處，避免陽光直射。如需延長保存時間，可放入冰箱冷藏。建議在購買後一週內食用為佳</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 跳轉標籤 -->
+    <div class="container jump-tag">
+      <div class="list-group d-flex flex-row">
+        <a class="list-group-item list-group-item-action fs-5" href="#productIntroduce">商品介紹</a>
+        <a class="list-group-item list-group-item-action fs-5" href="#productComment">商品評論</a>
+        <a class="list-group-item list-group-item-action fs-5" href="#shoppingInstructions">購物須知</a>
+      </div>
+    </div>
+
+    <!-- 商品介紹 -->
+    <section class="container introduce">
+      <div class="title mb-17 d-flex justify-content-center">
+        <img src="/nong_nong/assets/small-leaf-75857c27.svg" alt="small-leaf">
+        <h2 id="productIntroduce" class="fs-2 text-secondary-700 fw-bold mb-0 mx-13">商品介紹</h2>
+        <img class="revert" src="/nong_nong/assets/small-leaf-75857c27.svg" alt="small-leaf">
+      </div>
+      <div class="introduce-content">
+        <ul class="list-unstyled d-flex flex-column gap-10">
+          <li class="intro-1 row d-flex mx-0">
+            <div class="col-lg-6 px-0">
+              <img src="/nong_nong/assets/product_Intro_1-dda6c3c2.jpg" alt="商品圖1">
+            </div>
+            <div class="col-lg-6 px-0 d-flex align-items-center bg-describe">
+              <div class="d-flex flex-column describe gap-6">
+                <div class="fs-2 text-primary-500 fw-bold mb-0 text-center">大自然的餽贈</div>
+                <div class="fs-5">來自臺灣中部山城的自然芭樂，蘊藏著大自然的純粹恩賜。以最原始、最自然的方式栽培這些芭樂，沒有使用任何化學肥料或農藥，讓每一顆芭樂都能自然成熟保持其健康的營養價值和原始風味。</div>
+              </div>
+            </div>
+          </li>
+          <li class="intro-2 row d-flex mx-0">
+            <div class="col-lg-6 px-0 d-flex align-items-center bg-describe">
+              <div class="d-flex flex-column describe gap-6">
+                <div class="fs-2 text-secondary-700 fw-bold mb-0 text-center">營養天然低熱量</div>
+                <div class="fs-5">這些芭樂在豐富的陽光和肥沃的土壤滋養下,果實鮮嫩多汁，富含豐富的維他命 C 和纖維素。咬上一口，即可感受到濃郁的芳香和清新的酸甜口感，是夏日消暑的最佳選擇，也適合日常健康飲食。</div>
+              </div>
+            </div>
+            <div class="col-lg-6 px-0">
+              <img src="/nong_nong/assets/product_Intro_2-5cc3b90b.jpg" alt="商品圖2">
+            </div>
+          </li>
+          <li class="intro-3">
+            <div class="bg">
+              <img src="/nong_nong/assets/product_Intro_3-67a3cef9.jpg" alt="商品圖3">
+            </div>
+          </li>
+          <li class="intro-4">
+            <div class="d-flex flex-column align-items-center bg describe">
+                <div class="fs-2 text-primary-500 fw-bold mb-6">堅持有機高品質</div>
+                <div class="fs-5">自然芭樂來自於專注於有機農業的小農，這些小農們擁有對土地的深厚理解和無盡的熱情。</div>
+                <div class="fs-5 gap-break-point">他們選擇最適合芭樂生長的品種，經過精心管理和照顧，讓每一顆芭樂都能達到最佳的成熟狀態。</div>
+                <div class="fs-5">每一顆芭樂都經過仔細挑選，確保只有最優質的果實能夠到達您的手中。<br>
+                  我們承諾提供的新鮮芭樂，不僅保留了大自然的純粹風味，也展現小農們對農業的專業和對品質的執著。</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="donate my-26 text-white">
+      <div class="container">
+        <div class="bg">
+          <div class="donate-container">
+            <div class="donate-slogan mb-10">
+              <p class="logo d-inline px-10 py-1">捐贈方案</p>
+              <h1 class="title fw-bold d-none d-xl-block my-2">選擇捐贈,自然農產品傳遞關愛</h1>
+              <h1 class="title fw-bold d-xl-none mb-2 my-2">選擇捐贈<br>自然農產品傳遞關愛</h1>
+              <p class="content d-none d-xl-block">在享受我們的自然農產品的同時，您可以選擇將這份珍貴的禮物捐贈給弱勢團體<br>幫助更多需要幫助的人</p>
+              <p class="content d-xl-none">在享受我們的自然農產品的同時，您可以選擇將這份珍貴的禮物捐贈給弱勢團體幫助更多需要幫助的人</p>
+            </div>
+            <div class="donate-icon row mb-15 gap-10">
+              <div class="col-sm d-flex align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="d-flex justify-content-center align-items-center icon-text rounded-circle fs-5 fw-bold mb-0">提升<br>健康</div>
+                </div>
+                <div class="fs-6 ms-6">捐贈農產品提供必需的營養，助力弱勢群體的健康</div>
+              </div>
+              <div class="col-sm d-flex align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="d-flex justify-content-center align-items-center icon-text rounded-circle fs-5 fw-bold mb-0">可持續<br>農業</div>
+                </div>
+                <div class="fs-6 ms-6">我們的農產品來自有機耕作，支持環保，保護我們的地球</div>
+              </div>
+              <div class="col-sm d-flex align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="d-flex justify-content-center align-items-center icon-text rounded-circle fs-5 fw-bold mb-0">傳遞<br>關愛</div>
+                </div>
+                <div class="fs-6 ms-6">每一份捐贈帶來溫暖與支持，提供社會關懷與傳遞善意</div>
+              </div>          
+            </div>
+            <div class="donate-footer fs-5">
+              選擇捐贈自然農產品，不僅支持健康和環境也傳遞了愛與關懷<br>讓我們一起把這份自然的美好帶給更多需要幫助的人！
+            </div>            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="farm mb-26">
+      <div class="container">
+        <div class="farm-picture position-relative">
+          <img class="bg-farm" src="/nong_nong/assets/farm_intro-b19817ec.png" alt="小農園">
+          <div class="farm-owner">
+            <img class="rounded-circle" src="/nong_nong/assets/farm_owner-53fbc6e9.png" alt="小農">
+            <div class="d-flex flex-column align-items-center">
+              <div class="farm-name fw-bold text-primary-500 ">林氏果園</div>
+              <h4 class="farm-owner-name mb-0">林大哥</h4>
+            </div>
+          </div>
+        </div>
+        <div class="describe">
+           <div class="describe-title fs-2 fw-bold text-primary-500 mb-2">傳承三代的堅持與心意</div>
+           <div class="describe-content fs-5">
+            <p>在中部山城的綠意盎然的山間，林大哥和家族經營著一片傳承了三代的農田。自上世紀中葉以來，他們遵循有機耕作的原則，不使用化學肥料和農藥，讓土地與作物保持自然的和諧。林大哥的農園內生長著各種新鮮農產品，每一種作物都在這片肥沃的土地上汲取自然的養分。</p>
+            <br>
+            <p>林大哥和家人的用心耕作，讓農田成為一個充滿生機的生態系統。農園裡的小烏和昆蟲見證了他們對土地的熱愛和對品質的堅持。每一項農產品都承載著他們對自然的珍視和對生活的熱情，選擇我們的產品，就是選擇了這份來自大自然的真誠與美好。</p>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 商品評論 -->
+    <section class="comment py-26 mb-26">
+      <div class="container">
+        <div class="title mb-17 d-flex justify-content-center">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAbCAYAAABm409WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKCSURBVHgB1VVddtJQEJ65hJ/qCzswXYGwAmEF4grAB8+BVI90BcIKEo6F9OiDugLrCsoOzA7IDowPlj+540wgmITY0iM89DunhTvMnW/mu19uAA4Eu1suy186bsB/YmidvEXAFizmFQIYcKh7MALXevSOgHoAFK6RwE/nKLgH4hLY7ZKpgRLdIuLT9J69Jhi2Sy3e3YTZ/CcvGxLLIzVYmoTmueVycC8C6bKA+AkRausWIYh+U6ieJbPR+5XLBXb3cfncCf7m3UZQRLzeFl9ju5FVN5PZVCkqnBQX8x9yNtJcgiBtMVcSMF0kOzcNOXgmux6+yldCApu/MPP3iFWgIdF5CNZ8LLaULhFAbBlwsT7FJovBBMOwlRQtGsZXCUSssJ7NzOisxYWdzTLggKc0jJWmKuxa1NdEfSOP0ItJEbICLOtEFLDtUgQQcCSSpyznQ4g1IhifudPT9+1STa1WwdnHpbedetQpTdiCZryQsfxdXbEjiA9tU3jAXTpcrMHN2JAJ9KzRTTUdVbxp58B0Hp+AUs1I40Wh2JO45U4dHvtLNgFVPkTyxmlHnZNJhlt8WNvQJ5FiI4tIsSB6WWADINJzQNXgoOSw3tB/czkb7xBcdIpdfmj+MXYm/Lmm+vnlzN8nWb125450Fg9yR94te5Juu4sg/MdjRzZj94jtXmTYLkGCRt6EfQk6PK4GHV5UOdSOrJGoDqSv0hvEUajp1HJvrvYh2Br9olP6rBADazRNXMHi7U0nfD2Dn3WQdxKETzN7XsGq0R4tvsEBEUokdzt/eIcuviXgK6EsVwMcAWsCwibflAfvXhC+0QjDJ9WEIyD2RiMPjoCIwFeQfsc+EPwBQpYDURANgloAAAAASUVORK5CYII=" alt="rice-ears">
+          <h2 id="productComment" class="fs-2 text-primary-500 fw-bold mb-0 mx-6">商品評論</h2>
+          <img class="revert" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAbCAYAAABm409WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKCSURBVHgB1VVddtJQEJ65hJ/qCzswXYGwAmEF4grAB8+BVI90BcIKEo6F9OiDugLrCsoOzA7IDowPlj+540wgmITY0iM89DunhTvMnW/mu19uAA4Eu1suy186bsB/YmidvEXAFizmFQIYcKh7MALXevSOgHoAFK6RwE/nKLgH4hLY7ZKpgRLdIuLT9J69Jhi2Sy3e3YTZ/CcvGxLLIzVYmoTmueVycC8C6bKA+AkRausWIYh+U6ieJbPR+5XLBXb3cfncCf7m3UZQRLzeFl9ju5FVN5PZVCkqnBQX8x9yNtJcgiBtMVcSMF0kOzcNOXgmux6+yldCApu/MPP3iFWgIdF5CNZ8LLaULhFAbBlwsT7FJovBBMOwlRQtGsZXCUSssJ7NzOisxYWdzTLggKc0jJWmKuxa1NdEfSOP0ItJEbICLOtEFLDtUgQQcCSSpyznQ4g1IhifudPT9+1STa1WwdnHpbedetQpTdiCZryQsfxdXbEjiA9tU3jAXTpcrMHN2JAJ9KzRTTUdVbxp58B0Hp+AUs1I40Wh2JO45U4dHvtLNgFVPkTyxmlHnZNJhlt8WNvQJ5FiI4tIsSB6WWADINJzQNXgoOSw3tB/czkb7xBcdIpdfmj+MXYm/Lmm+vnlzN8nWb125450Fg9yR94te5Juu4sg/MdjRzZj94jtXmTYLkGCRt6EfQk6PK4GHV5UOdSOrJGoDqSv0hvEUajp1HJvrvYh2Br9olP6rBADazRNXMHi7U0nfD2Dn3WQdxKETzN7XsGq0R4tvsEBEUokdzt/eIcuviXgK6EsVwMcAWsCwibflAfvXhC+0QjDJ9WEIyD2RiMPjoCIwFeQfsc+EPwBQpYDURANgloAAAAASUVORK5CYII=" alt="rice-ears">
+        </div>
+        <div class="swiper idx-comment-list mb-17">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide idx-comment-item" style="height: auto">
+              <div class="row g-0">
+                <div class="card-header">
+                  <img src="/nong_nong/assets/avatar_default-e8790bc1.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
+                  <div class="name-rank">
+                    <span class="fullname">Andrew</span>
+                    <div class="rank-star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">新鮮清脆，能品嚐到自然的陽光與大地，非常滿意。</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide idx-comment-item" style="height: auto">
+              <div class="row g-0">
+                <div class="card-header">
+                  <img src="/nong_nong/assets/avatar_default-e8790bc1.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
+                  <div class="name-rank">
+                    <span class="fullname">張小姐</span>
+                    <div class="rank-star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">口感不錯，但甜度稍微不足，整體來說還可以，但沒有特別驚豔。</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide idx-comment-item" style="height: auto">
+              <div class="row g-0">
+                <div class="card-header">
+                  <img src="/nong_nong/assets/avatar_default-e8790bc1.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
+                  <div class="name-rank">
+                    <span class="fullname">花媽</span>
+                    <div class="rank-star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                      <img src="/nong_nong/assets/star-yellow-6890ab9f.svg" class="star">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">我家小孩最挑嘴了，但這次的芭樂他們都吃得很開心，還搶著要再吃。真心推薦給所有媽媽們！</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next swiper-btn-white"></div>
+          <div class="swiper-button-prev swiper-btn-white"></div>
+        </div>
+        <div class="btn-comment d-flex justify-content-between">
+          <div class="btn-comment-write">
+            <button type="button" class="btn btn-primary fs-5 py-5">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEVSURBVHgBrdJBToNAFAbg9xOI2hVH4Ag9gj2CJ9AuTJTZyEl0IWjiwrmB3gC9Qb0BR2DVmmJ4zrOZpow1Ojh/QgK88PF+AmhEyvNkSklcA6TzclXszkCe2WJEqVwzQatqObfzyMMaYEz0bI4WxGdlPnn0Bl1MVasT6j5mLvqnym5NkwY9zy7v35vhi6B/3XDwAKAJWJjbGUeo7y4OM/XQLczsZbMdH8MHU+Vyfn2VpgfduibmqWzaA68R86lUX5tPAB/MzhyULFaYbSNfTFLctG1P9OZim9qemORWTfRuTYt9A/+LDcAQ2BYMhX2BITFJjCR+okCYRH6bTE5CYBbcmzHYj+BYTIIqP+J9gzGY3bAJhUk+AVwNGer9h/P3AAAAAElFTkSuQmCC" alt="pen">
+              我要評論</button>
+          </div> 
+          <div class="btn-comment-viewall">
+            <button type="button" class="btn btn-primary fs-5 py-5">
+              <img src="/nong_nong/assets/star-primary100-d2244138.svg" class="star">
+              查看所有評論</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 購物須知 -->
+    <section class="container instructions">
+      <div class="title mb-17 d-flex justify-content-center">
+        <img src="/nong_nong/assets/hat-9f52982c.svg" alt="hat">
+        <h2 id="shoppingInstructions" class="fs-2 text-primary-500 fw-bold mb-0 mx-13">購物須知</h2>
+        <img class="revert" src="/nong_nong/assets/hat-9f52982c.svg" alt="hat">
+      </div>
+      <div>
+        <ol class="instructions-list pl-0">
+          <li class="fs-5 text-primary-700 fw-bold division py-10">運送天數
+            <p class="fs-6 text-black mb-0 mt-2">我們所有的農產品皆在新鲜採摘後 24 小時內發貨。一般配送時間為 1-3 個工作天，偏遠地區可能需稍長時間。請您在下單時確認收件地址正確，以確保產品能夠及時送達。</p>
+          </li>
+          <li class="fs-5 text-primary-700 fw-bold division py-10">瑕疵退換貨
+            <p class="fs-6 text-black mb-0 mt-2">若您收到的產品存在明顯瑕疵或損壞，請於收到商品後 24 小時内聯繫客服。我們將根據實際情況提供退換貨服務或其他補償措施。</p>
+          </li>
+          <li class="fs-5 text-primary-700 fw-bold division py-10">捐贈注意事項及捐贈紅利點數翻倍
+            <p class="fs-6 text-black mb-0 mt-2">我們非常支持您捐贈農產品給有需要的團體，因此選擇捐贈將獲得翻倍的紅利點數回饋，可用於下次購買折抵。</p>
+          </li>
+          <li class="fs-5 text-primary-700 fw-bold division py-10">保存方式
+            <p class="fs-6 text-black mb-0 mt-2">為了保持農產品的新鮮度，建議您在收到產品後盡快食用。如無法及時食用，請按照包裝上的建議保存方式存放，避免陽光直射和高溫環境。</p>
+          </li>
+          <li class="fs-5 text-primary-700 fw-bold division py-10 mb-10">客户服務
+            <p class="fs-6 text-black mb-0 mt-2">若您對於購買的產品有任何疑問或需要協助，請隨時聯繫我們的客服團隊，我們將竭誠為您解答，確保您有愉快的購物體驗。</p>
+          </li>
+          <li class="fs-5 text-primary-700 fw-bold">訂單修改與取消
+            <p class="fs-6 text-black mb-0 mt-2">訂單提交後如需修改或取消，請於發貨前盡快與我們聯繫。已發貨的訂單將無法進行更改或取消。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <!-- footer -->
+<br />
+<br />
+<br />
+<footer
+  class="footer bg-primary-500 text-white pt-20 pb-26 px-4 px-lg-26 pb-md-29"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-lg-6 mb-20 mb-md-0">
+        <div class="d-flex mb-6 footer-contact">
+          <div class="footer-brand me-md-15">
+            <a href="index.html">
+              <img
+                class="footer-logo"
+                src="/nong_nong/assets/logo_default_white-887d8e98.png"
+                alt="農農自然Logo"
+              />
+            </a>
+          </div>
+          <ul class="list-unstyled d-flex d-md-none pt-4 social-list">
+            <li class="me-2">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </li>
+          </ul>
+          <ul class="list-unstyled pt-4 contact-info">
+            <li class="mb-2 footer-contact-time">
+              客服時間：週一至週五 09:00 - 18:00
+            </li>
+            <li class="mb-2">
+              <span class="nong-d-none-sm">客服電話：</span
+              ><a href="tel:0800-000-000">0800-000-000</a>
+            </li>
+            <li>
+              <span class="nong-d-none-sm">客服信箱：</span
+              ><a href="mailto: exmanple@mail.com">exmanple@mail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          <p>本網站僅為學習使用 Copyright © 2024 農農自然保留一切權利</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-6 mb-20 mb-md-0">
+        <ul class="list-unstyled d-flex justify-content-center">
+          <li class="me-15 me-lg-20">
+            <div class="mb-10 fs-5 fw-bolder"><a href="#">商品列表</a></div>
+
+            <ul class="list-unstyled d-flex flex-column align-items-center">
+              <li class="mb-2"><a href="product.html">最新上架</a></li>
+              <li class="mb-2"><a href="product.html">熱門商品</a></li>
+              <li><a href="product.html">捐贈心意</a></li>
+            </ul>
+          </li>
+          <li class="">
+            <div class="mb-10 fs-5 fw-bolder"><a href="#">會員中心</a></div>
+
+            <ul class="list-unstyled d-flex flex-column align-items-center">
+              <li class="mb-2"><a href="#">註冊登入</a></li>
+              <li class="mb-2"><a href="#">管理後台</a></li>
+              <li><a href="#">忘記密碼</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="text-center sm-copyright">
+        <p>本網站僅為學習使用<br />Copyright © 2024 農農自然保留一切權利</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".idx-comment-list", {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        direction: getDirection(),
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 'auto',
+          }
+        },
+        on: {
+          resize: function () {
+            swiper.changeDirection(getDirection());
+          },
+        }
+      });
+
+      function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 374 ? 'vertical' : 'horizontal';
+
+        return direction;
+      }
+    </script>
+  </body>
+</html>

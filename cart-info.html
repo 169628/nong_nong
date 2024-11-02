@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>購物車/填寫收件資料</title>
+    <script type="module" crossorigin src="/nong_nong/assets/main-f55d420d.js"></script>
+    <link rel="stylesheet" href="/nong_nong/assets/main-903b64c0.css">
+  </head>
+  <body>
+    <!-- header -->
+
+<!-- 以下是 navbar -->
+<div class="header pt-20 pb-6 py-md-6">
+  <nav class="header-container">
+    <!-- 漢堡開始 -->
+    <a
+      href="#"
+      class="navbar-toggler d-md-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <img src="/nong_nong/assets/menu-1828182a.svg" alt="mobile-menu" />
+    </a>
+    <!-- 漢堡裡的內容-->
+    <div
+      class="offcanvas offcanvas-start bg-white admin-offcanvas"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div
+        class="offcanvas-body p-0 pt-15 d-flex flex-column justify-content-between"
+      >
+        <div>
+          <div
+            href="#"
+            class="fs-6 ps-11 py-1 fw-semibold text-primary-500 bg-primary-100"
+          >
+            所有地區
+          </div>
+          <ul class="ps-11 pe-6 mt-10 list-unstyled">
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500"
+                >北部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >中部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >南部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >東部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <button
+          type="submits"
+          class="border-0 bg-tertiary-500 py-2 text-white fs-6 fw-semibold"
+        >
+          登入 / 註冊
+        </button>
+      </div>
+    </div>
+    <!-- 漢堡結束 -->
+    <!-- logo -->
+    <a class="m-0 p-0" href="index.html"
+      ><picture>
+        <source
+          srcset="/nong_nong/assets/logo_horizontal_white-f49b86d9.png "
+          media="(max-width: 767px)"
+        />
+        <img
+          class="img-fluid header-logo"
+          src="/nong_nong/assets/logo_horizontal-d94d5102.png"
+          alt="banner"
+        /> </picture
+    ></a>
+    <a href="cart-confirm.html">
+      <button
+        type="button"
+        class="d-block d-md-none btn btn-outline-white rounded-circle"
+      >
+        <i class="bi bi-cart3 fs-5"></i>
+      </button>
+    </a>
+
+    <ul
+      class="d-none d-md-block list-unstyled d-md-flex align-items-md-center justify-content-md-between"
+    >
+      <li class="fs-5 text-gary-500">
+        <span class="fw-semibold me-2">皮皮</span>先生/小姐，您好
+      </li>
+      <li class="ms-10 position-relative dropdown-center">
+        <a
+          class="btn btn-primary-500 rounded-circle"
+          href="admin-panel.html"
+          role="button"
+        >
+          <!-- <a
+          class="btn btn-primary-500 rounded-circle dropdown-toggle"
+          href="admin-panel.html"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        > -->
+          <i class="bi bi-person fs-5"></i>
+        </a>
+        <!-- dropdown -->
+        <div class="header-dropdown-menu dropdown-menu mt-14">
+          <p class="fs-6 fw-semibold text-gary-500 p-0 mb-10">會員中心</p>
+          <ul class="p-0">
+            <li>
+              <a class="fs-6" href="#">個人資料</a>
+            </li>
+            <li>
+              <a class="fs-6 mt-1" href="#">歷史訂單</a>
+            </li>
+            <li>
+              <a class="fs-6 mt-1" href="#">折扣碼清單</a>
+            </li>
+            <li>
+              <a class="fs-6 mt-1" href="#">登出</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="ms-10">
+        <a href="cart-confirm.html">
+          <button
+            type="button"
+            class="btn btn-outline-primary-500 rounded-circle"
+          >
+            <i class="bi bi-cart3 fs-5"></i>
+          </button>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    <!--填寫收件資料-->
+    <div class="container"><div class="cart-out-progressbar d-none d-lg-block mt-22 pt-22 mb-31 mx-auto">
+  <div class="position-relative">
+    <div
+      class="progress"
+      role="progressbar"
+      aria-label="Progress"
+      aria-valuenow="50"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      style="height: 1px"
+    >
+      <div class="progress-bar bg-primary-500" style="width: 100%"></div>
+    </div>
+    <a
+      href="#"
+      class="position-absolute top-0 start-0 translate-middle d-flex flex-column align-items-center"
+    >
+      <span class="span-full rounded-3">1</span>
+      <p class="font-probar">確認訂單</p>
+    </a>
+    <a
+      href="#"
+      class="position-absolute top-0 start-33 translate-middle d-flex flex-column align-items-center"
+    >
+      <span class="span-outline rounded-3">2</span>
+      <p class="font-probar">填寫收件資料</p>
+    </a>
+    <a
+      href="#"
+      class="position-absolute top-0 start-66 translate-middle d-flex flex-column align-items-center"
+    >
+      <span class="span-outline rounded-3">3</span>
+      <p class="font-probar">進行付款</p>
+    </a>
+    <a
+      href="#"
+      class="position-absolute top-0 finish-position translate-middle-y d-flex flex-column align-items-center"
+    >
+      <span class="span-outline rounded-3">4</span>
+      <p class="font-probar">完成購買</p>
+    </a>
+  </div>
+</div>
+</div>
+    <!-- footer -->
+<br />
+<br />
+<br />
+<footer
+  class="footer bg-primary-500 text-white pt-20 pb-26 px-4 px-lg-26 pb-md-29"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-lg-6 mb-20 mb-md-0">
+        <div class="d-flex mb-6 footer-contact">
+          <div class="footer-brand me-md-15">
+            <a href="index.html">
+              <img
+                class="footer-logo"
+                src="/nong_nong/assets/logo_default_white-887d8e98.png"
+                alt="農農自然Logo"
+              />
+            </a>
+          </div>
+          <ul class="list-unstyled d-flex d-md-none pt-4 social-list">
+            <li class="me-2">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </li>
+          </ul>
+          <ul class="list-unstyled pt-4 contact-info">
+            <li class="mb-2 footer-contact-time">
+              客服時間：週一至週五 09:00 - 18:00
+            </li>
+            <li class="mb-2">
+              <span class="nong-d-none-sm">客服電話：</span
+              ><a href="tel:0800-000-000">0800-000-000</a>
+            </li>
+            <li>
+              <span class="nong-d-none-sm">客服信箱：</span
+              ><a href="mailto: exmanple@mail.com">exmanple@mail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          <p>本網站僅為學習使用 Copyright © 2024 農農自然保留一切權利</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-6 mb-20 mb-md-0">
+        <ul class="list-unstyled d-flex justify-content-center">
+          <li class="me-15 me-lg-20">
+            <div class="mb-10 fs-5 fw-bolder"><a href="#">商品列表</a></div>
+
+            <ul class="list-unstyled d-flex flex-column align-items-center">
+              <li class="mb-2"><a href="product.html">最新上架</a></li>
+              <li class="mb-2"><a href="product.html">熱門商品</a></li>
+              <li><a href="product.html">捐贈心意</a></li>
+            </ul>
+          </li>
+          <li class="">
+            <div class="mb-10 fs-5 fw-bolder"><a href="#">會員中心</a></div>
+
+            <ul class="list-unstyled d-flex flex-column align-items-center">
+              <li class="mb-2"><a href="#">註冊登入</a></li>
+              <li class="mb-2"><a href="#">管理後台</a></li>
+              <li><a href="#">忘記密碼</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="text-center sm-copyright">
+        <p>本網站僅為學習使用<br />Copyright © 2024 農農自然保留一切權利</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+  </body>
+</html>

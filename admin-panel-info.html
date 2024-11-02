@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>會員後台/小農資料</title>
+    <script type="module" crossorigin src="/nong_nong/assets/main-f55d420d.js"></script>
+    <link rel="stylesheet" href="/nong_nong/assets/main-903b64c0.css">
+  </head>
+  <body>
+    <!-- admin-header -->
+<div class="admin-header pt-20 pb-6 py-md-6">
+  <nav class="admin-header-container position-relative">
+    <!-- 漢堡開始 -->
+    <a
+      href="#"
+      class="navbar-toggler d-md-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <img src="/nong_nong/assets/menu-1828182a.svg" alt="mobile-menu" />
+    </a>
+    <!-- 漢堡裡的內容-->
+    <div
+      class="offcanvas offcanvas-start bg-white"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div
+        class="offcanvas-body p-0 pt-15 d-flex flex-column justify-content-between"
+      >
+        <div>
+          <div
+            href="#"
+            class="fs-6 ps-11 py-1 fw-semibold text-primary-500 bg-primary-100"
+          >
+            後台管理
+          </div>
+          <ul class="ps-11 pe-6 mt-10 list-unstyled">
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500"
+                >商品管理<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >小農資料<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+          </ul>
+          <div
+            href="#"
+            class="fs-6 mt-13 ps-11 py-1 fw-semibold text-primary-500 bg-primary-100"
+          >
+            會員中心
+          </div>
+          <ul class="ps-11 pe-6 mt-10 list-unstyled">
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500"
+                >個人資料<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >歷史訂單<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >收藏資訊<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >折扣碼清單<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >登出<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex align-items-center px-4 pt-6 pb-14">
+          <img
+            src="data:image/png;base64,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"
+            class="img-fluid me-4"
+            alt="member photo"
+          />
+          <div class="d-flex flex-column justify-content-center">
+            <span class="fs-6 fw-semibold">皮皮</span>
+            <p class="m-0 fs-6">先生/小姐，您好</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 漢堡結束 -->
+    <!-- logo -->
+    <a class="m-0 p-0" href="index.html"
+      ><picture>
+        <source
+          srcset="/nong_nong/assets/logo_horizontal_white-f49b86d9.png "
+          media="(max-width: 767px)"
+        />
+        <img
+          class="img-fluid admin-header-logo"
+          src="/nong_nong/assets/logo_horizontal-d94d5102.png"
+          alt="banner"
+        /> </picture
+    ></a>
+
+    <ul
+      class="d-none d-md-block list-unstyled d-md-flex align-items-md-center justify-content-md-between list-unstyled"
+    >
+      <li class="fs-5 text-gary-500">
+        <span class="fw-semibold me-2">皮皮</span>先生/小姐，您好
+      </li>
+      <li class="ms-10">
+        <button
+          type="button"
+          class="btn btn-outline-primary-500 rounded-circle"
+        >
+          <i class="bi bi-person fs-5"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    <div class="d-flex">
+      <!-- admin side nav -->
+<div class="admin-side bg-primary-100 d-none d-md-block">
+  <div class="admin-side-container pe-10">
+    <ul class="pt-17 list-unstyled">
+      <li><a class="fs-5 text-primary-700" href="#">商品管理</a></li>
+      <li class="mt-13">
+        <a class="fs-5 text-primary-700" href="#">小農資料</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      <div class="admin-contnet">
+        <!--小農資料-->
+      </div>
+    </div>
+
+    
+  </body>
+</html>

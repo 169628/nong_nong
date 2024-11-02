@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>購物車/確認訂單</title>
+    <script type="module" crossorigin src="/nong_nong/assets/main-f55d420d.js"></script>
+    <link rel="stylesheet" href="/nong_nong/assets/main-903b64c0.css">
+  </head>
+
+  <body class="pt-md-26 pt-lg-33">
+    <!-- header -->
+
+<!-- 以下是 navbar -->
+<div class="header pt-20 pb-6 py-md-6">
+  <nav class="header-container">
+    <!-- 漢堡開始 -->
+    <a
+      href="#"
+      class="navbar-toggler d-md-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <img src="/nong_nong/assets/menu-1828182a.svg" alt="mobile-menu" />
+    </a>
+    <!-- 漢堡裡的內容-->
+    <div
+      class="offcanvas offcanvas-start bg-white admin-offcanvas"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div
+        class="offcanvas-body p-0 pt-15 d-flex flex-column justify-content-between"
+      >
+        <div>
+          <div
+            href="#"
+            class="fs-6 ps-11 py-1 fw-semibold text-primary-500 bg-primary-100"
+          >
+            所有地區
+          </div>
+          <ul class="ps-11 pe-6 mt-10 list-unstyled">
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500"
+                >北部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >中部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >南部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="d-flex justify-content-between fs-6 text-gary-500 mt-6"
+                >東部<i class="bi bi-chevron-compact-right"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <button
+          type="submits"
+          class="border-0 bg-tertiary-500 py-2 text-white fs-6 fw-semibold"
+        >
+          登入 / 註冊
+        </button>
+      </div>
+    </div>
+    <!-- 漢堡結束 -->
+    <!-- logo -->
+    <a class="m-0 p-0" href="index.html"
+      ><picture>
+        <source
+          srcset="/nong_nong/assets/logo_horizontal_white-f49b86d9.png "
+          media="(max-width: 767px)"
+        />
+        <img
+          class="img-fluid header-logo"
+          src="/nong_nong/assets/logo_horizontal-d94d5102.png"
+          alt="banner"
+        /> </picture
+    ></a>
+    <a href="cart-confirm.html">
+      <button
+        type="button"
+        class="d-block d-md-none btn btn-outline-white rounded-circle"
+      >
+        <i class="bi bi-cart3 fs-5"></i>
+      </button>
+    </a>
+
+    <ul
+      class="d-none d-md-block list-unstyled d-md-flex align-items-md-center justify-content-md-between"
+    >
+      <li class="fs-5 text-gary-500">
+        <span class="fw-semibold me-2">皮皮</span>先生/小姐，您好
+      </li>
+      <li class="ms-10 position-relative dropdown-center">
+        <a
+          class="btn btn-primary-500 rounded-circle"
+          href="admin-panel.html"
+          role="button"
+        >
+          <!-- <a
+          class="btn btn-primary-500 rounded-circle dropdown-toggle"
+          href="admin-panel.html"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        > -->
+          <i class="bi bi-person fs-5"></i>
+        </a>
+        <!-- dropdown -->
+        <div class="header-dropdown-menu dropdown-menu mt-14">
+          <p class="fs-6 fw-semibold text-gary-500 p-0 mb-10">會員中心</p>
+          <ul class="p-0">
+            <li>
+              <a class="fs-6" href="#">個人資料</a>
+            </li>
+            <li>
+              <a class="fs-6 mt-1" href="#">歷史訂單</a>
+            </li>
+            <li>
+              <a class="fs-6 mt-1" href="#">折扣碼清單</a>
+            </li>
+            <li>
+              <a class="fs-6 mt-1" href="#">登出</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="ms-10">
+        <a href="cart-confirm.html">
+          <button
+            type="button"
+            class="btn btn-outline-primary-500 rounded-circle"
+          >
+            <i class="bi bi-cart3 fs-5"></i>
+          </button>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+    <!--填寫收件資料-->
+    <div class="container">
+      <div class="cart-out-progressbar d-none d-lg-block mt-22 pt-22 mb-31 mx-auto">
+  <div class="position-relative">
+    <div
+      class="progress"
+      role="progressbar"
+      aria-label="Progress"
+      aria-valuenow="50"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      style="height: 1px"
+    >
+      <div class="progress-bar bg-primary-500" style="width: 100%"></div>
+    </div>
+    <a
+      href="#"
+      class="position-absolute top-0 start-0 translate-middle d-flex flex-column align-items-center"
+    >
+      <span class="span-full rounded-3">1</span>
+      <p class="font-probar">確認訂單</p>
+    </a>
+    <a
+      href="#"
+      class="position-absolute top-0 start-33 translate-middle d-flex flex-column align-items-center"
+    >
+      <span class="span-outline rounded-3">2</span>
+      <p class="font-probar">填寫收件資料</p>
+    </a>
+    <a
+      href="#"
+      class="position-absolute top-0 start-66 translate-middle d-flex flex-column align-items-center"
+    >
+      <span class="span-outline rounded-3">3</span>
+      <p class="font-probar">進行付款</p>
+    </a>
+    <a
+      href="#"
+      class="position-absolute top-0 finish-position translate-middle-y d-flex flex-column align-items-center"
+    >
+      <span class="span-outline rounded-3">4</span>
+      <p class="font-probar">完成購買</p>
+    </a>
+  </div>
+</div>
+
+      <h4 class="mt-26 mt-lg-0 fs-4 fs-md-2 text-primary-700 fw-bold">
+        購物車內容
+      </h4>
+      <div class="text-secondary-700 d-flex">
+        <div class="cart-icon-vector">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFDSURBVHgBlVNNTsJAFH7fWHGLN+gNjBewwwmEDcZdOYG4E2Ji3aA7ww3YGWHBEahewN6AHqFrY+f5psVga9HhSybT9//Ne68gweglWMuVAJSZHPePl3FKjlDjxdmd3L6cLjOFULze6NwSkFGoK9kgGs91SA5QhqndbOKAHICbZ+2rA37nhkRHLRzb++PTXBHDFx8tYlIEguNJ/21a0B/NgxWVxhoJXEPRCTOHjdUVR17hl2MgworKZv7w4CepuhPSq1DZDzs2EToEimkPAOihySATWArt7j/xycPF66mqa28XWttgYTRgxlTqpNuKlNlj2UqDO1bn1RPkxpzbIHnWbKMalpOi9qQfJ3V/7zczDMvKW/y12pUnfG+fUjQjR1R7wMUY09YhpeQIVY2XLQOlUS/OyBFVBmBZ2V3/hiOipd4rwReMj3sXW4XOggAAAABJRU5ErkJggg=="
+            class="img-fluid"
+            alt="vector photo"
+          />
+        </div>
+        <p class="fs-6 fw-medium">表示購物項目屬於捐贈區商品</p>
+      </div>
+      <div class="row mt-md-15">
+        <div class="col col-lg-8">
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col d-none d-lg-block">
+              <p class="text-center bg-primary-100 rounded-3 fs-6 py-4 m-0">
+                項目
+              </p>
+            </div>
+            <div class="col d-none d-lg-block">
+              <div class="row">
+                <div class="col">
+                  <p class="text-center bg-primary-100 rounded-3 fs-6 py-4 m-0">
+                    數量
+                  </p>
+                </div>
+                <div class="col">
+                  <p class="text-center bg-primary-100 rounded-3 fs-6 py-4 m-0">
+                    小計
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex pt-13 pb-10 px-lg-10 pt-md-10 pb-lg-0">
+              <div class="cart-product-photo overflow-hidden rounded-3">
+                <img
+                  src="/nong_nong/assets/product-01-82d86872.jpg"
+                  class="img-fluid"
+                  alt="wendan"
+                />
+              </div>
+              <ul class="list-unstyled ms-4">
+                <li class="d-flex">
+                  <p class="m-0 fs-5 me-2">花蓮鶴岡老欉文旦</p>
+                  <div class="cart-icon-vector">
+                    <img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARCAYAAADUryzEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFDSURBVHgBlVNNTsJAFH7fWHGLN+gNjBewwwmEDcZdOYG4E2Ji3aA7ww3YGWHBEahewN6AHqFrY+f5psVga9HhSybT9//Ne68gweglWMuVAJSZHPePl3FKjlDjxdmd3L6cLjOFULze6NwSkFGoK9kgGs91SA5QhqndbOKAHICbZ+2rA37nhkRHLRzb++PTXBHDFx8tYlIEguNJ/21a0B/NgxWVxhoJXEPRCTOHjdUVR17hl2MgworKZv7w4CepuhPSq1DZDzs2EToEimkPAOihySATWArt7j/xycPF66mqa28XWttgYTRgxlTqpNuKlNlj2UqDO1bn1RPkxpzbIHnWbKMalpOi9qQfJ3V/7zczDMvKW/y12pUnfG+fUjQjR1R7wMUY09YhpeQIVY2XLQOlUS/OyBFVBmBZ2V3/hiOipd4rwReMj3sXW4XOggAAAABJRU5ErkJggg=="
+                      class="img-fluid"
+                      alt="vector photo"
+                    />
+                  </div>
+                </li>
+                <li class="mt-1">
+                  <p class="m-0 fs-6 text-gary-500">10斤/箱</p>
+                </li>
+                <li class="mt-1 d-flex">
+                  <p class="m-0 fs-6 text-gary-500 me-4">單價</p>
+                  <p class="m-0 fs-6 text-gary-500">NT.511</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <div class="row h-100">
+                <div class="col-6 d-flex align-items-center">
+                  <ul
+                    class="d-flex justify-content-between border border-gary-500 rounded-1 p-0 py-1 list-unstyled w-100"
+                  >
+                    <li>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-dash"></i
+                      ></a>
+                    </li>
+                    <li class="fs-6">2</li>
+                    <li>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-plus"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="col-6 d-flex justify-content-end align-items-center"
+                >
+                  <p class="m-0 fs-5 fw-medium cart-price-color">NT. 1022</p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex pt-15 pb-10 px-lg-10 pt-md-10 pb-lg-0">
+              <div class="cart-product-photo overflow-hidden rounded-3">
+                <img
+                  src="/nong_nong/assets/product-04-7927ae63.jpg"
+                  class="img-fluid"
+                  alt="banana"
+                />
+              </div>
+              <ul class="list-unstyled ms-4">
+                <li class="d-flex">
+                  <p class="m-0 fs-5 me-2">高雄旗山香蕉</p>
+                </li>
+                <li class="mt-1">
+                  <p class="m-0 fs-6 text-gary-500">400-500g/串</p>
+                </li>
+                <li class="mt-1 d-flex">
+                  <p class="m-0 fs-6 text-gary-500 me-4">單價</p>
+                  <p class="m-0 fs-6 text-gary-500">NT. 530</p>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <div class="row h-100">
+                <div class="col-6 d-flex align-items-center">
+                  <ul
+                    class="d-flex justify-content-between border border-gary-500 rounded-1 p-0 py-1 list-unstyled w-100"
+                  >
+                    <li>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-dash"></i
+                      ></a>
+                    </li>
+                    <li class="fs-6">1</li>
+                    <li>
+                      <a href="#" class="p-2 text-gary-500"
+                        ><i class="bi bi-plus"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="col-6 d-flex justify-content-end align-items-center"
+                >
+                  <p class="m-0 fs-5 fw-medium cart-price-color">NT. 530</p>
+                </div>
+              </div>
+            </div>
+            <div class="col pt-19 pt-md-15">
+              <p class="text-gary-500 fs-6 fs-md-5 m-0">運送方式</p>
+              <div class="mt-6 d-flex justify-content-between d-md-inline-flex">
+                <button
+                  type="button"
+                  class="btn btn-outline-gary-500 py-4 px-13 fs-6 fw-medium me-md-10 cart-btn-hover"
+                >
+                  捐贈
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-gary-500 py-4 px-13 fs-6 fw-medium me-md-10 cart-btn-hover"
+                >
+                  宅配
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-gary-500 py-4 px-6 fs-6 fw-medium cart-btn-hover"
+                >
+                  倉庫自取
+                </button>
+              </div>
+              <p class="cart-alert-text mt-2 d-none d-md-flex">
+                購物車內有不屬於捐贈區商品，請確認後再選擇
+              </p>
+            </div>
+            <div class="col d-none d-md-block"></div>
+            <div class="col pt-8 pt-md-10">
+              <label for="discount" class="text-gary-500 fs-6 fs-md-5"
+                >優惠折扣碼</label
+              >
+              <div class="mt-6 d-flex justify-content-between">
+                <input
+                  id="discount"
+                  type="text"
+                  class="cart-input-form"
+                  placeholder="請輸入折扣碼序號"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-gary-500 py-3 px-10 fs-6 cart-btn-hover"
+                >
+                  使用
+                </button>
+              </div>
+            </div>
+            <div class="col pt-8 pt-md-10">
+              <div class="d-flex">
+                <label for="discount" class="text-gary-500 fs-6 fs-md-5 me-2"
+                  >紅利點數可折抵</label
+                >
+                <p class="text-secondary-700 fs-6 fs-md-5 fs-medium">NT. 24</p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <input
+                  id="discount"
+                  type="text"
+                  class="cart-input-form"
+                  placeholder="請輸入要使用的紅利點數"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-gary-500 py-3 px-10 fs-6 cart-btn-hover"
+                >
+                  使用
+                </button>
+              </div>
+              <p class="cart-alert-text d-none d-md-block">
+                持有的紅利點數不足
+              </p>
+            </div>
+          </div>
+
+          <div class="d-block d-lg-none pt-13 pb-15">
+            <p
+              class="m-0 fs-6 fw-medium py-4 text-white text-center bg-primary-300 cart-info-top-border"
+            >
+              訂單摘要
+            </p>
+            <div class="bg-white cart-info-bottom-border p-10 px-lg-13">
+              <ul class="list-unstyled p-0">
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">商品總金額</span
+                  ><span class="text-gary-500">NT. 1,552</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">運費總金額</span
+                  ><span class="text-gary-500">NT. 60</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">折扣</span
+                  ><span class="text-primary-500">－NT. 60</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">紅利折抵</span
+                  ><span class="text-primary-500">－ NT. 2</span>
+                </li>
+              </ul>
+              <div
+                class="d-flex justify-content-between align-items-center border-top border-gary-500 pt-10 pb-6"
+              >
+                <span class="text-gary-500 cart-total-price-font"
+                  >結帳總金額</span
+                ><span class="text-primary-500 fs-4 fw-bold">$ 1,550</span>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center cart-info-bgcolor py-8 px-6"
+              >
+                <span class="text-gary-500 cart-info-li-text"
+                  >此筆訂單捐贈後可獲得紅利</span
+                ><span class="text-primary-300 fs-6 fw-bold">11 點</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-info-bgcolor p-10 mt-lg-10">
+            <p class="text-primary-300 fw-bold">
+              【 優惠使用及商品出貨配送須知 】
+            </p>
+            <ol class="mb-0 ps-6">
+              <li class="text-gary-500 cart-info-li-text">
+                除商品缺貨外，訂單付款完成後 5~7 個工作天（不含例假日）進行出貨
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                實際配送天數視物流狀況而定，恕無法指定到貨日
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                低溫商品運用過程中有一定風險，無法保證產品不會遭遇溫度變化，請評估後可接受再下單
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                若訂單成立後因個人因素取消訂單，首購折扣碼即失效，恕不補發
+              </li>
+            </ol>
+            <p class="text-primary-300 fw-bold mt-13">【 會員紅利點數累積 】</p>
+            <ol class="mb-0 ps-6">
+              <li class="text-gary-500 cart-info-li-text">
+                消費滿 100 元贈送 1 點紅利
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                紅利點數等同現金，1點 = $1元，可直接折抵商品金額
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                捐贈回饋之紅利積點可累計，且無使用時效性（不含特殊活動獲得之紅利）
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                紅利點數無法折抵運費
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                除因商品瑕疵因素，退貨後該訂單使用的紅利點數將無法歸還帳戶
+              </li>
+              <li class="text-gary-500 cart-info-li-text">
+                訂單內商品須全為捐贈區商品, 才可捐贈
+              </li>
+            </ol>
+          </div>
+          <ul class="list-unstyled mt-20 mt-md-26">
+            <li
+              class="cart-info-bgcolor py-8 py-md-4 px-10 d-flex align-items-center"
+            >
+              <input type="checkbox" class="cart-info-checkbox me-6" />
+              <p class="m-0 fw-light">
+                同意商店服務條款/會員責任規範及個資聲明。
+              </p>
+            </li>
+            <li
+              class="cart-info-bgcolor py-8 py-md-4 px-10 d-flex align-items-center mt-6"
+            >
+              <input type="checkbox" class="cart-info-checkbox me-6" />
+              <p class="m-0 fw-light">
+                為保障彼此之權益，賣家在收到您的訂單後仍保有決定是否接受訂單及出貨與否之權利。
+              </p>
+            </li>
+          </ul>
+          <div class="row mt-22 mb-26 mb-md-31">
+            <div class="col-6">
+              <button
+                type="button"
+                class="btn btn-outline-primary-500 w-100 py-4"
+              >
+                繼續選購
+              </button>
+            </div>
+            <div class="col-6">
+              <button type="button" class="btn btn-primary-500 w-100 py-4">
+                填寫收件資料
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-4">
+          <div class="p-0 px-lg-4">
+            <p
+              class="m-0 fs-6 fw-medium py-4 text-white text-center bg-primary-300 cart-info-top-border"
+            >
+              訂單摘要
+            </p>
+            <div class="bg-white cart-info-bottom-border p-10 px-lg-13">
+              <ul class="list-unstyled p-0">
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">商品總金額</span
+                  ><span class="text-gary-500">NT. 1,552</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">運費總金額</span
+                  ><span class="text-gary-500">NT. 60</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">折扣</span
+                  ><span class="text-primary-500">－NT. 60</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">紅利折抵</span
+                  ><span class="text-primary-500">－ NT. 2</span>
+                </li>
+              </ul>
+              <div
+                class="d-flex justify-content-between align-items-center border-top border-gary-500 pt-10 pb-6"
+              >
+                <span class="text-gary-500 cart-total-price-font"
+                  >結帳總金額</span
+                ><span class="text-primary-500 fs-4 fw-bold">$ 1,550</span>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center cart-info-bgcolor py-8 px-6"
+              >
+                <span class="text-gary-500 cart-info-li-text"
+                  >此筆訂單捐贈後可獲得紅利</span
+                ><span class="text-primary-300 fs-6 fw-bold">11 點</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+<br />
+<br />
+<br />
+<footer
+  class="footer bg-primary-500 text-white pt-20 pb-26 px-4 px-lg-26 pb-md-29"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-lg-6 mb-20 mb-md-0">
+        <div class="d-flex mb-6 footer-contact">
+          <div class="footer-brand me-md-15">
+            <a href="index.html">
+              <img
+                class="footer-logo"
+                src="/nong_nong/assets/logo_default_white-887d8e98.png"
+                alt="農農自然Logo"
+              />
+            </a>
+          </div>
+          <ul class="list-unstyled d-flex d-md-none pt-4 social-list">
+            <li class="me-2">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </li>
+          </ul>
+          <ul class="list-unstyled pt-4 contact-info">
+            <li class="mb-2 footer-contact-time">
+              客服時間：週一至週五 09:00 - 18:00
+            </li>
+            <li class="mb-2">
+              <span class="nong-d-none-sm">客服電話：</span
+              ><a href="tel:0800-000-000">0800-000-000</a>
+            </li>
+            <li>
+              <span class="nong-d-none-sm">客服信箱：</span
+              ><a href="mailto: exmanple@mail.com">exmanple@mail.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          <p>本網站僅為學習使用 Copyright © 2024 農農自然保留一切權利</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-6 mb-20 mb-md-0">
+        <ul class="list-unstyled d-flex justify-content-center">
+          <li class="me-15 me-lg-20">
+            <div class="mb-10 fs-5 fw-bolder"><a href="#">商品列表</a></div>
+
+            <ul class="list-unstyled d-flex flex-column align-items-center">
+              <li class="mb-2"><a href="product.html">最新上架</a></li>
+              <li class="mb-2"><a href="product.html">熱門商品</a></li>
+              <li><a href="product.html">捐贈心意</a></li>
+            </ul>
+          </li>
+          <li class="">
+            <div class="mb-10 fs-5 fw-bolder"><a href="#">會員中心</a></div>
+
+            <ul class="list-unstyled d-flex flex-column align-items-center">
+              <li class="mb-2"><a href="#">註冊登入</a></li>
+              <li class="mb-2"><a href="#">管理後台</a></li>
+              <li><a href="#">忘記密碼</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="text-center sm-copyright">
+        <p>本網站僅為學習使用<br />Copyright © 2024 農農自然保留一切權利</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+  </body>
+</html>
