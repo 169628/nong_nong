@@ -107,3 +107,39 @@
     display: block;
   }
 }
+
+
+.page-cart {
+  opacity: 0;
+  right: 5%;
+  bottom: 290px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+  height: 86px;
+  border-radius: 50px;
+  font-size: 42px;
+  text-align: center;
+  background: #DBBE5D;
+  color: #FFFFFF;
+  z-index: 1000;
+
+  @include mobile {
+      bottom: 35%;
+      width: 70px;
+      height: 70px;
+      font-size: 30px;
+  }
+
+
+  .page-cart-num {
+      top: 30%;
+      font-size: 13px;
+
+      @include mobile {
+          font-size: 10px;
+      }
+  }
+}
