@@ -60,6 +60,12 @@
     }
 }
 
+.banner-swiper {
+    .btn-swiper {
+        display: none !important; 
+    }
+}
+
 .idx-banner {
     margin-bottom: 75px;
     position: relative;
@@ -116,11 +122,43 @@
     .idx-search-item {
         width: 60%;
         max-width: 636px;
+        
+
+        .form-control {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            border-radius: 500px;
+        }
 
         .form-control:focus {
             outline: none;
             box-shadow: none;
             border-color: white;
+        }
+
+        .form-control.show {
+            padding-top: 20px;
+            padding-bottom: 56px;
+            border-radius: 40px;
+        }
+    }
+
+    .search-tag-list {
+        bottom: 10px;
+        left: 40px;
+
+        .search-tags {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .search-tag {
+            background: #966A09;
+            color: #FFFFFF;
+            padding: 4px 10px;
+            border-radius: 8px;
+            margin-top: 16px;
+            margin-right: 16px;
         }
     }
 
@@ -258,22 +296,6 @@
                 font-size: 14px;
             }
         }
-
-        .tag-list {
-            position: absolute;
-            top: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .product-tag {
-            background: #DBBE5D;
-            padding: 4px 10px;
-            border-radius: 8px;
-            margin-top: 16px;
-            margin-right: 16px;
-        }
     }
 
     // .swiper-wrapper {
@@ -282,10 +304,44 @@
     // }
 }
 
+.tag-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tag-cat-list {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-tag {
+    background: #DBBE5D;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-top: 16px;
+    margin-right: 16px;
+}
+
+.product-cat-tag {
+    background: #F7F4EB;
+    color: #785507;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-top: 16px;
+    margin-right: 16px;
+}
+
 // 傳遞心意
 .idx-heart-list {
     padding: 64px 72px;
     background: #EBF1DD;
+    position: relative;
 
     @include mobile {
         padding: 10px 0;
@@ -306,6 +362,7 @@
 
         // https: //blog.csdn.net/pitaogao/article/details/112727743
         .img-box {
+            position: relative;
             overflow: hidden;
             border-radius: 8px;
             margin-bottom: 16px;
@@ -352,12 +409,54 @@
     }
 }
 
+.heart-read-more {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+
+    .readmore {
+        padding: 16px 56px 16px 56px;
+        background: #CDAA34;
+        color: #FFFFFF;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.heart-read-more-sm {
+    display: none;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    .readmore {
+        padding: 8px 85px 8px 85px;
+        background: #CDAA34;
+        color: #FFFFFF;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include mobile {
+        display: block;
+    }
+}
+
 .buy-btn {
     width: 48px;
     height: 48px;
     border-radius: 50px;
     font-size: 28px;
     text-align: center;
+    margin-top: auto;
 
     @include mobile {
         width: 100%;

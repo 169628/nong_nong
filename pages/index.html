@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>農農自然 - 首頁</title>
   </head>
   <body>
@@ -27,42 +28,55 @@
             </picture>
           </div>
         </div>
+        <div class="swiper-button-next swiper-btn-white d-none d-lg-flex btn-swiper"><i class="bi bi-arrow-right-short fs-1 text-primary-500"></i></div>
+        <div class="swiper-button-prev swiper-btn-white d-none d-lg-flex btn-swiper"><i class="bi bi-arrow-left-short fs-1 text-primary-500"></i></div>
         <div class="swiper-pagination"></div>
       </div>
       <div class="d-none d-md-flex justify-content-center position-absolute idx-search">
         <div class="d-flex align-items-center position-relative idx-search-item">
-          <input type="text" class="form-control rounded-pill text-gary-500 py-6 px-10 dropdown-toggle" placeholder="請輸入關鍵字..." role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+          <input type="text" class="form-control text-gary-500 px-10 dropdown-toggle search-inp" placeholder="請輸入關鍵字..." role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
           <a class="position-absolute end-0 me-11 text-primary-300" href="#" ><i class="bi bi-search"></i></a>
+
+          <div class="search-tag-list position-absolute">
+            <ul class="list-unstyled search-tags">
+              <li class="search-tag"><a href="product_list.html">#有機</a></li>
+              <li class="search-tag"><a href="product_list.html">#捐贈</a></li>
+              <li class="search-tag"><a href="product_list.html">#熱門</a></li>
+              <li class="search-tag"><a href="product_list.html">#最新</a></li>
+              <li class="search-tag"><a href="product_list.html">#花蓮限定</a></li>
+            </ul>
+          </div>
 
           <!-- 搜尋選單 -->
           <div class="dropdown-menu mt-4 overflow-hidden text-gary-500">
             <div class="d-flex">
               <!-- 選單第一層 -->
               <ul class="list-unstyled dropdown-menu-lev-one">
-                <li class="mb-6"><a class="search-item search-item-all" href="#">所有地區</a></li>
-                <li><a class="search-item" href="#">北部</a></li>
-                <li class="item-current"><a class="search-item" href="#">中部</a></li>
-                <li><a class="search-item" href="#">南部</a></li>
-                <li><a class="search-item" href="#">東部</a></li>
-              </ul>
-              <!-- 選單第二層 -->
-              <ul class="list-unstyled dropdown-menu-lev-two">
                 <li class="mb-6"><a class="search-item search-item-all" href="#">所有種類</a></li>
                 <li class="item-current"><a class="search-item" href="#">葉菜類</a></li>
                 <li><a class="search-item" href="#">根莖瓜果類</a></li>
                 <li><a class="search-item" href="#">菌菇類</a></li>
                 <li><a class="search-item" href="#">豆類</a></li>
                 <li><a class="search-item" href="#">安心水果類</a></li>
+                
+              </ul>
+              <!-- 選單第二層 -->
+              <ul class="list-unstyled dropdown-menu-lev-two">
+                <li class="mb-6"><a class="search-item search-item-all" href="#">所有項目</a></li>
+                <li><a href="#" class="search-item">小白菜</a></li>
+                <li><a href="#" class="search-item">高麗菜</a></li>
+                <li class="item-current"><a href="#" class="search-item">青江菜</a></li>
+                <li><a href="#" class="search-item">龍鬚菜</a></li>
+                <li><a href="#" class="search-item">韭菜</a></li>
               </ul>
               <!-- 選單第三層 -->
               <section class="list-unstyled dropdown-menu-lev-three">
                 <ul class="list-unstyled">
-                  <li class="mb-6"><a href="#" class="search-item search-item-all">所有項目</a></li>
-                  <li><a href="#" class="search-item">小白菜</a></li>
-                  <li><a href="#" class="search-item">高麗菜</a></li>
-                  <li class="item-current"><a href="#" class="search-item">青江菜</a></li>
-                  <li><a href="#" class="search-item">龍鬚菜</a></li>
-                  <li><a href="#" class="search-item">韭菜</a></li>
+                  <li class="mb-6"><a href="#" class="search-item search-item-all">所有地區</a></li>
+                  <li><a class="search-item" href="#">北部</a></li>
+                  <li class="item-current"><a class="search-item" href="#">中部</a></li>
+                  <li><a class="search-item" href="#">南部</a></li>
+                  <li><a class="search-item" href="#">東部</a></li>
                 </ul>
               </section>
             </div>
@@ -79,7 +93,7 @@
               <img src="../assets/images/icon/rice_ears.png" class="me-2 me-md-6" />
               <h2 class="text-primary-500 fs-4 fs-md-2 fw-700">最新上架</h2>
             </div>
-            <a href="#" class="read-more">看更多最新產品<i class="bi bi-arrow-right ms-2"></i></a>
+            <a href="product_list.html" class="read-more">看更多<i class="bi bi-arrow-right ms-2"></i></a>
           </div>
 
           <div class="swiper mySwiper">
@@ -92,6 +106,9 @@
                   <div class="tag-list">
                     <span class="product-tag">多汁</span>
                     <span class="product-tag">有機</span>
+                  </div>
+                  <div class="tag-cat-list">
+                    <span class="product-cat-tag">最新</span>
                   </div>
                 </div>
 
@@ -120,10 +137,48 @@
               <div class="swiper-slide idx-goods-item">
                 <div class="img-box">
                   <a href="product.html">
+                      <img src="../assets/images/product/product_cover.png" class="card-img-top goods-pic" alt="...">
+                  </a>
+                  <div class="tag-list">
+                    <span class="product-tag">有機</span>
+                  </div>
+                  <div class="tag-cat-list">
+                    <span class="product-cat-tag">最新</span>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <a href="product.html"><h3 class="card-title mb-1">山城自然芭樂</h3></a>
+                  <span class="text-gary-500 mb-2">2斤/箱</span>
+
+                  <div
+                    class="d-flex flex-column flex-md-row justify-content-md-between"
+                  >
+                    <div class="goods-price mb-2 mb-md-0">
+                      <span class="text-primary-500 fw-bold fs-6 fs-md-4 me-4"
+                        >NT.500</span
+                      >
+                      <span class="old-price text-gary-500"
+                        ><del>NT.535</del></span
+                      >
+                    </div>
+                    <a href="#" class="buy-btn buy-btn-primary"
+                      ><i class="bi bi-cart3"></i
+                      ><span class="ms-2 d-md-none">加入購物車</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide idx-goods-item">
+                <div class="img-box">
+                  <a href="product.html">
                       <img src="../assets/images/index/product-02.jpg" class="card-img-top goods-pic" alt="...">
                   </a>
                   <div class="tag-list">
                     <span class="product-tag">常溫</span>
+                  </div>
+                  <div class="tag-cat-list">
+                    <span class="product-cat-tag">最新</span>
                   </div>
                 </div>
 
@@ -215,7 +270,7 @@
               <img src="../assets/images/icon/rice_ears.png" class="me-2 me-md-6" />
               <h2 class="text-primary-500 fs-4 fs-md-2 fw-700">熱門商品</h2>
             </div>
-            <a href="#" class="read-more">看更多熱門產品<i class="bi bi-arrow-right ms-2"></i></a>
+            <a href="#" class="read-more">看更多<i class="bi bi-arrow-right ms-2"></i></a>
           </div>
 
           <div class="swiper hotSwiper">
@@ -254,6 +309,9 @@
                   <div class="tag-list">
                     <span class="product-tag">冷藏</span>
                     <span class="product-tag">有機</span>
+                  </div>
+                  <div class="tag-cat-list">
+                    <span class="product-cat-tag">熱門</span>
                   </div>
                 </div>
 
@@ -310,11 +368,49 @@
               <div class="swiper-slide idx-goods-item">
                 <div class="img-box">
                   <a href="product.html">
+                      <img src="../assets/images/index/product-03.jpg" class="card-img-top goods-pic" alt="...">
+                  </a>
+                  <div class="tag-list">
+                    <span class="product-tag">冷藏</span>
+                    <span class="product-tag">有機</span>
+                  </div>
+                  <div class="tag-cat-list">
+                    <span class="product-cat-tag">熱門</span>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <a href="product.html"><h3 class="card-title mb-1">拉拉山水蜜桃</h3></a>
+                  <span class="text-gary-500 mb-2">5粒/箱</span>
+
+                  <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-start align-items-md-end">
+                    <div class="goods-price mb-2 mb-md-0">
+                      <span class="text-primary-500 fw-bold fs-6 fs-md-4 me-4"
+                        >NT.1100</span
+                      >
+                      <span class="old-price text-gary-500"
+                        ><del>NT.1500</del></span
+                      >
+                    </div>
+                    <a href="#" class="buy-btn buy-btn-primary"
+                      ><i class="bi bi-cart3"></i
+                      ><span class="ms-2 d-md-none">加入購物車</span></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide idx-goods-item">
+                <div class="img-box">
+                  <a href="product.html">
                       <img src="../assets/images/index/product-01.jpg" class="card-img-top goods-pic" alt="...">
                   </a>
                   <div class="tag-list">
                     <span class="product-tag">多汁</span>
                     <span class="product-tag">有機</span>
+                  </div>
+                  <div class="tag-cat-list">
+                    <span class="product-cat-tag">熱門</span>
+                    <span class="product-cat-tag">捐贈</span>
                   </div>
                 </div>
 
@@ -361,6 +457,9 @@
                   <a href="product.html">
                     <img src="../assets/images/index/product-03.jpg" class="card-img-top goods-pic" alt="...">
                   </a>
+                  <div class="tag-cat-list">
+                    <span class="product-cat-tag">熱門</span>
+                  </div>
                 </div>
                 <div class="card-body">
                   <a href="product.html"><h3 class="card-title mb-1">拉拉山水蜜桃</h3></a>
@@ -422,9 +521,55 @@
                   </div>
                 </div>
               </div>
+              <div class="swiper-slide idx-goods-item">
+                <div class="img-box">
+                  <a href="product.html">
+                    <img src="../assets/images/index/product-03.jpg" class="card-img-top goods-pic" alt="...">
+                  </a>
+                  <div class="tag-cat-list">
+                    <span class="product-cat-tag">熱門</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <a href="product.html"><h3 class="card-title mb-1">拉拉山水蜜桃</h3></a>
+                  <span class="text-gary-500 mb-2 mb-md-0">5粒/箱</span>
+
+                  <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-start align-items-md-end">
+                    <div class="goods-price mb-2 mb-md-0">
+                      <span class="text-secondary-700 fw-bold fs-6 fs-md-4 me-4">NT.1100</span>
+                      <span class="old-price text-gary-500"><del>NT.1500</del></span>
+                    </div>
+                    <a href="#" class="buy-btn buy-btn-secondary"
+                      ><i class="bi bi-cart3"></i
+                      ><span class="ms-2 d-md-none">加入購物車</span></a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="swiper-button-next swiper-btn-white"></div>
             <div class="swiper-button-prev swiper-btn-white"></div>
+          </div>
+
+          <div class="heart-read-more w-100">
+            <div class="d-flex justify-content-center">
+              <a href="product_list.html" class="readmore">
+                <svg class="me-2" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 512 512">
+                  <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9l0 176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/>
+                </svg>
+                <span>看更多產品</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="heart-read-more-sm w-100">
+          <div class="d-flex justify-content-center">
+            <a href="product_list.html" class="readmore">
+              <svg class="me-2" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 512 512">
+                <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9l0 176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/>
+              </svg>
+              <span>看更多產品</span>
+            </a>
           </div>
         </div>
       </div>
@@ -439,7 +584,7 @@
         <div class="d-flex flex-wrap justify-content-center idx-brand-feature">
           <div class="d-flex justify-content-center mb-4 mb-lg-0 me-0 me-lg-10">
             <div class="d-flex justify-content-center me-8 me-lg-10">
-              <div class="rounded-circle bg-secondary-700 pt-9 pt-lg-2 idx-brand-item">
+              <div class="rounded-circle bg-secondary-700 pt-9 pt-lg-2 idx-brand-item" data-aos="zoom-in">
                 <div class="idx-brand-title">
                   <svg class="fs-2 me-2 me-lg-0" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="40" height="40"/>
@@ -455,7 +600,7 @@
               </div>
             </div>
             <div class="d-flex justify-content-center">
-              <div class="rounded-circle bg-tertiary-700 pt-9 pt-lg-2 idx-brand-item">
+              <div class="rounded-circle bg-tertiary-700 pt-9 pt-lg-2 idx-brand-item" data-aos="zoom-in">
                 <div class="idx-brand-title">
                   <svg class="fs-2 me-2 me-lg-0" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="40" height="40"/>
@@ -472,7 +617,7 @@
           </div>
           <div class="d-flex justify-content-center">
             <div class="d-flex justify-content-center me-8 me-lg-10">
-              <div class="rounded-circle bg-primary-700 pt-9 pt-lg-2 idx-brand-item">
+              <div class="rounded-circle bg-primary-700 pt-9 pt-lg-2 idx-brand-item" data-aos="zoom-in">
                 <div class="idx-brand-title">
                   <svg class="fs-2 me-2 me-lg-0" width="53" height="40" viewBox="0 0 53 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="52.7273" height="40"/>
@@ -487,7 +632,7 @@
               </div>
             </div>
             <div class="d-flex justify-content-center">
-              <div class="rounded-circle bg-tertiary-100 pt-9 pt-lg-2 idx-brand-item text-primary-700">
+              <div class="rounded-circle bg-tertiary-100 pt-9 pt-lg-2 idx-brand-item text-primary-700" data-aos="zoom-in">
                 <div class="idx-brand-title">
                   <svg class="fs-2 me-2 me-lg-0" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32" height="32"/>
@@ -579,6 +724,82 @@
                 </div>
               </div>
             </div>
+            <div class="swiper-slide idx-comment-item">
+              <div class="row g-0">
+                <div class="card-header">
+                  <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
+                  <div class="name-rank">
+                    <span class="fullname">王曉明</span>
+                    <div class="rank-star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">還不錯，蠻方便的，購買的柚子也還不錯，就是有少數幾顆太酸了</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide idx-comment-item">
+              <div class="row g-0">
+                <div class="card-header">
+                  <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
+                  <div class="name-rank">
+                    <span class="fullname">冰鄉在你家</span>
+                    <div class="rank-star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">謝謝這個平台給予我們一個管道可以售賣自家的農產品~</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide idx-comment-item">
+              <div class="row g-0">
+                <div class="card-header">
+                  <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
+                  <div class="name-rank">
+                    <span class="fullname">李大大</span>
+                    <div class="rank-star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">勉強還算可以啦，但這個速度有點慢..</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide idx-comment-item">
+              <div class="row g-0">
+                <div class="card-header">
+                  <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
+                  <div class="name-rank">
+                    <span class="fullname">林如意</span>
+                    <div class="rank-star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                      <img src="../assets/images/icon/star-yellow.svg" class="star">
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">可以一起共襄盛舉發心的傳遞自己的心意，真的要推廣一下此平台</p>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="swiper-button-next swiper-btn-white"></div>
           <div class="swiper-button-prev swiper-btn-white"></div>
@@ -602,18 +823,18 @@
         </div>
         <div class="idx-about-list">
           <div class="idx-about-item-group mb-10">
-            <div class="idx-about-item">
+            <div class="idx-about-item" data-aos="flip-left">
               <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
               <div class="w-100 data">
                 <div class="d-flex name-social">
                   <h3 class="fw-500 name">Pipi</h3>
                   <div class="ms-auto social">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2ZM13.683 15.95C12.5619 16.0152 11.4381 16.0152 10.317 15.95C10.453 16.736 10.626 17.444 10.827 18.048C11.079 18.804 11.357 19.344 11.617 19.674C11.705 19.784 11.84 20 12.002 20C12.147 19.987 12.304 19.773 12.382 19.674C12.642 19.344 12.921 18.804 13.172 18.048C13.3943 17.3624 13.5657 16.6611 13.683 15.95ZM19.513 14.755C19.2477 14.869 18.97 14.974 18.68 15.07C17.828 15.354 16.832 15.582 15.74 15.74C15.6042 16.7379 15.38 17.7218 15.07 18.68C14.974 18.97 14.869 19.2477 14.755 19.513C15.8454 19.1119 16.8356 18.4787 17.6571 17.6571C18.4787 16.8356 19.1119 15.8454 19.513 14.755ZM4.487 14.755C4.88811 15.8454 5.52134 16.8356 6.34287 17.6571C7.1644 18.4787 8.15462 19.1119 9.245 19.513C9.1288 19.2397 9.02371 18.9618 8.93 18.68C8.62002 17.7218 8.39581 16.7379 8.26 15.74C7.26209 15.6042 6.27822 15.38 5.32 15.07C5.03 14.974 4.75233 14.869 4.487 14.755ZM10.072 10.072C9.97468 11.3555 9.97468 12.6445 10.072 13.928C11.354 14.025 12.646 14.025 13.928 13.928C14.0253 12.6445 14.0253 11.3555 13.928 10.072C12.6445 9.97468 11.3555 9.97468 10.072 10.072ZM15.95 10.317C16.0152 11.4381 16.0152 12.5619 15.95 13.683C16.6611 13.5657 17.3624 13.3953 18.048 13.173C18.804 12.921 19.344 12.643 19.674 12.383C19.784 12.296 20 12.159 20 11.998C19.987 11.853 19.773 11.696 19.674 11.618C19.344 11.358 18.804 11.079 18.048 10.828C17.3624 10.6057 16.6611 10.4343 15.95 10.317ZM8.05 10.317C7.264 10.453 6.557 10.626 5.952 10.827C5.196 11.079 4.657 11.357 4.326 11.617C4.086 11.807 4.014 11.95 4.003 11.985C3.958 12.135 4.233 12.308 4.326 12.382C4.656 12.642 5.196 12.921 5.952 13.172C6.557 13.374 7.264 13.547 8.05 13.682C7.98258 12.5617 7.98258 11.4373 8.05 10.317ZM9.245 4.487C8.15462 4.88811 7.1644 5.52134 6.34287 6.34287C5.52134 7.1644 4.88811 8.15462 4.487 9.245C4.75233 9.131 5.03 9.026 5.32 8.93C6.27822 8.62002 7.26209 8.39581 8.26 8.26C8.418 7.168 8.646 6.172 8.93 5.32C9.026 5.03 9.131 4.75233 9.245 4.487ZM14.755 4.487C14.869 4.753 14.974 5.03067 15.07 5.32C15.354 6.172 15.582 7.168 15.74 8.26C16.832 8.418 17.828 8.646 18.68 8.93C18.97 9.026 19.2477 9.131 19.513 9.245C19.1119 8.15462 18.4787 7.1644 17.6571 6.34287C16.8356 5.52134 15.8454 4.88811 14.755 4.487ZM12 4C11.861 4 11.688 4.237 11.618 4.326C11.358 4.656 11.079 5.196 10.828 5.952C10.6057 6.63759 10.4353 7.33889 10.318 8.05C11.4383 7.98258 12.5617 7.98258 13.682 8.05C13.5647 7.33889 13.3943 6.63759 13.172 5.952C12.921 5.196 12.642 4.657 12.382 4.326C12.312 4.236 12.14 4 12 4Z" fill="#79A93F"/>
                     </svg>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z" fill="#79A93F"/>
-                    </svg>
+                    </svg> -->
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.173 20.8178 18.8983 19.5421 20.1205 17.84C21.3427 16.138 22 14.0954 22 12C22 6.475 17.525 2 12 2Z" fill="#79A93F"/>
                     </svg>
@@ -622,18 +843,18 @@
                 <span class="text-gary-500 job">全端工程師</span>
               </div>
             </div>
-            <div class="idx-about-item">
+            <div class="idx-about-item" data-aos="flip-right" data-aos-delay="50">
               <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
               <div class="w-100 data">
                 <div class="d-flex name-social">
                   <h3 class="fw-500 name">Abu</h3>
                   <div class="ms-auto social">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2ZM13.683 15.95C12.5619 16.0152 11.4381 16.0152 10.317 15.95C10.453 16.736 10.626 17.444 10.827 18.048C11.079 18.804 11.357 19.344 11.617 19.674C11.705 19.784 11.84 20 12.002 20C12.147 19.987 12.304 19.773 12.382 19.674C12.642 19.344 12.921 18.804 13.172 18.048C13.3943 17.3624 13.5657 16.6611 13.683 15.95ZM19.513 14.755C19.2477 14.869 18.97 14.974 18.68 15.07C17.828 15.354 16.832 15.582 15.74 15.74C15.6042 16.7379 15.38 17.7218 15.07 18.68C14.974 18.97 14.869 19.2477 14.755 19.513C15.8454 19.1119 16.8356 18.4787 17.6571 17.6571C18.4787 16.8356 19.1119 15.8454 19.513 14.755ZM4.487 14.755C4.88811 15.8454 5.52134 16.8356 6.34287 17.6571C7.1644 18.4787 8.15462 19.1119 9.245 19.513C9.1288 19.2397 9.02371 18.9618 8.93 18.68C8.62002 17.7218 8.39581 16.7379 8.26 15.74C7.26209 15.6042 6.27822 15.38 5.32 15.07C5.03 14.974 4.75233 14.869 4.487 14.755ZM10.072 10.072C9.97468 11.3555 9.97468 12.6445 10.072 13.928C11.354 14.025 12.646 14.025 13.928 13.928C14.0253 12.6445 14.0253 11.3555 13.928 10.072C12.6445 9.97468 11.3555 9.97468 10.072 10.072ZM15.95 10.317C16.0152 11.4381 16.0152 12.5619 15.95 13.683C16.6611 13.5657 17.3624 13.3953 18.048 13.173C18.804 12.921 19.344 12.643 19.674 12.383C19.784 12.296 20 12.159 20 11.998C19.987 11.853 19.773 11.696 19.674 11.618C19.344 11.358 18.804 11.079 18.048 10.828C17.3624 10.6057 16.6611 10.4343 15.95 10.317ZM8.05 10.317C7.264 10.453 6.557 10.626 5.952 10.827C5.196 11.079 4.657 11.357 4.326 11.617C4.086 11.807 4.014 11.95 4.003 11.985C3.958 12.135 4.233 12.308 4.326 12.382C4.656 12.642 5.196 12.921 5.952 13.172C6.557 13.374 7.264 13.547 8.05 13.682C7.98258 12.5617 7.98258 11.4373 8.05 10.317ZM9.245 4.487C8.15462 4.88811 7.1644 5.52134 6.34287 6.34287C5.52134 7.1644 4.88811 8.15462 4.487 9.245C4.75233 9.131 5.03 9.026 5.32 8.93C6.27822 8.62002 7.26209 8.39581 8.26 8.26C8.418 7.168 8.646 6.172 8.93 5.32C9.026 5.03 9.131 4.75233 9.245 4.487ZM14.755 4.487C14.869 4.753 14.974 5.03067 15.07 5.32C15.354 6.172 15.582 7.168 15.74 8.26C16.832 8.418 17.828 8.646 18.68 8.93C18.97 9.026 19.2477 9.131 19.513 9.245C19.1119 8.15462 18.4787 7.1644 17.6571 6.34287C16.8356 5.52134 15.8454 4.88811 14.755 4.487ZM12 4C11.861 4 11.688 4.237 11.618 4.326C11.358 4.656 11.079 5.196 10.828 5.952C10.6057 6.63759 10.4353 7.33889 10.318 8.05C11.4383 7.98258 12.5617 7.98258 13.682 8.05C13.5647 7.33889 13.3943 6.63759 13.172 5.952C12.921 5.196 12.642 4.657 12.382 4.326C12.312 4.236 12.14 4 12 4Z" fill="#79A93F"/>
                     </svg>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z" fill="#79A93F"/>
-                    </svg>
+                    </svg> -->
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.173 20.8178 18.8983 19.5421 20.1205 17.84C21.3427 16.138 22 14.0954 22 12C22 6.475 17.525 2 12 2Z" fill="#79A93F"/>
                     </svg>
@@ -644,18 +865,18 @@
             </div>
           </div>
           <div class="idx-about-item-group justify-content-end">
-            <div class="idx-about-item">
+            <div class="idx-about-item" data-aos="flip-up" data-aos-delay="100">
               <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
               <div class="w-100 data">
                 <div class="d-flex name-social">
                   <h3 class="fw-500 name">Sandy</h3>
                   <div class="ms-auto social">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2ZM13.683 15.95C12.5619 16.0152 11.4381 16.0152 10.317 15.95C10.453 16.736 10.626 17.444 10.827 18.048C11.079 18.804 11.357 19.344 11.617 19.674C11.705 19.784 11.84 20 12.002 20C12.147 19.987 12.304 19.773 12.382 19.674C12.642 19.344 12.921 18.804 13.172 18.048C13.3943 17.3624 13.5657 16.6611 13.683 15.95ZM19.513 14.755C19.2477 14.869 18.97 14.974 18.68 15.07C17.828 15.354 16.832 15.582 15.74 15.74C15.6042 16.7379 15.38 17.7218 15.07 18.68C14.974 18.97 14.869 19.2477 14.755 19.513C15.8454 19.1119 16.8356 18.4787 17.6571 17.6571C18.4787 16.8356 19.1119 15.8454 19.513 14.755ZM4.487 14.755C4.88811 15.8454 5.52134 16.8356 6.34287 17.6571C7.1644 18.4787 8.15462 19.1119 9.245 19.513C9.1288 19.2397 9.02371 18.9618 8.93 18.68C8.62002 17.7218 8.39581 16.7379 8.26 15.74C7.26209 15.6042 6.27822 15.38 5.32 15.07C5.03 14.974 4.75233 14.869 4.487 14.755ZM10.072 10.072C9.97468 11.3555 9.97468 12.6445 10.072 13.928C11.354 14.025 12.646 14.025 13.928 13.928C14.0253 12.6445 14.0253 11.3555 13.928 10.072C12.6445 9.97468 11.3555 9.97468 10.072 10.072ZM15.95 10.317C16.0152 11.4381 16.0152 12.5619 15.95 13.683C16.6611 13.5657 17.3624 13.3953 18.048 13.173C18.804 12.921 19.344 12.643 19.674 12.383C19.784 12.296 20 12.159 20 11.998C19.987 11.853 19.773 11.696 19.674 11.618C19.344 11.358 18.804 11.079 18.048 10.828C17.3624 10.6057 16.6611 10.4343 15.95 10.317ZM8.05 10.317C7.264 10.453 6.557 10.626 5.952 10.827C5.196 11.079 4.657 11.357 4.326 11.617C4.086 11.807 4.014 11.95 4.003 11.985C3.958 12.135 4.233 12.308 4.326 12.382C4.656 12.642 5.196 12.921 5.952 13.172C6.557 13.374 7.264 13.547 8.05 13.682C7.98258 12.5617 7.98258 11.4373 8.05 10.317ZM9.245 4.487C8.15462 4.88811 7.1644 5.52134 6.34287 6.34287C5.52134 7.1644 4.88811 8.15462 4.487 9.245C4.75233 9.131 5.03 9.026 5.32 8.93C6.27822 8.62002 7.26209 8.39581 8.26 8.26C8.418 7.168 8.646 6.172 8.93 5.32C9.026 5.03 9.131 4.75233 9.245 4.487ZM14.755 4.487C14.869 4.753 14.974 5.03067 15.07 5.32C15.354 6.172 15.582 7.168 15.74 8.26C16.832 8.418 17.828 8.646 18.68 8.93C18.97 9.026 19.2477 9.131 19.513 9.245C19.1119 8.15462 18.4787 7.1644 17.6571 6.34287C16.8356 5.52134 15.8454 4.88811 14.755 4.487ZM12 4C11.861 4 11.688 4.237 11.618 4.326C11.358 4.656 11.079 5.196 10.828 5.952C10.6057 6.63759 10.4353 7.33889 10.318 8.05C11.4383 7.98258 12.5617 7.98258 13.682 8.05C13.5647 7.33889 13.3943 6.63759 13.172 5.952C12.921 5.196 12.642 4.657 12.382 4.326C12.312 4.236 12.14 4 12 4Z" fill="#79A93F"/>
                     </svg>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z" fill="#79A93F"/>
-                    </svg>
+                    </svg> -->
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.173 20.8178 18.8983 19.5421 20.1205 17.84C21.3427 16.138 22 14.0954 22 12C22 6.475 17.525 2 12 2Z" fill="#79A93F"/>
                     </svg>
@@ -664,18 +885,18 @@
                 <span class="text-gary-500 job">全端工程師</span>
               </div>
             </div>
-            <div class="idx-about-item">
+            <div class="idx-about-item" data-aos="flip-down" data-aos-delay="150">
               <img src="../assets/images/index/avatar_default.png" alt="*" class="rounded-circle object-fit-cover author-img" width="60px" height="60px">
               <div class="w-100 data">
                 <div class="d-flex name-social">
                   <h3 class="fw-500 name">Edward</h3>
                   <div class="ms-auto social">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2ZM13.683 15.95C12.5619 16.0152 11.4381 16.0152 10.317 15.95C10.453 16.736 10.626 17.444 10.827 18.048C11.079 18.804 11.357 19.344 11.617 19.674C11.705 19.784 11.84 20 12.002 20C12.147 19.987 12.304 19.773 12.382 19.674C12.642 19.344 12.921 18.804 13.172 18.048C13.3943 17.3624 13.5657 16.6611 13.683 15.95ZM19.513 14.755C19.2477 14.869 18.97 14.974 18.68 15.07C17.828 15.354 16.832 15.582 15.74 15.74C15.6042 16.7379 15.38 17.7218 15.07 18.68C14.974 18.97 14.869 19.2477 14.755 19.513C15.8454 19.1119 16.8356 18.4787 17.6571 17.6571C18.4787 16.8356 19.1119 15.8454 19.513 14.755ZM4.487 14.755C4.88811 15.8454 5.52134 16.8356 6.34287 17.6571C7.1644 18.4787 8.15462 19.1119 9.245 19.513C9.1288 19.2397 9.02371 18.9618 8.93 18.68C8.62002 17.7218 8.39581 16.7379 8.26 15.74C7.26209 15.6042 6.27822 15.38 5.32 15.07C5.03 14.974 4.75233 14.869 4.487 14.755ZM10.072 10.072C9.97468 11.3555 9.97468 12.6445 10.072 13.928C11.354 14.025 12.646 14.025 13.928 13.928C14.0253 12.6445 14.0253 11.3555 13.928 10.072C12.6445 9.97468 11.3555 9.97468 10.072 10.072ZM15.95 10.317C16.0152 11.4381 16.0152 12.5619 15.95 13.683C16.6611 13.5657 17.3624 13.3953 18.048 13.173C18.804 12.921 19.344 12.643 19.674 12.383C19.784 12.296 20 12.159 20 11.998C19.987 11.853 19.773 11.696 19.674 11.618C19.344 11.358 18.804 11.079 18.048 10.828C17.3624 10.6057 16.6611 10.4343 15.95 10.317ZM8.05 10.317C7.264 10.453 6.557 10.626 5.952 10.827C5.196 11.079 4.657 11.357 4.326 11.617C4.086 11.807 4.014 11.95 4.003 11.985C3.958 12.135 4.233 12.308 4.326 12.382C4.656 12.642 5.196 12.921 5.952 13.172C6.557 13.374 7.264 13.547 8.05 13.682C7.98258 12.5617 7.98258 11.4373 8.05 10.317ZM9.245 4.487C8.15462 4.88811 7.1644 5.52134 6.34287 6.34287C5.52134 7.1644 4.88811 8.15462 4.487 9.245C4.75233 9.131 5.03 9.026 5.32 8.93C6.27822 8.62002 7.26209 8.39581 8.26 8.26C8.418 7.168 8.646 6.172 8.93 5.32C9.026 5.03 9.131 4.75233 9.245 4.487ZM14.755 4.487C14.869 4.753 14.974 5.03067 15.07 5.32C15.354 6.172 15.582 7.168 15.74 8.26C16.832 8.418 17.828 8.646 18.68 8.93C18.97 9.026 19.2477 9.131 19.513 9.245C19.1119 8.15462 18.4787 7.1644 17.6571 6.34287C16.8356 5.52134 15.8454 4.88811 14.755 4.487ZM12 4C11.861 4 11.688 4.237 11.618 4.326C11.358 4.656 11.079 5.196 10.828 5.952C10.6057 6.63759 10.4353 7.33889 10.318 8.05C11.4383 7.98258 12.5617 7.98258 13.682 8.05C13.5647 7.33889 13.3943 6.63759 13.172 5.952C12.921 5.196 12.642 4.657 12.382 4.326C12.312 4.236 12.14 4 12 4Z" fill="#79A93F"/>
                     </svg>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z" fill="#79A93F"/>
-                    </svg>
+                    </svg> -->
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2C6.475 2 2 6.475 2 12C2 16.425 4.8625 20.1625 8.8375 21.4875C9.3375 21.575 9.525 21.275 9.525 21.0125C9.525 20.775 9.5125 19.9875 9.5125 19.15C7 19.6125 6.35 18.5375 6.15 17.975C6.0375 17.6875 5.55 16.8 5.125 16.5625C4.775 16.375 4.275 15.9125 5.1125 15.9C5.9 15.8875 6.4625 16.625 6.65 16.925C7.55 18.4375 8.9875 18.0125 9.5625 17.75C9.65 17.1 9.9125 16.6625 10.2 16.4125C7.975 16.1625 5.65 15.3 5.65 11.475C5.65 10.3875 6.0375 9.4875 6.675 8.7875C6.575 8.5375 6.225 7.5125 6.775 6.1375C6.775 6.1375 7.6125 5.875 9.525 7.1625C10.325 6.9375 11.175 6.825 12.025 6.825C12.875 6.825 13.725 6.9375 14.525 7.1625C16.4375 5.8625 17.275 6.1375 17.275 6.1375C17.825 7.5125 17.475 8.5375 17.375 8.7875C18.0125 9.4875 18.4 10.375 18.4 11.475C18.4 15.3125 16.0625 16.1625 13.8375 16.4125C14.2 16.725 14.5125 17.325 14.5125 18.2625C14.5125 19.6 14.5 20.675 14.5 21.0125C14.5 21.275 14.6875 21.5875 15.1875 21.4875C17.173 20.8178 18.8983 19.5421 20.1205 17.84C21.3427 16.138 22 14.0954 22 12C22 6.475 17.525 2 12 2Z" fill="#79A93F"/>
                     </svg>
@@ -711,6 +932,7 @@
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
       // 進入網站時跳出廣告
@@ -719,11 +941,32 @@
           keyboard: false
         });
         myModal.show();
+        document.querySelector('.search-tag-list').style.display = "none";
+      });
+
+      AOS.init();
+
+      // 控制點擊搜尋框顯示搜尋標籤
+      const searchInp = document.querySelector('.search-inp');
+      searchInp.addEventListener('click', () => {
+        if (searchInp.getAttribute('class').indexOf('show') > -1) {
+          document.querySelector('.search-tag-list').style.display = "block";
+        } else {
+          document.querySelector('.search-tag-list').style.display = "none";
+        }
+      });
+      document.addEventListener('click', () => {
+        if (searchInp.getAttribute('class').indexOf('show') > -1) {
+          document.querySelector('.search-tag-list').style.display = "block";
+        } else {
+          document.querySelector('.search-tag-list').style.display = "none";
+        }
       });
 
       var swiper = new Swiper(".banner-swiper", {
         slidesPerView: 1,
         loop: true,
+        autoplay: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
@@ -734,6 +977,9 @@
         slidesPerView: 4,
         spaceBetween: 24,
         loop: true,
+        autoplay: {
+          delay: 3000,//N秒切换一次
+        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -754,6 +1000,9 @@
         slidesPerView: 4,
         spaceBetween: 24,
         loop: true,
+        autoplay: {
+          delay: 4000,//N秒切换一次
+        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -794,6 +1043,7 @@
         spaceBetween: 24,
         direction: getDirection(),
         loop: true,
+        autoplay: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
