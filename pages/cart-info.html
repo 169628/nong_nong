@@ -6,11 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>購物車/填寫收件資料</title>
   </head>
-  <body>
+  <body class="pt-md-26 pt-lg-33">
     <%- include('./layout/header'); -%>
-
     <!--填寫收件資料-->
-    <div class="container"><%- include('./layout/cart-confirm'); -%></div>
+    <div class="container">
+      <%- include('./layout/cart-confirm'); -%>
+      <div class="row mt-md-15">
+        <div class="col col-lg-8">
+          <!-- 寫在這!!!!! -->
+        </div>
+        <div class="d-none d-lg-block col-lg-4">
+          <div class="p-0 px-lg-4">
+            <p
+              class="m-0 fs-6 fw-medium py-4 text-white text-center bg-primary-300 cart-info-top-border"
+            >
+              訂單摘要
+            </p>
+            <div class="bg-white cart-info-bottom-border p-10 px-lg-13">
+              <ul class="list-unstyled p-0">
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">商品總金額</span
+                  ><span class="text-gary-500">NT. 1,552</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">運費總金額</span
+                  ><span class="text-gary-500">NT. 60</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">折扣</span
+                  ><span class="text-primary-500">－NT. 60</span>
+                </li>
+                <li class="d-flex justify-content-between mb-10">
+                  <span class="text-gary-500">紅利折抵</span
+                  ><span class="text-primary-500">－ NT. 2</span>
+                </li>
+              </ul>
+              <div
+                class="d-flex justify-content-between align-items-center border-top border-gary-500 pt-10 pb-6"
+              >
+                <span class="text-gary-500 cart-total-price-font"
+                  >結帳總金額</span
+                ><span class="text-primary-500 fs-4 fw-bold">$ 1,550</span>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center cart-info-bgcolor py-8 px-6"
+              >
+                <span class="text-gary-500 cart-info-li-text"
+                  >此筆訂單捐贈後可獲得紅利</span
+                ><span class="text-primary-300 fs-6 fw-bold">11 點</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
