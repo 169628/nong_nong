@@ -1,5 +1,16 @@
 .prodout-list {
-    margin-bottom: 50px;
+
+    .bread-crumbs {
+        margin-bottom: 15px;
+    }
+    .bread-crumbs .dropdown-item:hover {
+        background: #EDE4CB;
+        color: #966A09;
+    }
+    .bread-crumbs .active {
+        background: #EDE4CB;
+        color: #966A09;
+    }
 
     .goods-item {
         position: relative;
@@ -45,9 +56,17 @@
             }
         }
     
-        .tag-list {
+        .tag-cat-list {
             position: absolute;
             top: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .tag-list {
+            position: absolute;
+            top: 40px;
             right: 0;
             display: flex;
             justify-content: space-between;
