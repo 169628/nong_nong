@@ -1,43 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>登入123</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>註冊與登入</title>
+  <script src="https://cdn.jsdelivr.net/npm/validate.js"></script>
+
 </head>
 
 <body>
-  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-    aria-controls="offcanvasExample">
-    登入
-  </a>
 
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <!-- 登入與註冊按鈕 -->
+  <div class="container mt-5">
+    <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRegister"
+      aria-controls="offcanvasRegister">註冊</button>
+    <button class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
+      aria-controls="offcanvasLogin">登入</button>
+  </div>
+
+  <!-- Offcanvas 註冊頁 -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRegister" aria-labelledby="offcanvasRegisterLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">登入</h5>
+      <h5 id="offcanvasRegisterLabel"></h5>
+
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <!-- 登入寫在這 -->
+      <!-- 註冊表單 -->
+      <form id="registerForm" method="POST">
+        <h4 class="text-center">註冊</h4>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control custom-input" id="email" name="email" placeholder="email@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="identity">我要註冊成為 : </label>
+          <select id="identity" name="identity" class="form-control" required>
+            <option value="">請選擇身份</option>
+            <option value="member">會員</option>
+            <option value="farmer">小農</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">姓名</label>
+          <input type="text" class="form-control custom-input" id="name" name="name" placeholder="請使用本名">
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">聯絡電話</label>
+          <input type="text" class="form-control custom-input" id="phone" name="phone" placeholder="請勿輸入空格或符號">
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">地址</label>
+          <input type="text" class="form-control custom-input" id="address" name="address"
+            placeholder="請先輸入3碼郵遞區號，再填地址">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">密碼</label>
+          <input type="password" class="form-control custom-input" id="password" name="password" placeholder="password">
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">確認密碼</label>
+          <input type="password" class="form-control custom-input" id="confirmPassword" name="confirmPassword"
+            placeholder="password">
+        </div>
+        <div class="d-flex justify-content-around">
+          <button type="submit" class="btn btn-primary btn-block" style="width:100%;max-width:500px">註冊</button>
+        </div>
+      </form>
     </div>
   </div>
-  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasRegister" role="button"
-    aria-controls="offcanvasRegister">
-    註冊
-  </a>
 
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRegister" aria-labelledby="offcanvasExampleLabel">
+  <!-- Offcanvas 登入頁 -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLogin" aria-labelledby="offcanvasLoginLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasRegister">註冊</h5>
+      <h5 id="offcanvasLoginLabel"></h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <!-- 註冊寫在這 -->
+      <!-- 登入表單 -->
+      <form id="loginForm" method="POST">
+        <h4 class="text-center">登入</h4>
+        <div class="mb-3">
+          <label for="loginEmail" class="form-label">帳號</label>
+          <input type="email" class="form-control custom-input" id="loginEmail" name="loginEmail"
+            placeholder="email@example.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="loginPassword" class="form-label">密碼</label>
+          <input type="password" class="form-control custom-input" id="loginPassword" name="loginPassword"
+            placeholder="password" required>
+        </div>
+        <div class="d-flex justify-content-around">
+          <button type="submit" id="btnRegister" class="btn btn-primary btn-block"
+            style="width:100%;max-width:150px">註冊</button>
+          <button type="submit" id="btnRegLogin" class="btn btn-primary" style="width:100%;max-width:150px">登入</button>
+        </div>
+      </form>
+      <div class="text-center mt-3">
+        <p>或</p>
+        <a href="#" id="clientLogin" onclick="alert('消費者登入 demo')" class="btn btn-link">消費者登入 Demo</a>
+        <a href="#" id="farmerLogin" onclick="alert('小農登入 demo')" class="btn btn-link">小農登入 Demo</a>
+      </div>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script type="module" src="../main.js"></script>
+
+  <script>
+    // 註冊表單驗證規則
+    const constraints = {
+      name: {
+        presence: { allowEmpty: false, message: "^必填欄位" },
+        format: {
+          pattern: "^[a-zA-Z\u4E00-\uFAFF]+",
+          flags: "i", // 大小寫不拘
+          message: "^請輸入中文或英文"
+        },
+        length: { minimum: 3, message: "必須至少包含3個字符" }
+      },
+      email: {
+        presence: { allowEmpty: false, message: "^必填欄位" },
+        email: { message: "請提供符合正確的E-mail格式" }
+      },
+      address: {
+        presence: { allowEmpty: false, message: "^必填欄位" },
+        format: {
+          // Must be numbers followed by address
+          pattern: "^[0-9]{3}[\u4E00-\u9FA5]+[a-zA-Z0-9\s]*$",
+          message: "^請提供正確的3碼郵遞區號和地址"
+        },
+        length: { minimum: 5, message: "地址必須至少包含5個字符" }
+      },
+      phone: {
+        presence: { allowEmpty: false },
+        format: {
+          pattern: /^[0-9]{10}$/,
+          message: "請提供正確的10位數字電話"
+        }
+      },
+      password: {
+        presence: { allowEmpty: false },
+        length: { minimum: 6, message: "密碼必須至少6個字符" }
+      },
+      confirmPassword: {
+        presence: { allowEmpty: false },
+        equality: {
+          attribute: "password", // 要比對的屬性 
+          message: "^The passwords do not match"
+        }
+      }
+    };
+
+    // 表單提交事件
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // 防止表單提交
+
+      // 驗證表單
+      const form = e.target;
+      const formValues = {
+        name: form.name.value,
+        email: form.email.value,
+        identity: form.identity.value,
+        address: form.address.value,
+        phone: form.phone.value,
+        password: form.password.value,
+        confirmPassword: form.confirmPassword.value
+      };
+
+      const errors = validate(formValues, constraints);
+
+      // 清除先前的錯誤訊息
+      const errorMessages = form.querySelectorAll('.text-danger');
+      errorMessages.forEach(message => message.remove());
+
+      // 顯示錯誤訊息
+      if (errors) {
+        for (let field in errors) {
+          const errorMsg = errors[field][0];
+          const inputElement = form.querySelector(`[name="${field}"]`);
+          const errorElement = document.createElement('div');
+          errorElement.classList.add('text-danger');
+          errorElement.textContent = errorMsg;
+          inputElement.parentElement.appendChild(errorElement);
+        }
+      } else {
+        // 註冊成功，顯示登入頁
+        alert('註冊成功!');
+        // 關閉註冊頁
+        const offcanvasRegister = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasRegister'));
+        offcanvasRegister.hide();
+
+        // 直接跳轉到登入頁的 Offcanvas
+        const offcanvasLogin = new bootstrap.Offcanvas(document.getElementById('offcanvasLogin'));
+        offcanvasLogin.show();
+        // 自動填入註冊的電子郵件
+        document.getElementById('loginEmail').value = form.email.value;
+
+
+      }
+    });  //end 表單提交事件
+
+    // 登入表單提交事件
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // 防止表單提交
+
+      const form = e.target;
+      const loginEmail = form.loginEmail.value;
+      const loginPassword = form.loginPassword.value;
+
+      // 在這裡添加登入驗證邏輯
+      alert(`登入成功！用戶：${loginEmail}`);
+    });
+
+    document.getElementById("btnRegister").addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const offcanvasLogin1 = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasLogin'));
+      offcanvasLogin1.hide();
+      const offcanvasRegister1 = new bootstrap.Offcanvas(document.getElementById('offcanvasRegister'));
+      offcanvasRegister1.show();
+
+    });
+
+    // 當點擊 "自動填入" 連結時
+    document.getElementById("clientLogin").addEventListener("click", function (event) {
+      event.preventDefault();
+
+      // 設置自動填入的用戶名和密碼
+      document.getElementById("loginEmail").value = "testclient";
+      document.getElementById("loginPassword").value = "testclient";
+
+      // 模擬提交表單
+      document.getElementById("loginForm").submit();
+    });
+
+    document.getElementById("farmerLogin").addEventListener("click", function (event) {
+      event.preventDefault();
+
+      // 設置自動填入的用戶名和密碼
+      document.getElementById("loginEmail").value = "testfarmer";
+      document.getElementById("loginPassword").value = "testfarmer";
+
+      // 模擬提交表單
+      document.getElementById("loginForm").submit();
+    });
+  </script>
+  <style>
+    .custom-input::placeholder {
+      color: #d3d3d3;
+      /* 浅灰色 */
+    }
+  </style>
 </body>
 
 </html>
