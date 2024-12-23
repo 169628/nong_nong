@@ -11,3 +11,4 @@ document.addEventListener("scroll", (event) => {
         document.querySelector('.page-cart').style.opacity = "0";
     }
 });
+
