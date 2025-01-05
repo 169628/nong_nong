@@ -11,11 +11,229 @@
     <!--填寫收件資料-->
     <div class="container">
       <%- include('./layout/cart-confirm'); -%>
-      <div class="row mt-md-15">
-        <div class="col col-lg-8">
-          <!-- 寫在這!!!!! -->
+      <div class="row mt-md-26">
+        <div class="col col-lg-8 d-flex flex-column gap-26">
+          <div class="buyer">
+            <div class="fs-2 text-primary-700 fw-bold mb-15">訂購人資訊</div>
+            <div class="form d-flex flex-column gap-10 mb-15">
+              <div class="buyer-name row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">訂購人姓名<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="buyer-name" type="text" class="cart-input-form cart-input-form-info" placeholder="請輸入真實姓名">
+                </div>
+              </div>
+              <div class="buyer-phone row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">聯絡電話<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="buyer-phone" type="text" class="cart-input-form cart-input-form-info" placeholder="0912345678">
+                </div>
+              </div>
+              <div class="buyer-email row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">聯絡信箱<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="buyer-email" type="text" class="cart-input-form cart-input-form-info" placeholder="example@mail.com">
+                </div>
+              </div>
+            </div>
+            <div class="cart-info-bgcolor p-10 mt-lg-10">
+              <p class="text-primary-300 fw-bold">【 配送狀態查詢 】</p>
+              <ol class="mb-0 ps-6">
+                <li class="text-gary-500 cart-info-li-text">
+                  點選「會員中心」之「訂單查詢」，點選訂單編號,即可查看訂單配送狀態
+                </li>
+                <li class="text-gary-500 cart-info-li-text">
+                  如訂單狀態已進入「準備出貨」，恕無法更改訂單
+                </li>
+                <li class="text-gary-500 cart-info-li-text">
+                  如訂購之商品無法順利出貨或缺貨，我們將以 Email 或電話主動通知您
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="recipient">  
+            <div class="mb-15 d-flex">
+              <span class="fs-2 text-primary-700 fw-bold" style="margin-right: 32px;">取件人資訊</span>
+              <button type="button" class="btn btn-outline-gary-500 py-2 px-13 fs-6 cart-btn-hover">同訂購人資料</button>
+            </div>
+            <div class="form d-flex flex-column gap-10">
+              <div class="recipient-name row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">取件人姓名<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="recipient-name" type="text" class="cart-input-form cart-input-form-info" placeholder="請輸入真實姓名">
+                </div>
+              </div>
+              <div class="recipient-phone row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">聯絡電話<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="recipient-phone" type="text" class="cart-input-form cart-input-form-info" placeholder="0912345678">
+                </div>
+              </div>
+              <div class="recipient-email row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">聯絡信箱<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="recipient-email" type="text" class="cart-input-form cart-input-form-info" placeholder="example@mail.com">
+                </div>
+              </div>
+              <div class="recipient-postalcode row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">郵遞區號<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="recipient-postalcode" type="text" class="cart-input-form cart-input-form-info" placeholder="00000">
+                </div>
+              </div>
+              <div class="recipient-address row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">寄送地址<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="recipient-address" type="text" class="cart-input-form cart-input-form-info" placeholder="example@mail.com">
+                </div>
+              </div>
+              <div class="recipient-storage row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">取貨倉庫<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10 d-flex storage gap-6 justify-content-between">
+                  <select class="form-select cart-input-form cart-input-form-info fs-6 px-6 py-2 text-gary-500 border border-gary-500 rounded-1" aria-label="Default select example">
+                    <option selected>請選擇欲取貨的倉庫</option>
+                    <option value="1">A 倉庫</option>
+                    <option value="2">B 倉庫</option>
+                    <option value="3">C 倉庫</option>
+                  </select>
+                  <div class="btn-storage">
+                    <button type="button" class="btn btn-outline-gary-500 py-2 px-10 fs-6 cart-btn-hover" style="font-weight: 500;">
+                      <img src="../assets/images/icon/box-gary-500.svg" alt="box" class="mb-1" style="margin-right: 8px;">
+                      庫存查詢</button>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="invoice"> 
+            <div class="fs-2 text-primary-700 fw-bold mb-15">發票設定</div>
+            <div>
+              <span class="text-gary-500">請選擇發票類型</span>
+              <div class="mb-15 mt-6 d-flex gap-10 flex-wrap">
+                <button type="button" class="btn btn-outline-gary-500 py-4 px-13 fs-6 cart-btn-hover" style="font-weight: 500;">紙本發票</button>
+                <button type="button" class="btn btn-primary-500 py-4 px-13 fs-6 cart-btn-hover" style="font-weight: 500;">電子發票</button>
+                <button type="button" class="btn btn-outline-gary-500 py-4 px-13 fs-6 cart-btn-hover" style="font-weight: 500;">三聯式發票</button>
+                <button type="button" class="btn btn-outline-gary-500 py-4 px-13 fs-6 cart-btn-hover" style="font-weight: 500;">捐贈發票</button>
+              </div>
+            </div>
+            <div class="form d-flex flex-column gap-10">
+              <div class="invoice-carrier row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">手機載具條碼<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="invoice-carrier" type="text" class="cart-input-form cart-input-form-info" placeholder="/123ABCD">
+                  <div class="py-1 text-gary-500 cart-info-li-text">※ 若未填手機戴具條碼，電子發票自動捐贈各基金會</div>
+                </div>                  
+              </div>                
+              <div class="invoice-taxId row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">統一編號<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="invoice-taxId" type="text" class="cart-input-form cart-input-form-info" placeholder="請輸入統一編號">
+                </div>
+              </div>
+              <div class="invoice-donation row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">捐贈單位<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10 ">
+                  <select class="form-select cart-input-form cart-input-form-info fs-6 px-6 py-2 text-gary-500 border border-gary-500 rounded-1" aria-label="Default select example">
+                    <option selected>請選擇欲捐贈單位</option>
+                    <option value="1">AAA</option>
+                    <option value="2">BBB</option>
+                    <option value="3">CCC</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="notes">
+            <div class="fs-2 text-primary-700 fw-bold mb-15">訂單備註</div>
+            <textarea name="order-notes" placeholder="若有購買的特殊需求，請填寫備註" cols="20" rows="5" class="cart-input-form cart-input-form-info"></textarea>
+          </div>
+          <div class="payments">
+            <div class="fs-2 text-primary-700 fw-bold mb-15">付款方式</div>
+            <div class="d-block d-lg-none pt-13 pb-15">
+              <p
+                class="m-0 fs-6 fw-medium py-4 text-white text-center bg-primary-300 cart-info-top-border"
+              >
+                訂單摘要
+              </p>
+              <div class="bg-white cart-info-bottom-border p-10 px-lg-13">
+                <ul class="list-unstyled p-0">
+                  <li class="d-flex justify-content-between mb-10">
+                    <span class="text-gary-500">商品總金額</span
+                    ><span class="text-gary-500">NT. 1,552</span>
+                  </li>
+                  <li class="d-flex justify-content-between mb-10">
+                    <span class="text-gary-500">運費總金額</span
+                    ><span class="text-gary-500">NT. 60</span>
+                  </li>
+                  <li class="d-flex justify-content-between mb-10">
+                    <span class="text-gary-500">折扣</span
+                    ><span class="text-primary-500">－NT. 60</span>
+                  </li>
+                  <li class="d-flex justify-content-between mb-10">
+                    <span class="text-gary-500">紅利折抵</span
+                    ><span class="text-primary-500">－ NT. 2</span>
+                  </li>
+                </ul>
+                <div
+                  class="d-flex justify-content-between align-items-center border-top border-gary-500 pt-10 pb-6"
+                >
+                  <span class="text-gary-500 cart-total-price-font"
+                    >結帳總金額</span
+                  ><span class="text-primary-500 fs-4 fw-bold">$ 1,550</span>
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center cart-info-bgcolor py-8 px-6"
+                >
+                  <span class="text-gary-500 cart-info-li-text"
+                    >此筆訂單捐贈後可獲得紅利</span
+                  ><span class="text-primary-300 fs-6 fw-bold">11 點</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="text-gary-500">請選擇付款方式</span>
+              <div class="mb-15 mt-6 d-flex gap-10 flex-wrap">
+                <button type="button" class="btn btn-primary-500 py-4 px-13 fs-6 cart-btn-hover" style="font-weight: 500;">信用卡/金融卡</button>
+                <button type="button" class="btn btn-outline-gary-500 py-4 px-13 fs-6 cart-btn-hover" style="font-weight: 500;">虛擬帳戶轉帳</button>
+                <button type="button" class="btn btn-outline-gary-500 py-4 px-13 fs-6 cart-btn-hover" style="font-weight: 500;">LINE Pay</button>
+              </div>
+            </div>
+            <div class="form d-flex flex-column gap-10">
+              <div class="creditCard-name row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">持卡人姓名<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="creditCard-name" type="text" class="cart-input-form cart-input-form-info" placeholder="請輸入與卡片相同的姓名">
+                </div>
+              </div>
+              <div class="creditCard-number row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">信用卡卡號<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="creditCard-number" type="text" class="cart-input-form cart-input-form-info" placeholder="0000 0000 0000 0000">
+                </div>
+              </div>
+              <div class="creditCard-date row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">有效日期<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="creditCard-date" type="text" class="cart-input-form cart-input-form-info" placeholder="MM/YY">
+                </div>
+              </div>
+              <div class="creditCard-CVC row">
+                <span class="col-sm-3 col-xl-2 text-gary-500">驗證碼<span class="fs-5" style="color: #D16A30;">*</span></span>
+                <div class="col-sm-9 col-xl-10">
+                  <input id="creditCard-CVC" type="text" class="cart-input-form cart-input-form-info" placeholder="123">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-26 mb-md-31">
+            <div class="col-6">
+              <button type="button" class="btn btn-outline-primary-500 w-100 py-4">回到上一步</button>
+            </div>
+            <div class="col-6">
+              <button type="button" class="btn btn-primary-500 w-100 py-4">立即結帳</button>
+            </div>
+          </div>
         </div>
-        <div class="d-none d-lg-block col-lg-4">
+        <div class="d-none d-lg-block col-lg-4"> 
           <div class="p-0 px-lg-4">
             <p
               class="m-0 fs-6 fw-medium py-4 text-white text-center bg-primary-300 cart-info-top-border"
