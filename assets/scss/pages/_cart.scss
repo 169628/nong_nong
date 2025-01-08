@@ -1,3 +1,7 @@
+textarea{
+  resize: none;
+}
+
 .cart-out-progressbar {
   max-width: 747px;
 
@@ -80,6 +84,21 @@
   width: 311px;
   @media (max-width: 1400px) {
     width: 254px;
+  }
+  &-info{
+    width: 100%;
+  }
+}
+
+.storage{
+  @include mobile {
+      flex-direction: column;
+  }
+  .btn{
+    width: 155px;
+    @include mobile {
+      width: 100%;
+    }
   }
 }
 
